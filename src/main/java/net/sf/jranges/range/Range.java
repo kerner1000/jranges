@@ -1,0 +1,64 @@
+/**********************************************************************
+Copyright (c) 2009-2010 Alexander Kerner. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ ***********************************************************************/
+
+package net.sf.jranges.range;
+
+/**
+ * 
+ * A {@code Range} is a collection of sequential positions and an interval.<br>
+ * 
+ * A {@code Range} is defined by the following attributes:
+ * <ol>
+ * <li>
+ * The first position, inclusively</li>
+ * <li>
+ * The last position, inclusively</li>
+ * <li>
+ * An interval</li>
+ * </ol>
+ * <p>
+ * {@code start} and {@code stop} must both be a multiple of {@code interval}
+ * </p>
+ * <p>
+ * All positions that match
+ * <ol>
+ * <li>
+ * {@code start <= position <= stop}</li>
+ * <li>
+ * {@code (start + (n * interval) == position) && (stop + (n * interval) == position)}</li>
+ * </ol>
+ * are also considered to be a member of this {@code Range}.
+ * </p>
+ * <p>
+ * A {@code Range} can be <i>shifted</i>, which will result in an equivalent
+ * modification of start and stop position in the <i>same</i> direction.
+ * </p>
+ * <p>
+ * A {@code Range} can also be <i>expanded</i>, which will result in an
+ * equivalent modification of start and stop position in the <i>opposite</i>
+ * direction.
+ * </p>
+ * 
+ * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
+ * @version 2010-11-19
+ * 
+ * @see IntegerRange
+ * @see LongRange
+ * @see BigRange
+ * 
+ */
+public interface Range {
+
+}
