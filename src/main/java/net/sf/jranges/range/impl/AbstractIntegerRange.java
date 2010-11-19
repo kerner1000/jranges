@@ -200,19 +200,40 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 			return super.includes(position);
 		return ((position - start) % interval == 0) && position <= stop;
 	}
+	
+	@Override
+	public int getLength() {
+		if(interval == 1)
+			return super.getLength();
+		
+		// TODO this is falsch!!
+		return super.getLength();
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + interval;
+		result = prime * result + start;
+		result = prime * result + stop;
+		return result;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
+		if (!super.equals(obj))
 			return false;
-		if (!(obj instanceof AbstractIntegerRange))
+		if (!(obj instanceof IntegerRange))
 			return false;
-		AbstractIntegerRange other = (AbstractIntegerRange) obj;
-		if (start != other.start)
+		IntegerRange other = (IntegerRange) obj;
+		if (interval != other.getInterval())
 			return false;
-		if (stop != other.stop)
+		if (start != other.getStart())
+			return false;
+		if (stop != other.getStop())
 			return false;
 		return true;
 	}
