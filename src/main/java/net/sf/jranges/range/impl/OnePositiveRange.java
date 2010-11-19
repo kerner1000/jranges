@@ -42,16 +42,10 @@ public class OnePositiveRange extends AbstractIntegerRange {
 
 	public OnePositiveRange(int start, int stop) throws RangeException {
 		super(start, stop, 1, Integer.MAX_VALUE);
-		if (start < 1) {
-			throw new RangeException("invalid range \"" + start + ", " + stop);
-		}
 	}
 	
 	public OnePositiveRange(int start, int stop, int interval) throws RangeException {
 		super(start, stop, 1, Integer.MAX_VALUE, interval);
-		if (start < 1) {
-			throw new RangeException("invalid range \"" + start + ", " + stop);
-		}
 	}
 
 	@Override

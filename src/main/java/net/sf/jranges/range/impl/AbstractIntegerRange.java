@@ -179,9 +179,19 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 	@Override
 	public IntegerRange expandRange(int offset, boolean stayWithinLimits)
 			throws RangeException {
-		int start = Utils.rangeCheckAdd(getStart(), -offset);
-		int stop = Utils.rangeCheckAdd(getStop(), offset);
+		int start = this.start;
+		int stop = this.stop;
 		if (stayWithinLimits) {
+			try{
+			start = Utils.rangeCheckAdd(getStart(), -offset);
+			}catch(ArithmeticException e){
+				//
+			}
+			try{
+			stop = Utils.rangeCheckAdd(getStop(), offset);
+			}catch(ArithmeticException e){
+				//
+			}
 			if (start < limit1) {
 				start = limit1;
 			}
@@ -190,6 +200,8 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 			}
 			return newInstange(start, stop, getLimit1(), getLimit2());
 		} else {
+			start = Utils.rangeCheckAdd(getStart(), -offset);
+			stop = Utils.rangeCheckAdd(getStop(), offset);
 			return newInstange(start, stop, getLimit1(), getLimit2());
 		}
 	}
