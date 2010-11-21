@@ -13,14 +13,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range.impl;
+package net.sf.jranges.range;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.sf.jranges.range.IntegerRange;
-import net.sf.jranges.range.IntegerRangeFactory;
 import net.sf.kerner.utils.Utils;
 
 /**
