@@ -17,7 +17,7 @@ package net.sf.jranges.range.impl;
 
 import net.sf.jranges.range.IntegerRange;
 import net.sf.jranges.range.RangeException;
-import net.sf.kerner.utils.Utils;
+import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
  * 
@@ -165,8 +165,8 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 
 	@Override
 	public IntegerRange shift(int offset) throws RangeException {
-		return newInstange(Utils.rangeCheckAdd(getStart(), offset),
-				Utils.rangeCheckAdd(getStop(), offset), getLimit1(),
+		return newInstange(ArithmeticSavety.addInt(getStart(), offset),
+				ArithmeticSavety.addInt(getStop(), offset), getLimit1(),
 				getLimit2());
 
 	}
@@ -183,12 +183,12 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 		int stop = this.stop;
 		if (stayWithinLimits) {
 			try{
-			start = Utils.rangeCheckAdd(getStart(), -offset);
+			start = ArithmeticSavety.addInt(getStart(), -offset);
 			}catch(ArithmeticException e){
 				//
 			}
 			try{
-			stop = Utils.rangeCheckAdd(getStop(), offset);
+			stop = ArithmeticSavety.addInt(getStop(), offset);
 			}catch(ArithmeticException e){
 				//
 			}
@@ -200,8 +200,8 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 			}
 			return newInstange(start, stop, getLimit1(), getLimit2());
 		} else {
-			start = Utils.rangeCheckAdd(getStart(), -offset);
-			stop = Utils.rangeCheckAdd(getStop(), offset);
+			start = ArithmeticSavety.addInt(getStart(), -offset);
+			stop = ArithmeticSavety.addInt(getStop(), offset);
 			return newInstange(start, stop, getLimit1(), getLimit2());
 		}
 	}

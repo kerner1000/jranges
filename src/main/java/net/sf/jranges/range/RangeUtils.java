@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 import net.sf.kerner.utils.Utils;
+import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
  * 
@@ -154,7 +155,7 @@ public class RangeUtils {
 				if (value == null)
 					result.put(key, Integer.valueOf(n));
 				else
-					result.put(key, Utils.add(value, n));
+					result.put(key, ArithmeticSavety.add(value, n));
 			}
 		}
 
