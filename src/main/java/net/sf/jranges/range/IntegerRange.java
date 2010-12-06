@@ -18,11 +18,11 @@ package net.sf.jranges.range;
 
 /**
  * 
- * A {@code IntegerRange} is a {@link net.sf.kerner.commons.range.Range Range}
+ * A {@code IntegerRange} is a {@link Range}
  * based on {@code int} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-11-07
+ * @version 2010-12-06
  * 
  */
 public interface IntegerRange extends Range, Comparable<IntegerRange> {
@@ -83,7 +83,7 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
 	/**
 	 * 
 	 * 
-	 * Exactly the same as {@link IntegerRange#expandRange(int, false)}
+	 *The same as {@code IntegerRange#expandRange(int, false)}
 	 * 
 	 * @param offset
 	 *            offset by which is expanded
