@@ -13,10 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range.impl;
+package net.sf.jranges.range;
 
-import net.sf.jranges.range.IntegerRange;
-import net.sf.jranges.range.RangeException;
+import net.sf.jranges.range.impl.DummyRange;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
@@ -82,7 +81,7 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 	 * @throws RangeException
 	 *             if {@code limit1 > start || limit2 < stop || start > stop}
 	 */
-	AbstractIntegerRange(int start, int stop, int limit1, int limit2)
+	public AbstractIntegerRange(int start, int stop, int limit1, int limit2)
 			throws RangeException {
 		super(start, stop);
 		this.limit1 = limit1;
@@ -119,7 +118,7 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 	 *             if
 	 *             {@code limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0)}
 	 */
-	AbstractIntegerRange(int start, int stop, int limit1, int limit2,
+	public AbstractIntegerRange(int start, int stop, int limit1, int limit2,
 			int interval) throws RangeException {
 		super(start, stop);
 		this.limit1 = limit1;
@@ -269,6 +268,6 @@ public abstract class AbstractIntegerRange extends DummyRange implements
 	 * @return the new {@code AbstractIntegerRange} instance
 	 * @throws RangeException
 	 */
-	abstract AbstractIntegerRange newInstange(int start, int stop, int limit1,
+	protected abstract AbstractIntegerRange newInstange(int start, int stop, int limit1,
 			int limit2) throws RangeException;
 }

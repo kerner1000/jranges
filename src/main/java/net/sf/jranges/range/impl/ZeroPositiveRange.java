@@ -15,6 +15,7 @@ limitations under the License.
 
 package net.sf.jranges.range.impl;
 
+import net.sf.jranges.range.AbstractIntegerRange;
 import net.sf.jranges.range.RangeException;
 
 
@@ -55,6 +56,7 @@ public class ZeroPositiveRange extends AbstractIntegerRange {
 	}
 
 	@Override
+	protected
 	ZeroPositiveRange newInstange(int start, int stop, int limit1, int limit2)
 			throws RangeException {
 		return new ZeroPositiveRange(start, stop, interval);
