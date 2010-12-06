@@ -2,7 +2,7 @@
  * 
  *
  */
-package net.sf.jranges.range;
+package net.sf.jranges.range.integer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -11,10 +11,10 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.sf.jranges.range.IntegerRange;
-import net.sf.jranges.range.RangeUtils;
-import net.sf.jranges.range.impl.DummyRange;
-import net.sf.jranges.range.impl.DummyRangeFactory;
+import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integer.RangeUtils;
+import net.sf.jranges.range.integer.impl.DummyRange;
+import net.sf.jranges.range.integer.impl.DummyRangeFactory;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -58,7 +58,7 @@ public class TestRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.kerner.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -72,7 +72,7 @@ public class TestRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.kerner.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -86,7 +86,7 @@ public class TestRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.kerner.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -100,7 +100,7 @@ public class TestRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.kerner.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -114,7 +114,7 @@ public class TestRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.kerner.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -128,7 +128,7 @@ public class TestRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.kerner.commons.range.impl.RangeUtils#merge(java.util.List, net.sf.kerner.commons.range.RangeFactory)}
+	 * {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#merge(java.util.List, net.sf.kerner.commons.range.RangeFactory)}
 	 * .
 	 */
 	@Test

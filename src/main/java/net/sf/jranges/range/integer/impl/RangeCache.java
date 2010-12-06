@@ -1,4 +1,4 @@
-package net.sf.jranges.range.impl;
+package net.sf.jranges.range.integer.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;

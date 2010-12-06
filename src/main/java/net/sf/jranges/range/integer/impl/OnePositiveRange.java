@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range.impl;
+package net.sf.jranges.range.integer.impl;
 
 import net.sf.jranges.range.RangeException;
 import net.sf.jranges.range.integer.AbstractIntegerRange;
@@ -22,9 +22,9 @@ import net.sf.jranges.range.integer.AbstractIntegerRange;
 /**
  * 
  * 
- * {@code ZeroPositiveRange} is an implementation for
+ * {@code OnePositiveRange} is an implementation for
  * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}, for which the
- * following is true:<br> {@code 0 <= start <= stop <= Integer.MAX_VALUE}
+ * following is true:<br> {@code 1 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>
  * <b>Example:</b>
@@ -39,26 +39,21 @@ import net.sf.jranges.range.integer.AbstractIntegerRange;
  * @version 2010-10-19
  * 
  */
-public class ZeroPositiveRange extends AbstractIntegerRange {
+public class OnePositiveRange extends AbstractIntegerRange {
 
-	public ZeroPositiveRange(int start, int stop) throws RangeException {
-		super(start, stop, 0, Integer.MAX_VALUE);
-		if (start < 0) {
-			throw new RangeException("invalid range");
-		}
+	public OnePositiveRange(int start, int stop) throws RangeException {
+		super(start, stop, 1, Integer.MAX_VALUE);
 	}
 	
-	public ZeroPositiveRange(int start, int stop, int interval) throws RangeException {
-		super(start, stop, 0, Integer.MAX_VALUE, interval);
-		if (start < 0) {
-			throw new RangeException("invalid range");
-		}
+	public OnePositiveRange(int start, int stop, int interval) throws RangeException {
+		super(start, stop, 1, Integer.MAX_VALUE, interval);
 	}
 
 	@Override
 	protected
-	ZeroPositiveRange newInstange(int start, int stop, int limit1, int limit2)
+	OnePositiveRange newInstange(int start, int stop, int limit1, int limit2)
 			throws RangeException {
-		return new ZeroPositiveRange(start, stop, interval);
+		return new OnePositiveRange(start, stop, interval);
 	}
+
 }

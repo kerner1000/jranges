@@ -16,7 +16,7 @@ limitations under the License.
 package net.sf.jranges.range.integer;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.impl.DummyRange;
+import net.sf.jranges.range.integer.impl.DummyRange;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**

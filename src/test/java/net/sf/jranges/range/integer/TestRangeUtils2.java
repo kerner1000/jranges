@@ -1,15 +1,15 @@
 /**
  * 
  */
-package net.sf.jranges.range;
+package net.sf.jranges.range.integer;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
-import net.sf.jranges.range.IntegerRange;
-import net.sf.jranges.range.RangeUtils;
-import net.sf.jranges.range.impl.DummyRange;
+import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integer.RangeUtils;
+import net.sf.jranges.range.integer.impl.DummyRange;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -47,7 +47,7 @@ public class TestRangeUtils2 {
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.RangeUtils#positionFrequencies(java.util.Collection, java.util.Collection)}.
+	 * Test method for {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#positionFrequencies(java.util.Collection, java.util.Collection)}.
 	 */
 	@Test
 	public final void testPositionFrequencies() {
@@ -55,7 +55,7 @@ public class TestRangeUtils2 {
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
+	 * Test method for {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
 	 */
 	@Test
 	public final void testMedianPositionFrequencies() {
@@ -65,7 +65,7 @@ public class TestRangeUtils2 {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
+	 * Test method for {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
 	 */
 	@Test
 	public final void testMedianPositionFrequencies01() {
@@ -75,7 +75,7 @@ public class TestRangeUtils2 {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
+	 * Test method for {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
 	 */
 	@Test
 	public final void testMedianPositionFrequencies02() {
@@ -86,7 +86,7 @@ public class TestRangeUtils2 {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
+	 * Test method for {@link net.sf.jranges.range.integer.commons.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}.
 	 */
 	@Test
 	public final void testMedianPositionFrequencies03() {

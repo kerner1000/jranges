@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net.sf.jranges.range.impl;
+package net.sf.jranges.range.integer.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -10,7 +10,8 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import net.sf.jranges.range.IntegerRange;
+import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integer.impl.DummyRange;
 
 import org.junit.After;
 import org.junit.AfterClass;
