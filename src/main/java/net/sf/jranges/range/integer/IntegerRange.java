@@ -13,116 +13,118 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range;
+package net.sf.jranges.range.integer;
 
-import java.math.BigInteger;
+import net.sf.jranges.range.Range;
+import net.sf.jranges.range.RangeException;
+
 
 /**
  * 
- * A {@code BigRange} is a {@link net.sf.kerner.commons.range.Range Range} based
- * on {@link java.math.BigInteger BigInteger} values.
+ * A {@code IntegerRange} is a {@link Range}
+ * based on {@code int} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-11-07
+ * @version 2010-12-06
  * 
  */
-public interface BigRange extends Comparable<BigRange>, Range {
+public interface IntegerRange extends Range, Comparable<IntegerRange> {
 
 	/**
 	 * 
-	 * Retrieve this {@code BigRange}'s start point.
+	 * Retrieve this {@code IntegerRange}'s start point.
 	 * 
-	 * @return this {@code BigRange}'s start point
+	 * @return this {@code IntegerRange}'s start point
 	 */
-	BigInteger getStart();
+	int getStart();
 
 	/**
 	 * 
-	 * Retrieve this {@code BigRange}'s stop point.
+	 * Retrieve this {@code IntegerRange}'s stop point.
 	 * 
-	 * @return this {@code BigRange}'s stop point
+	 * @return this {@code IntegerRange}'s stop point
 	 */
-	BigInteger getStop();
+	int getStop();
 
 	/**
 	 * 
-	 * Retrieve the number of positions covered by this {@code BigRange}, what
-	 * will be typically defined as {@code {@link #getStop()} -
-	 * {@link #getStart()} +1}.
+	 * Retrieve the number of positions covered by this {@code IntegerRange}. <br>
+	 * If {@code interval == 1}, that will be typically defined as {@code
+	 * {@link #getStop()} - {@link #getStart()} +1}.
 	 * 
-	 * @return this {@code BigRange}'s length
+	 * @return this {@code IntegerRange}'s length
 	 */
-	BigInteger getLength();
+	int getLength();
 	
 	/**
 	 * 
-	 *  Retrieve this {@code BigInteger}'s interval.
+	 *  Retrieve this {@code IntegerRange}'s interval.
 	 *
-	 * @return this {@code BigInteger}'s interval
+	 * @return this {@code IntegerRange}'s interval
 	 */
-	BigInteger getInterval();
+	int getInterval();
 
 	/**
 	 * 
 	 * 
-	 * Shift this {@code BigRange}.
+	 * Shift this {@code IntegerRange}.
 	 * <p>
 	 * A shift is defined as the increment of both start and stop by given
 	 * offset. <br>
 	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code BigRange}'s start and stop.
+	 * {@code IntegerRange}'s start and stop.
 	 * </p>
 	 * 
 	 * @param offset
 	 *            offset by which is shifted
-	 * @return the new, shifted {@code BigRange}
+	 * @return the new, shifted {@code IntegerRange}
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	BigRange shift(BigInteger offset) throws RangeException;
+	IntegerRange shift(int offset) throws RangeException;
 
 	/**
 	 * 
 	 * 
-	 * Exactly the same as {@link BigRange#expandRange(BigInteger, false)}
+	 *The same as {@code IntegerRange#expandRange(int, false)}
 	 * 
 	 * @param offset
 	 *            offset by which is expanded
-	 * @return the new, expanded {@code BigRange}
+	 * @return the new, expanded {@code IntegerRange}
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	BigRange expandRange(BigInteger offset) throws RangeException;
+	IntegerRange expandRange(int offset) throws RangeException;
 
 	/**
 	 * 
-	 * Expand this {@code BigRange}.
+	 * Expand this {@code IntegerRange}.
 	 * <p>
-	 * An expansion is defined as the increment of this {@code BigRange}'s
-	 * length by {@code offset * 2}. <br>
+	 * IntegerRangepansion is defined as the increment of this
+	 * {@code IntegerRange}'s length by {@code offset * 2}. <br>
 	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code BigRange}'s length.
+	 * {@code IntegerRange}'s length.
 	 * </p>
 	 * 
 	 * @param offset
 	 *            offset by which is expanded
 	 * @param stayWithinLimits
 	 *            if true, this operation will not result in a RangeException
-	 * @return the new, expanded {@code BigRange}
+	 * @return the new, expanded {@code IntegerRange}
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	BigRange expandRange(BigInteger offset, boolean stayWithinLimits)
+	IntegerRange expandRange(int offset, boolean stayWithinLimits)
 			throws RangeException;
 
 	/**
-	 * Check if this {@code BigRange} contains the given position.
+	 * Check if this {@code IntegerRange} contains the given position.
 	 * 
 	 * @param position
 	 *            position that is checked
-	 * @return true, if given position is covered by this {@code BigRange};
+	 * @return true, if given position is covered by this {@code IntegerRange};
 	 *         false otherwise
 	 */
-	boolean includes(BigInteger position);
+	boolean includes(int position);
 
 }

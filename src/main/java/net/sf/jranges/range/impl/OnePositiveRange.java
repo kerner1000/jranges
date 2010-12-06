@@ -15,15 +15,15 @@ limitations under the License.
 
 package net.sf.jranges.range.impl;
 
-import net.sf.jranges.range.AbstractIntegerRange;
 import net.sf.jranges.range.RangeException;
+import net.sf.jranges.range.integer.AbstractIntegerRange;
 
 
 /**
  * 
  * 
  * {@code OnePositiveRange} is an implementation for
- * {@link net.sf.jranges.range.IntegerRange IntegerRange}, for which the
+ * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}, for which the
  * following is true:<br> {@code 1 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>

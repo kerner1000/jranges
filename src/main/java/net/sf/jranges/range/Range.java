@@ -15,6 +15,10 @@ limitations under the License.
 
 package net.sf.jranges.range;
 
+import net.sf.jranges.range.integer.BigRange;
+import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integer.LongRange;
+
 /**
  * 
  * A {@code Range} is a collection of sequential positions and an interval.<br>

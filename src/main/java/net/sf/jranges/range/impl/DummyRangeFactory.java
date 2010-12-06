@@ -15,8 +15,8 @@ limitations under the License.
 
 package net.sf.jranges.range.impl;
 
-import net.sf.jranges.range.IntegerRange;
-import net.sf.jranges.range.IntegerRangeFactory;
+import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integer.IntegerRangeFactory;
 
 /**
  * 

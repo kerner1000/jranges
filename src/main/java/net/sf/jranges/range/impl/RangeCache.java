@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import net.sf.jranges.range.IntegerRange;
+import net.sf.jranges.range.integer.IntegerRange;
 
 class RangeCache implements Iterable<Collection<? extends IntegerRange>>,Iterator<Collection<? extends IntegerRange>>{
 	

@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range;
+package net.sf.jranges.range.integer;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +25,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
 /**
  * 
  * Utility class for all kind of
- * {@link net.sf.jranges.range.IntegerRange Range} related operations.
+ * {@link net.sf.jranges.range.integer.IntegerRange Range} related operations.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-05
@@ -117,7 +117,7 @@ public class RangeUtils {
 	 * @param ranges
 	 *            {@code Range}s that are to be merged
 	 * @param factory
-	 *            {@link net.sf.kerner.commons.range.IntegerRangeFactory RangeFactory}
+	 *            {@link net.sf.jranges.range.integer.commons.range.IntegerRangeFactory RangeFactory}
 	 *            that is used for retrieving a new {@code Range}-instance
 	 * @return a new {@code Range}, that represents the merge of the given
 	 *         {@code Range}s
