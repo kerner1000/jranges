@@ -31,9 +31,9 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * @version 2010-11-05
  * 
  */
-public class RangeUtils {
+public class IntegerRangeUtils {
 
-	private RangeUtils() {
+	private IntegerRangeUtils() {
 		// singleton
 	}
 
