@@ -25,7 +25,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
 /**
  * 
  * Utility class for all kind of
- * {@link net.sf.kerner.commons.range.IntegerRange Range} related operations.
+ * {@link net.sf.jranges.range.IntegerRange Range} related operations.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-05

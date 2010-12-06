@@ -23,7 +23,7 @@ import net.sf.jranges.range.RangeException;
  * 
  * 
  * {@code ZeroPositiveRange} is an implementation for
- * {@link net.sf.kerner.commons.range.IntegerRange IntegerRange}, for which the
+ * {@link net.sf.jranges.range.IntegerRange IntegerRange}, for which the
  * following is true:<br> {@code 0 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>
