@@ -109,6 +109,14 @@ public class TestZeroPositiveRange {
 	public final void testZeroPositiveRangeIntIntInt02() {
 		new ZeroPositiveRange(0, 9, 2);
 	}
+	
+	/**
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int, int)}.
+	 */
+	@Test(expected=RangeException.class)
+	public final void testZeroPositiveRangeIntIntInt03() {
+		new ZeroPositiveRange(-1, 8, 2);
+	}
 
 	/**
 	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#newInstange(int, int, int, int)}.
