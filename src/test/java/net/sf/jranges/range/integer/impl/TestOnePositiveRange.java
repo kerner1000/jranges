@@ -18,7 +18,7 @@ import org.junit.Test;
 /**
  *
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-11-19
+ * @version 2010-12-08
  *
  */
 public class TestOnePositiveRange {
@@ -96,6 +96,22 @@ public class TestOnePositiveRange {
 	@Test(expected=RangeException.class)
 	public final void testOnePositiveRangeIntIntInt03() {
 		r1 = new OnePositiveRange(1, 8, 3);
+	}
+	
+	/**
+	 * Test method for {@link net.sf.jranges.range.integer.impl.OnePositiveRange#OnePositiveRange(int, int, int)}.
+	 */
+	@Test
+	public final void testOnePositiveRangeIntIntInt04() {
+		r1 = new OnePositiveRange(1, 9, 2);
+	}
+	
+	/**
+	 * Test method for {@link net.sf.jranges.range.integer.impl.OnePositiveRange#OnePositiveRange(int, int, int)}.
+	 */
+	@Test(expected=RangeException.class)
+	public final void testOnePositiveRangeIntIntInt05() {
+		r1 = new OnePositiveRange(2, 9, 2);
 	}
 
 	/**
@@ -359,9 +375,27 @@ public class TestOnePositiveRange {
 	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getLength()}.
 	 */
 	@Test
-	@Ignore("TODO")
 	public final void testGetLength() {
-		fail("Not yet implemented"); // TODO
+		r1 = new OnePositiveRange(2,8,3);
+		assertEquals(3, r1.getLength());
+	}
+	
+	/**
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getLength()}.
+	 */
+	@Test
+	public final void testGetLength01() {
+		r1 = new OnePositiveRange(2,8,1);
+		assertEquals(7, r1.getLength());
+	}
+	
+	/**
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getLength()}.
+	 */
+	@Test
+	public final void testGetLength02() {
+		r1 = new OnePositiveRange(1,9,2);
+		assertEquals(5, r1.getLength());
 	}
 
 	/**
