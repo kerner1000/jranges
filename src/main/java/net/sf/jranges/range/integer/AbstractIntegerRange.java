@@ -35,11 +35,15 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * </p>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-11-19
+ * @version 2010-12-08
  * 
  */
-public abstract class AbstractIntegerRange extends DummyIntegerRange implements
+public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements
 		IntegerRange {
+	
+	protected final int start;
+	
+	protected final int stop;
 
 	/**
 	 * This {@code AbstractIntegerRange}'s lower limit, which is the smallest
@@ -84,14 +88,15 @@ public abstract class AbstractIntegerRange extends DummyIntegerRange implements
 	 */
 	public AbstractIntegerRange(int start, int stop, int limit1, int limit2)
 			throws RangeException {
-		super(start, stop);
-		this.limit1 = limit1;
-		this.limit2 = limit2;
 		if (limit1 > start || limit2 < stop || start > stop)
 			throw new RangeException("invalid range" + " start=" + start
 					+ " stop=" + stop + " limit1=" + limit1 + " limit2="
 					+ limit2);
 		this.interval = 1;
+		this.limit1 = limit1;
+		this.limit2 = limit2;
+		this.stop = stop;
+		this.start = start;
 	}
 
 	/**
@@ -121,15 +126,16 @@ public abstract class AbstractIntegerRange extends DummyIntegerRange implements
 	 */
 	public AbstractIntegerRange(int start, int stop, int limit1, int limit2,
 			int interval) throws RangeException {
-		super(start, stop);
-		this.limit1 = limit1;
-		this.limit2 = limit2;
-		this.interval = interval;
 		if (limit1 > start || limit2 < stop || start > stop
 				|| (((stop - start) % interval) != 0))
 			throw new RangeException("invalid range" + " start=" + start
 					+ " stop=" + stop + " limit1=" + limit1 + " limit2="
 					+ limit2 + "interval="+interval);
+		this.limit1 = limit1;
+		this.limit2 = limit2;
+		this.interval = interval;
+		this.stop = stop;
+		this.start = start;
 	}
 
 	// Public //
@@ -162,8 +168,25 @@ public abstract class AbstractIntegerRange extends DummyIntegerRange implements
 	public int getInterval() {
 		return interval;
 	}
-
+	
 	@Override
+	public boolean includes(int position) {
+		if (interval == 1)
+			return super.includes(position);
+		return ((position - start) % interval == 0) && position <= stop;
+	}
+	
+	@Override
+	public int getLength() {
+		if(interval == 1)
+			return super.getLength();
+		
+		// TODO this is falsch!!
+		return super.getLength();
+	}
+	
+	// Implement //
+
 	public IntegerRange shift(int offset) throws RangeException {
 		return newInstange(ArithmeticSavety.addInt(getStart(), offset),
 				ArithmeticSavety.addInt(getStop(), offset), getLimit1(),
@@ -171,12 +194,10 @@ public abstract class AbstractIntegerRange extends DummyIntegerRange implements
 
 	}
 
-	@Override
 	public IntegerRange expandRange(int offset) throws RangeException {
 		return expandRange(offset, false);
 	}
 
-	@Override
 	public IntegerRange expandRange(int offset, boolean stayWithinLimits)
 			throws RangeException {
 		int start = this.start;
@@ -204,50 +225,6 @@ public abstract class AbstractIntegerRange extends DummyIntegerRange implements
 			stop = ArithmeticSavety.addInt(getStop(), offset);
 			return newInstange(start, stop, getLimit1(), getLimit2());
 		}
-	}
-
-	@Override
-	public boolean includes(int position) {
-		if (interval == 1)
-			return super.includes(position);
-		return ((position - start) % interval == 0) && position <= stop;
-	}
-	
-	@Override
-	public int getLength() {
-		if(interval == 1)
-			return super.getLength();
-		
-		// TODO this is falsch!!
-		return super.getLength();
-	}
-	
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + interval;
-		result = prime * result + start;
-		result = prime * result + stop;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (!(obj instanceof IntegerRange))
-			return false;
-		IntegerRange other = (IntegerRange) obj;
-		if (interval != other.getInterval())
-			return false;
-		if (start != other.getStart())
-			return false;
-		if (stop != other.getStop())
-			return false;
-		return true;
 	}
 
 	// Abstract //
