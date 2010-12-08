@@ -117,7 +117,7 @@ public class IntegerRangeUtils {
 	 * @param ranges
 	 *            {@code Range}s that are to be merged
 	 * @param factory
-	 *            {@link net.sf.jranges.range.integer.commons.range.IntegerRangeFactory RangeFactory}
+	 *            {@link net.sf.jranges.range.integer.IntegerRangeFactory RangeFactory}
 	 *            that is used for retrieving a new {@code Range}-instance
 	 * @return a new {@code Range}, that represents the merge of the given
 	 *         {@code Range}s
