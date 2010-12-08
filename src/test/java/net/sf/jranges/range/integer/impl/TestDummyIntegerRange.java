@@ -24,7 +24,7 @@ import org.junit.Test;
  * @version 2010-11-18
  *
  */
-public class TestDummyRange {
+public class TestDummyIntegerRange {
 	
 	private DummyIntegerRange r1;
 	private DummyIntegerRange r2;
