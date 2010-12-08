@@ -22,7 +22,7 @@ import net.sf.jranges.range.RangeException;
 
 /**
  * 
- * A {@code BigRange} is a {@link net.sf.kerner.commons.range.Range Range} based
+ * A {@code BigRange} is a {@link net.sf.jranges.range.Range Range} based
  * on {@link java.math.BigInteger BigInteger} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
@@ -87,7 +87,7 @@ public interface BigRange extends Comparable<BigRange>, Range {
 	/**
 	 * 
 	 * 
-	 * Exactly the same as {@link BigRange#expandRange(BigInteger, false)}
+	 * Exactly the same as {@code BigRange#expandRange(BigInteger, false)}
 	 * 
 	 * @param offset
 	 *            offset by which is expanded

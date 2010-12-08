@@ -21,7 +21,7 @@ import net.sf.jranges.range.RangeException;
 
 /**
  * 
- * A {@code LongRange} is a {@link net.sf.kerner.commons.range.Range Range}
+ * A {@code LongRange} is a {@link net.sf.jranges.range.Range Range}
  * based on {@code long} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
@@ -86,7 +86,7 @@ public interface LongRange extends Comparable<LongRange>, Range {
 	/**
 	 * 
 	 * 
-	 * Exactly the same as {@link LongRange#expandRange(long, false)}
+	 * Exactly the same as {@code LongRange#expandRange(long, false)}
 	 * 
 	 * @param offset
 	 *            offset by which is expanded
