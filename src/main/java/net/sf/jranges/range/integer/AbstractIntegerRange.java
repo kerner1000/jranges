@@ -40,10 +40,6 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  */
 public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements
 		IntegerRange {
-	
-	protected final int start;
-	
-	protected final int stop;
 
 	/**
 	 * This {@code AbstractIntegerRange}'s lower limit, which is the smallest
@@ -181,8 +177,7 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
 		if(interval == 1)
 			return super.getLength();
 		
-		// TODO this is falsch!!
-		return super.getLength();
+		return ((getStop() - getStart()) / getInterval()) + 1; 
 	}
 	
 	// Implement //
