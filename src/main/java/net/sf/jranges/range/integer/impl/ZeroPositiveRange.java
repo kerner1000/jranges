@@ -43,16 +43,10 @@ public class ZeroPositiveRange extends AbstractIntegerRange {
 
 	public ZeroPositiveRange(int start, int stop) throws RangeException {
 		super(start, stop, 0, Integer.MAX_VALUE);
-		if (start < 0) {
-			throw new RangeException("invalid range");
-		}
 	}
 	
 	public ZeroPositiveRange(int start, int stop, int interval) throws RangeException {
 		super(start, stop, 0, Integer.MAX_VALUE, interval);
-		if (start < 0) {
-			throw new RangeException("invalid range");
-		}
 	}
 
 	@Override
