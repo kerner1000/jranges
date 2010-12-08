@@ -20,7 +20,7 @@ import net.sf.jranges.range.integer.IntegerRangeFactory;
 
 /**
  * 
- * A factory that creates objects of type {@link DummyRange}.
+ * A factory that creates objects of type {@link DummyIntegerRange}.
  * 
  * <p>
  * <b>Example:</b><br>
@@ -40,16 +40,16 @@ import net.sf.jranges.range.integer.IntegerRangeFactory;
  */
 public class DummyRangeFactory implements IntegerRangeFactory{
 
-	public DummyRange create() {
-		return new DummyRange();
+	public DummyIntegerRange create() {
+		return new DummyIntegerRange();
 	}
 
-	public DummyRange create(int start, int stop) {
-		return new DummyRange(start, stop);
+	public DummyIntegerRange create(int start, int stop) {
+		return new DummyIntegerRange(start, stop);
 	}
 
-	public DummyRange create(IntegerRange template) {
-		return new DummyRange(template.getStart(), template.getStop());
+	public DummyIntegerRange create(IntegerRange template) {
+		return new DummyIntegerRange(template.getStart(), template.getStop());
 	}
 
 }

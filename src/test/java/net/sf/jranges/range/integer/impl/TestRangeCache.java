@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import net.sf.jranges.range.integer.IntegerRange;
-import net.sf.jranges.range.integer.impl.DummyRange;
+import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -55,10 +55,10 @@ public class TestRangeCache {
 	@Test
 	public final void testNext() {
 		ArrayList<IntegerRange> range = new ArrayList<IntegerRange>();
-		range1 = new DummyRange(1,10);
-			range2 = new DummyRange(11,20);
-				range3 = new DummyRange(21,30);
-					range4 = new DummyRange(31,40);
+		range1 = new DummyIntegerRange(1,10);
+			range2 = new DummyIntegerRange(11,20);
+				range3 = new DummyIntegerRange(21,30);
+					range4 = new DummyIntegerRange(31,40);
 		range.add(range1);
 		range.add(range2);
 		range.add(range3);

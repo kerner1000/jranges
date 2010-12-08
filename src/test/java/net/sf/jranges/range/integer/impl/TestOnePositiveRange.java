@@ -289,7 +289,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#hashCode()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode() {
@@ -299,7 +299,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#hashCode()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode01() {
@@ -309,7 +309,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#hashCode()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode02() {
@@ -319,7 +319,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#hashCode()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode03() {
@@ -329,7 +329,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#toString()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#toString()}.
 	 */
 	@Test
 	@Ignore
@@ -338,7 +338,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#getStart()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getStart()}.
 	 */
 	@Test
 	public final void testGetStart() {
@@ -347,7 +347,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#getStop()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getStop()}.
 	 */
 	@Test
 	public final void testGetStop() {
@@ -356,7 +356,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#getLength()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getLength()}.
 	 */
 	@Test
 	@Ignore("TODO")
@@ -365,7 +365,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#compareTo(net.sf.jranges.range.IntegerRange)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo() {
@@ -375,7 +375,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#compareTo(net.sf.jranges.range.IntegerRange)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo01() {
@@ -388,7 +388,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#compareTo(net.sf.jranges.range.IntegerRange)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo02() {
@@ -401,7 +401,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#compareTo(net.sf.jranges.range.IntegerRange)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo03() {
@@ -411,7 +411,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyRange#compareTo(net.sf.jranges.range.IntegerRange)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo04() {

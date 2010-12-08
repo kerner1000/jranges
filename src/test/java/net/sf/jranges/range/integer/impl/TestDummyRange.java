@@ -8,7 +8,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import net.sf.jranges.range.integer.impl.DummyRange;
+import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -26,8 +26,8 @@ import org.junit.Test;
  */
 public class TestDummyRange {
 	
-	private DummyRange r1;
-	private DummyRange r2;
+	private DummyIntegerRange r1;
+	private DummyIntegerRange r2;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -46,99 +46,99 @@ public class TestDummyRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#hashCode()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode() {
-		r1 = new DummyRange();
-		r2 = new DummyRange();
+		r1 = new DummyIntegerRange();
+		r2 = new DummyIntegerRange();
 		assertEquals(r1.hashCode(), r2.hashCode());
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#hashCode()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode01() {
-		r1 = new DummyRange(1,2);
-		r2 = new DummyRange(1,2);
+		r1 = new DummyIntegerRange(1,2);
+		r2 = new DummyIntegerRange(1,2);
 		assertEquals(r1.hashCode(), r2.hashCode());
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#hashCode()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode02() {
-		r1 = new DummyRange(1,2);
-		r2 = new DummyRange(2,2);
+		r1 = new DummyIntegerRange(1,2);
+		r2 = new DummyIntegerRange(2,2);
 		assertNotSame(r1.hashCode(), r2.hashCode());
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#DummyRange()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#DummyRange()}.
 	 */
 	@Test
 	public final void testDummyRange() {
-		r1 = new DummyRange();
+		r1 = new DummyIntegerRange();
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#DummyRange(int, int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#DummyRange(int, int)}.
 	 */
 	@Test
 	public final void testDummyRangeIntInt() {
-		r1 = new DummyRange(1,2);
+		r1 = new DummyIntegerRange(1,2);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#DummyRange(int, int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#DummyRange(int, int)}.
 	 */
 	@Test
 	public final void testDummyRangeIntInt01() {
-		r1 = new DummyRange(-1,2);
+		r1 = new DummyIntegerRange(-1,2);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#DummyRange(int, int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#DummyRange(int, int)}.
 	 */
 	@Test
 	public final void testDummyRangeIntInt02() {
-		r1 = new DummyRange(-1,-2);
+		r1 = new DummyIntegerRange(-1,-2);
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#setStart(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#setStart(int)}.
 	 */
 	@Test
 	public final void testSetStart() {
-		r1 = new DummyRange(-1,-2);
+		r1 = new DummyIntegerRange(-1,-2);
 		r1.setStart(1);
 		assertEquals(1, r1.getStart());
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#setStart(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#setStart(int)}.
 	 */
 	@Test
 	public final void testSetStart01() {
-		r1 = new DummyRange(-1,-2);
+		r1 = new DummyIntegerRange(-1,-2);
 		r1.setStart(-4);
 		assertEquals(-4, r1.getStart());
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#setStop(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#setStop(int)}.
 	 */
 	@Test
 	public final void testSetStop() {
-		r1 = new DummyRange(-1,-2);
+		r1 = new DummyIntegerRange(-1,-2);
 		r1.setStop(1);
 		assertEquals(1, r1.getStop());
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#toString()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#toString()}.
 	 */
 	@Test
 	@Ignore
@@ -147,109 +147,109 @@ public class TestDummyRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#equals(java.lang.Object)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#equals(java.lang.Object)}.
 	 */
 	@Test
 	public final void testEqualsObject() {
-		r1 = new DummyRange();
-		r2 = new DummyRange();
+		r1 = new DummyIntegerRange();
+		r2 = new DummyIntegerRange();
 		assertEquals(r1, r2);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#equals(java.lang.Object)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#equals(java.lang.Object)}.
 	 */
 	@Test
 	public final void testEqualsObject01() {
-		r1 = new DummyRange(1,1);
-		r2 = new DummyRange(1,1);
+		r1 = new DummyIntegerRange(1,1);
+		r2 = new DummyIntegerRange(1,1);
 		assertEquals(r1, r2);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#equals(java.lang.Object)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#equals(java.lang.Object)}.
 	 */
 	@Test
 	public final void testEqualsObject02() {
-		r1 = new DummyRange(1,1);
-		r2 = new DummyRange(1,2);
+		r1 = new DummyIntegerRange(1,1);
+		r2 = new DummyIntegerRange(1,2);
 		assertNotSame(r1, r2);
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#getStart()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#getStart()}.
 	 */
 	@Test
 	public final void testGetStart() {
-		r1 = new DummyRange(1,1);
+		r1 = new DummyIntegerRange(1,1);
 		assertEquals(1, r1.getStart());
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#getStop()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#getStop()}.
 	 */
 	@Test
 	public final void testGetStop() {
-		r1 = new DummyRange(1,2);
+		r1 = new DummyIntegerRange(1,2);
 		assertEquals(2, r1.getStop());
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#getLength()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#getLength()}.
 	 */
 	@Test
 	public final void testGetLength() {
-		r1 = new DummyRange(1,2);
+		r1 = new DummyIntegerRange(1,2);
 		assertEquals(2, r1.getLength());
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#getLength()}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#getLength()}.
 	 */
 	@Test
 	public final void testGetLength01() {
-		r1 = new DummyRange(1,20);
+		r1 = new DummyIntegerRange(1,20);
 		assertEquals(20, r1.getLength());
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#shift(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#shift(int)}.
 	 */
 	@Test
 	public final void testShift() {
-		r1 = new DummyRange(2,4);
-		assertEquals(new DummyRange(4,6), r1.shift(2));
+		r1 = new DummyIntegerRange(2,4);
+		assertEquals(new DummyIntegerRange(4,6), r1.shift(2));
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#shift(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#shift(int)}.
 	 */
 	@Test
 	public final void testShift01() {
-		r1 = new DummyRange(2,4);
-		assertEquals(new DummyRange(0,2), r1.shift(-2));
+		r1 = new DummyIntegerRange(2,4);
+		assertEquals(new DummyIntegerRange(0,2), r1.shift(-2));
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#expandRange(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#expandRange(int)}.
 	 */
 	@Test
 	public final void testExpandRangeInt() {
-		r1 = new DummyRange(2,4);
-		assertEquals(new DummyRange(0,6), r1.expandRange(2));
+		r1 = new DummyIntegerRange(2,4);
+		assertEquals(new DummyIntegerRange(0,6), r1.expandRange(2));
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#expandRange(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#expandRange(int)}.
 	 */
 	@Test
 	public final void testExpandRangeInt01() {
-		r1 = new DummyRange(2,4);
-		assertEquals(new DummyRange(3,3), r1.expandRange(-1));
+		r1 = new DummyIntegerRange(2,4);
+		assertEquals(new DummyIntegerRange(3,3), r1.expandRange(-1));
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#expandRange(int, boolean)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#expandRange(int, boolean)}.
 	 */
 	@Test
 	@Ignore("A DummyRange does not have limits")
@@ -258,72 +258,72 @@ public class TestDummyRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo() {
-		r1 = new DummyRange();
-		r2 = new DummyRange();
+		r1 = new DummyIntegerRange();
+		r2 = new DummyIntegerRange();
 		assertEquals(0, r1.compareTo(r2));
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo01() {
-		r1 = new DummyRange(1,1);
-		r2 = new DummyRange(1,1);
+		r1 = new DummyIntegerRange(1,1);
+		r2 = new DummyIntegerRange(1,1);
 		assertEquals(0, r1.compareTo(r2));
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo02() {
-		r1 = new DummyRange(1,1);
-		r2 = new DummyRange(1,2);
+		r1 = new DummyIntegerRange(1,1);
+		r2 = new DummyIntegerRange(1,2);
 		assertEquals(0, r1.compareTo(r2));
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo03() {
-		r1 = new DummyRange(1,1);
-		r2 = new DummyRange(2,2);
+		r1 = new DummyIntegerRange(1,1);
+		r2 = new DummyIntegerRange(2,2);
 		assertEquals(-1, r1.compareTo(r2));
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}.
 	 */
 	@Test
 	public final void testCompareTo04() {
-		r1 = new DummyRange(3,1);
-		r2 = new DummyRange(2,2);
+		r1 = new DummyIntegerRange(3,1);
+		r2 = new DummyIntegerRange(2,2);
 		assertEquals(1, r1.compareTo(r2));
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#includes(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#includes(int)}.
 	 */
 	@Test
 	public final void testIncludes() {
-		r1 = new DummyRange(1,3);
+		r1 = new DummyIntegerRange(1,3);
 		assertTrue(r1.includes(3));
 		assertTrue(r1.includes(2));
 		assertTrue(r1.includes(1));
 	}
 	
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.DummyRange#includes(int)}.
+	 * Test method for {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#includes(int)}.
 	 */
 	@Test
 	public final void testIncludes01() {
-		r1 = new DummyRange(3,1);
+		r1 = new DummyIntegerRange(3,1);
 		assertFalse(r1.includes(4));
 		assertFalse(r1.includes(0));
 		assertFalse(r1.includes(-1));

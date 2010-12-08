@@ -44,7 +44,7 @@ import net.sf.jranges.range.integer.IntegerRange;
  * @version 2010-11-18
  * 
  */
-public class DummyRange implements IntegerRange {
+public class DummyIntegerRange implements IntegerRange {
 	
 	// Field //
 
@@ -65,7 +65,7 @@ public class DummyRange implements IntegerRange {
 	 * Construct a new {@code DummyRange} with start and stop values initiated with {@code 0}.
 	 *
 	 */
-	public DummyRange() {
+	public DummyIntegerRange() {
 		this.start = 0;
 		this.stop = 0;
 	}
@@ -75,7 +75,7 @@ public class DummyRange implements IntegerRange {
 	 * Construct a new {@code DummyRange} with given start and stop values.
 	 *
 	 */
-	public DummyRange(int start, int stop) {
+	public DummyIntegerRange(int start, int stop) {
 		this.start = start;
 		this.stop = stop;
 	}
@@ -168,7 +168,7 @@ public class DummyRange implements IntegerRange {
 	 * 
 	 */
 	public IntegerRange shift(int offset) {
-		return new DummyRange(getStart() + offset, getStop() + offset);
+		return new DummyIntegerRange(getStart() + offset, getStop() + offset);
 	}
 
 	/**
@@ -185,7 +185,7 @@ public class DummyRange implements IntegerRange {
 			throws RangeException {
 		int start = getStart() - offset;
 		int stop = getStop() + offset;
-		return new DummyRange(start, stop);
+		return new DummyIntegerRange(start, stop);
 	}
 
 	/**

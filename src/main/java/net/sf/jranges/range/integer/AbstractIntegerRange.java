@@ -16,7 +16,7 @@ limitations under the License.
 package net.sf.jranges.range.integer;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integer.impl.DummyRange;
+import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
@@ -25,7 +25,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * A prototype implementation for {@link IntegerRange}.
  * 
  * <p>
- * In contrast to {@link DummyRange}, an {@code AbstractIntegerRange} is
+ * In contrast to {@link DummyIntegerRange}, an {@code AbstractIntegerRange} is
  * immutable and also provides basic value checking e.g. {@code start <= stop}.
  * </p>
  * An {@code AbstractIntegerRange} also has limits, that means start cannot be
@@ -38,7 +38,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * @version 2010-11-19
  * 
  */
-public abstract class AbstractIntegerRange extends DummyRange implements
+public abstract class AbstractIntegerRange extends DummyIntegerRange implements
 		IntegerRange {
 
 	/**
