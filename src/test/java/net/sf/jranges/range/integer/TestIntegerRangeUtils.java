@@ -14,7 +14,7 @@ import java.util.List;
 import net.sf.jranges.range.integer.IntegerRange;
 import net.sf.jranges.range.integer.IntegerRangeUtils;
 import net.sf.jranges.range.integer.impl.DummyIntegerRange;
-import net.sf.jranges.range.integer.impl.DummyRangeFactory;
+import net.sf.jranges.range.integer.impl.DummyIntegerRangeFactory;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -138,7 +138,7 @@ public class TestIntegerRangeUtils {
 		ranges.add(new DummyIntegerRange(5, 6));
 		ranges.add(new DummyIntegerRange(7, 8));
 		assertEquals(new DummyIntegerRange(1, 8),
-				IntegerRangeUtils.merge(ranges, new DummyRangeFactory()));
+				IntegerRangeUtils.merge(ranges, new DummyIntegerRangeFactory()));
 	}
 
 	
