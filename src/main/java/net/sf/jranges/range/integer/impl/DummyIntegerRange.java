@@ -17,6 +17,7 @@ package net.sf.jranges.range.integer.impl;
 
 import net.sf.jranges.range.RangeException;
 import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integer.VeryAbstractIntegerRange;
 
 /**
  * 
@@ -44,19 +45,7 @@ import net.sf.jranges.range.integer.IntegerRange;
  * @version 2010-11-18
  * 
  */
-public class DummyIntegerRange implements IntegerRange {
-	
-	// Field //
-
-	/**
-	 * start position.
-	 */
-	protected int start;
-	
-	/**
-	 * stop position.s
-	 */
-	protected int stop;
+public class DummyIntegerRange extends VeryAbstractIntegerRange implements IntegerRange {
 	
 	// Constructor //
 
@@ -102,67 +91,7 @@ public class DummyIntegerRange implements IntegerRange {
 		this.stop = stop;
 	}
 	
-	// Override //
-	
-	@Override
-	public String toString() {
-		return getStart() + "-" + getStop();
-	}
-	
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + start;
-		result = prime * result + stop;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (!(obj instanceof IntegerRange))
-			return false;
-		IntegerRange other = (IntegerRange) obj;
-		if (start != other.getStart())
-			return false;
-		if (stop != other.getStop())
-			return false;
-		return true;
-	}
-	
 	// Implement //
-
-	/**
-	 * 
-	 */
-	public int getStart() {
-		return start;
-	}
-
-	/**
-	 * 
-	 */
-	public int getStop() {
-		return stop;
-	}
-
-	/**
-	 * 
-	 */
-	public int getLength() {
-		return stop - start + 1;
-	}
-	
-	/**
-	 * 
-	 */
-	public int getInterval() {
-		return 1;
-	}
 
 	/**
 	 * 
@@ -187,25 +116,5 @@ public class DummyIntegerRange implements IntegerRange {
 		int stop = getStop() + offset;
 		return new DummyIntegerRange(start, stop);
 	}
-
-	/**
-	 * Compares this {@code IntegerRange} to given {@code IntegerRange} by {@link #getStart()}
-	 * .
-	 */
-	public int compareTo(IntegerRange o) {
-		return Integer.valueOf(getStart()).compareTo(
-				Integer.valueOf(o.getStart()));
-	}
-
-	/**
-	 * 
-	 */
-	public boolean includes(int position) {
-		if (start <= position && stop >= position)
-			return true;
-		return false;
-	}
-
-	
 
 }

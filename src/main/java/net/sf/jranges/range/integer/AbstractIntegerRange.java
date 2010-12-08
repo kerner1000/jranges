@@ -186,14 +186,6 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
 	}
 	
 	// Implement //
-	
-	public int getStart() {
-		return start;
-	}
-	
-	public int getStop() {
-		return stop;
-	}
 
 	public IntegerRange shift(int offset) throws RangeException {
 		return newInstange(ArithmeticSavety.addInt(getStart(), offset),

@@ -27,6 +27,16 @@ package net.sf.jranges.range.integer;
 public abstract class VeryAbstractIntegerRange implements IntegerRange {
 
 	private volatile int hashCode;
+	
+	/**
+	 * start position.
+	 */
+	protected int start;
+	
+	/**
+	 * stop position.s
+	 */
+	protected int stop;
 
 	// Override //
 
@@ -68,6 +78,14 @@ public abstract class VeryAbstractIntegerRange implements IntegerRange {
 	}
 	
 	// Implement //
+	
+	public int getStart() {
+		return start;
+	}
+	
+	public int getStop() {
+		return stop;
+	}
 	
 	/**
 	 * 
