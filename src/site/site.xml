@@ -20,10 +20,10 @@ piwikTracker.enableLinkTracking();
 		<menu name="Overview">
 			<item name="Introduction" href="index.html" />
 			<item name="Download"
-				href="http://sourceforge.net/projects/jtables/files/" />
+				href="http://sourceforge.net/projects/jranges/files/" />
 			<item name="JavaDoc"
-				href="http://jtables.sourceforge.net/apidocs/index.html" />
-			<item name="Sourceforge" href="http://sourceforge.net/projects/jtables/" />
+				href="http://jranges.sourceforge.net/apidocs/index.html" />
+			<item name="Sourceforge" href="http://sourceforge.net/projects/jranges/" />
 		</menu>
 		<menu ref="reports" />
 	</body>
