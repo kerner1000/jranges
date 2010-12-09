@@ -1,5 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>5</version>
+	</parent>
 	<groupId>net.sf.jranges</groupId>
 	<artifactId>jranges</artifactId>
 	<version>0.1.2-SNAPSHOT</version>
@@ -36,18 +41,6 @@
 			<id>sourceforge-jranges</id>
 			<url>sftp://frs.sourceforge.net:/home/groups/j/jr/jranges/htdocs</url>
 		</site>
-		<repository>
-			<id>sourceforge-jranges</id>
-			<name>SourceForge jranges</name>
-			<url>sftp://frs.sourceforge.net:/home/pfs/project/j/jr/jranges/releases
-			</url>
-		</repository>
-		<snapshotRepository>
-			<id>sourceforge-jranges</id>
-			<name>SourceForge jranges</name>
-			<url>sftp://frs.sourceforge.net:/home/pfs/project/j/jr/jranges/snapshots
-			</url>
-		</snapshotRepository>
 	</distributionManagement>
 	<build>
 		<plugins>
