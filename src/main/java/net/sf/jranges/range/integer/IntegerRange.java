@@ -21,7 +21,7 @@ import net.sf.jranges.range.RangeException;
 
 /**
  * 
- * A {@code IntegerRange} is a {@link Range}
+ * An {@code IntegerRange} is a {@link Range}
  * based on {@code int} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
