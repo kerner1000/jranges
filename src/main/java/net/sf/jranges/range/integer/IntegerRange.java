@@ -100,7 +100,7 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
 	 * 
 	 * Expand this {@code IntegerRange}.
 	 * <p>
-	 * IntegerRangepansion is defined as the increment of this
+	 * IntegerRange expansion is defined as the increment of this
 	 * {@code IntegerRange}'s length by {@code offset * 2}. <br>
 	 * If {@code offset} is negative, it will result in an decrement of this
 	 * {@code IntegerRange}'s length.
