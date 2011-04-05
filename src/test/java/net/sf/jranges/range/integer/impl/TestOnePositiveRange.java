@@ -115,7 +115,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#equals(java.lang.Object)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}.
 	 */
 	@Test
 	public final void testEqualsObject() {
@@ -125,7 +125,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#equals(java.lang.Object)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}.
 	 */
 	@Test
 	public final void testEqualsObject01() {
@@ -135,7 +135,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#equals(java.lang.Object)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}.
 	 */
 	@Test
 	public final void testEqualsObject02() {
@@ -145,7 +145,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#equals(java.lang.Object)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}.
 	 */
 	@Test
 	public final void testEqualsObject03() {
@@ -155,7 +155,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#getInterval()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getInterval()}.
 	 */
 	@Test
 	public final void testGetInterval() {
@@ -164,7 +164,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#getInterval()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getInterval()}.
 	 */
 	@Test
 	public final void testGetInterval01() {
@@ -173,7 +173,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#shift(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#shift(int)}.
 	 */
 	@Test
 	public final void testShift() {
@@ -182,7 +182,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#shift(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#shift(int)}.
 	 */
 	@Test
 	public final void testShift01() {
@@ -191,7 +191,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#shift(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#shift(int)}.
 	 */
 	@Test
 	public final void testShift02() {
@@ -200,7 +200,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#expandRange(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int)}.
 	 */
 	@Test
 	public final void testExpandRangeInt() {
@@ -209,7 +209,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#expandRange(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int)}.
 	 */
 	@Test
 	public final void testExpandRangeInt01() {
@@ -218,7 +218,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#expandRange(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int)}.
 	 */
 	@Test
 	public final void testExpandRangeInt02() {
@@ -227,7 +227,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#expandRange(int, boolean)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int, boolean)}.
 	 */
 	@Test(expected=RangeException.class)
 	public final void testExpandRangeIntBoolean() {
@@ -236,7 +236,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#expandRange(int, boolean)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int, boolean)}.
 	 */
 	@Test
 	public final void testExpandRangeIntBoolean01() {
@@ -245,7 +245,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#expandRange(int, boolean)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int, boolean)}.
 	 */
 	@Test
 	public final void testExpandRangeIntBoolean02() {
@@ -254,7 +254,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#includes(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#includes(int)}.
 	 */
 	@Test
 	public final void testIncludes() {
@@ -266,7 +266,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#includes(int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#includes(int)}.
 	 */
 	@Test
 	public final void testIncludes01() {
@@ -278,7 +278,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#getLimit1()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getLimit1()}.
 	 */
 	@Test
 	public final void testGetLimit1() {
@@ -287,7 +287,7 @@ public class TestOnePositiveRange {
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#getLimit1()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getLimit1()}.
 	 */
 	@Test
 	public final void testGetLimit101() {
@@ -296,7 +296,7 @@ public class TestOnePositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.AbstractIntegerRange#getLimit2()}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getLimit2()}.
 	 */
 	@Test
 	public final void testGetLimit2() {

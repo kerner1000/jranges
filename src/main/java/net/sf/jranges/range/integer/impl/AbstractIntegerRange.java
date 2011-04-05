@@ -13,10 +13,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range.integer;
+package net.sf.jranges.range.integer.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integer.impl.DummyIntegerRange;
+import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integer.VeryAbstractIntegerRange;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
