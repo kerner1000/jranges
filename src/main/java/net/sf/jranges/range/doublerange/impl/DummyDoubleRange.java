@@ -13,9 +13,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range.doublerange;
+package net.sf.jranges.range.doublerange.impl;
 
 import net.sf.jranges.range.RangeException;
+import net.sf.jranges.range.doublerange.DoubleRange;
 
 /**
  * 
