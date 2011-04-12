@@ -1,8 +1,6 @@
 package net.sf.jranges.range.longrange.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integer.IntegerRange;
-import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 import net.sf.jranges.range.longrange.LongRange;
 
 public class DummyLongRange extends VeryAbstractLongRange implements LongRange {
