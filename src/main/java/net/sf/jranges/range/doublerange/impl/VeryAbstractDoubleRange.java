@@ -13,8 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
  ***********************************************************************/
 
-package net.sf.jranges.range.doublerange;
+package net.sf.jranges.range.doublerange.impl;
 
+import net.sf.jranges.range.doublerange.DoubleRange;
 import net.sf.jranges.range.integer.IntegerRange;
 
 /**
@@ -78,12 +79,25 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
 	
 	// Implement //
 	
+	/**
+	 * 
+	 */
 	public double getStart() {
 		return start;
 	}
 	
+	/**
+	 * 
+	 */
 	public double getStop() {
 		return stop;
+	}
+	
+	/**
+	 * 
+	 */
+	public double getInterval() {
+		return 1;
 	}
 	
 	/**
