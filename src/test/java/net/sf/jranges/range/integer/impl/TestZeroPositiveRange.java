@@ -39,87 +39,87 @@ public class TestZeroPositiveRange {
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}.
 	 */
 	@Test
 	public final void testZeroPositiveRangeIntInt() {
-		new ZeroPositiveRange(0, 5);
+		new ZeroPositiveIntegerRange(0, 5);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}.
 	 */
 	@Test
 	public final void testZeroPositiveRangeIntInt01() {
-		new ZeroPositiveRange(0, Integer.MAX_VALUE);
+		new ZeroPositiveIntegerRange(0, Integer.MAX_VALUE);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}.
 	 */
 	@Test
 	public final void testZeroPositiveRangeIntInt02() {
-		new ZeroPositiveRange(34, Integer.MAX_VALUE);
+		new ZeroPositiveIntegerRange(34, Integer.MAX_VALUE);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}.
 	 */
 	@Test(expected=RangeException.class)
 	public final void testZeroPositiveRangeIntInt03() {
-		new ZeroPositiveRange(-1, Integer.MAX_VALUE);
+		new ZeroPositiveIntegerRange(-1, Integer.MAX_VALUE);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}.
 	 */
 	@Test(expected=RangeException.class)
 	public final void testZeroPositiveRangeIntInt04() {
-		new ZeroPositiveRange(-1, 1);
+		new ZeroPositiveIntegerRange(-1, 1);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}.
 	 */
 	@Test
 	public final void testZeroPositiveRangeIntInt05() {
-		new ZeroPositiveRange(0, 0);
+		new ZeroPositiveIntegerRange(0, 0);
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}.
 	 */
 	@Test
 	public final void testZeroPositiveRangeIntIntInt() {
-		new ZeroPositiveRange(0, 0, 1);
+		new ZeroPositiveIntegerRange(0, 0, 1);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}.
 	 */
 	@Test
 	public final void testZeroPositiveRangeIntIntInt01() {
-		new ZeroPositiveRange(0, 8, 2);
+		new ZeroPositiveIntegerRange(0, 8, 2);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}.
 	 */
 	@Test(expected=RangeException.class)
 	public final void testZeroPositiveRangeIntIntInt02() {
-		new ZeroPositiveRange(0, 9, 2);
+		new ZeroPositiveIntegerRange(0, 9, 2);
 	}
 	
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#ZeroPositiveRange(int, int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}.
 	 */
 	@Test(expected=RangeException.class)
 	public final void testZeroPositiveRangeIntIntInt03() {
-		new ZeroPositiveRange(-1, 8, 2);
+		new ZeroPositiveIntegerRange(-1, 8, 2);
 	}
 
 	/**
-	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveRange#newInstange(int, int, int, int)}.
+	 * Test method for {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#newInstange(int, int, int, int)}.
 	 */
 	@Test
 	@Ignore("delegate to constructor")

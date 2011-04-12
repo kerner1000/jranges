@@ -21,9 +21,9 @@ import net.sf.jranges.range.RangeException;
 /**
  * 
  * 
- * {@code ZeroPositiveRange} is an implementation for
+ * {@code OnePositiveRange} is an implementation for
  * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}, for which the
- * following is true:<br> {@code 0 <= start <= stop <= Integer.MAX_VALUE}
+ * following is true:<br> {@code 1 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>
  * <b>Example:</b>
@@ -38,20 +38,21 @@ import net.sf.jranges.range.RangeException;
  * @version 2010-10-19
  * 
  */
-public class ZeroPositiveRange extends AbstractIntegerRange {
+public class OnePositiveIntegerRange extends AbstractIntegerRange {
 
-	public ZeroPositiveRange(int start, int stop) throws RangeException {
-		super(start, stop, 0, Integer.MAX_VALUE);
+	public OnePositiveIntegerRange(int start, int stop) throws RangeException {
+		super(start, stop, 1, Integer.MAX_VALUE);
 	}
 	
-	public ZeroPositiveRange(int start, int stop, int interval) throws RangeException {
-		super(start, stop, 0, Integer.MAX_VALUE, interval);
+	public OnePositiveIntegerRange(int start, int stop, int interval) throws RangeException {
+		super(start, stop, 1, Integer.MAX_VALUE, interval);
 	}
 
 	@Override
 	protected
-	ZeroPositiveRange newInstange(int start, int stop, int limit1, int limit2)
+	OnePositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2)
 			throws RangeException {
-		return new ZeroPositiveRange(start, stop, interval);
+		return new OnePositiveIntegerRange(start, stop, interval);
 	}
+
 }
