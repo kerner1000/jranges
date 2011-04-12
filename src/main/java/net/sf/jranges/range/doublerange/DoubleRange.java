@@ -26,35 +26,40 @@ import net.sf.jranges.range.RangeException;
  * 
  * <ul>
  * <li>
- * There is no {@code DoubleRange#getLength()} method, since the numer of
- * elements covered by this range is defined by the accuracy of the floating
- * point arithmetic</li>
- * <li>
- * There is no {@code DoubleRange#getInterval()} method
- * </li>
+ * There is no {@code DoubleRange#getLength()} method, since the number of
+ * elements covered by this range is defined by the rules of IEEE arithmetic</li>
+ *
  * </ul>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2011-02-23
+ * @version 2011-04-12
  * 
  */
 public interface DoubleRange extends Range, Comparable<DoubleRange> {
 
 	/**
 	 * 
-	 * Retrieve this {@code DoubleRange}'s start point.
+	 * Retrieve this {@code DoubleRange's} start point.
 	 * 
-	 * @return this {@code DoubleRange}'s start point
+	 * @return this {@code DoubleRange's} start point
 	 */
 	double getStart();
 
 	/**
 	 * 
-	 * Retrieve this {@code DoubleRange}'s stop point.
+	 * Retrieve this {@code DoubleRange's} stop point.
 	 * 
-	 * @return this {@code DoubleRange}'s stop point
+	 * @return this {@code DoubleRange's} stop point
 	 */
 	double getStop();
+	
+	/**
+	 * 
+	 *  Retrieve this {@code DoubleRange's} interval.
+	 *
+	 * @return this {@code DoubleRange's} interval
+	 */
+	double getInterval();
 
 	/**
 	 * 
@@ -64,7 +69,7 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
 	 * A shift is defined as the increment of both start and stop by given
 	 * offset. <br>
 	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code DoubleRange}'s start and stop.
+	 * {@code DoubleRange's} start and stop.
 	 * </p>
 	 * 
 	 * @param offset
@@ -93,9 +98,9 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
 	 * Expand this {@code DoubleRange}.
 	 * <p>
 	 * DoubleRange expansion is defined as the increment of this
-	 * {@code DoubleRange}'s length by {@code offset * 2}. <br>
+	 * {@code DoubleRange's} length by {@code offset * 2}. <br>
 	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code DoubleRange}'s length.
+	 * {@code DoubleRange's} length.
 	 * </p>
 	 * 
 	 * @param offset
