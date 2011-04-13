@@ -2,9 +2,12 @@ package net.sf.jranges.range.doublerange.impl;
 
 import net.sf.jranges.range.RangeException;
 import net.sf.jranges.range.doublerange.DoubleRange;
+import net.sf.kerner.utils.math.MathUtils;
 
 public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 		implements DoubleRange {
+	
+	public static final int ACCURACY = 6;
 
 	/**
 	 * This {@code AbstractDoubleRange's} lower limit, which is the smallest
@@ -88,7 +91,7 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 	public AbstractDoubleRange(double start, double stop, double limit1,
 			double limit2, double interval) throws RangeException {
 		if (limit1 > start || limit2 < stop || start > stop
-				|| (((stop - start) % interval) != 0))
+				|| (inValid(start, stop, interval)))
 			throw new RangeException("invalid range" + " start=" + start
 					+ " stop=" + stop + " limit1=" + limit1 + " limit2="
 					+ limit2 + "interval=" + interval);
@@ -97,6 +100,17 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 		this.interval = interval;
 		this.stop = stop;
 		this.start = start;
+	}
+	
+	protected static boolean inValid(double start, double stop, double interval){
+//		System.out.println("diff:" + MathUtils.round(stop - start, ACCURACY));
+//		System.out.println("mod:" + MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY));
+//		System.out.println("return:" + (MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) == 0));
+		return (MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) != 0 
+				
+		// double accuracy workaround
+				&& MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) != interval
+		);
 	}
 
 	// Public //
@@ -134,7 +148,7 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 	public boolean includes(double position) {
 		if (interval == 1)
 			return super.includes(position);
-		return ((position - start) % interval == 0) && position <= stop;
+		return (MathUtils.round(position - start, ACCURACY) % interval == 0) && position <= stop;
 	}
 
 	// Implement //
