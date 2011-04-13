@@ -9,7 +9,7 @@ public class RangeUtils {
 		void call(int i);
 	}
 	
-	public interface DoubleRangeCallback {
+	public interface DoubleRangeTask {
 		void call(double d);
 	}
 	
@@ -21,7 +21,7 @@ public class RangeUtils {
 		}
 	}
 	
-	public static void doForAllInRange(DoubleRange range, DoubleRangeCallback task){
+	public static void doForAllInRange(DoubleRange range, DoubleRangeTask task){
 		for(double i = range.getStart(); i <= range.getStop(); i+= range.getInterval()){
 			task.call(i);
 		}
