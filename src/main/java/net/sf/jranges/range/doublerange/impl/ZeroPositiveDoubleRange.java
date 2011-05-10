@@ -13,7 +13,7 @@ public class ZeroPositiveDoubleRange extends AbstractDoubleRange {
 	}
 	
 	public ZeroPositiveDoubleRange(String start, String stop, String interval) throws RangeException, NumberFormatException {
-		this(Double.parseDouble(start), Double.parseDouble(stop), Double.parseDouble(interval));
+		this(Double.parseDouble(start.trim()), Double.parseDouble(stop.trim()), Double.parseDouble(interval.trim()));
 	}
 
 	@Override
