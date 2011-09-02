@@ -1,5 +1,5 @@
 /**********************************************************************
-Copyright (c) 2009-2010 Alexander Kerner. All rights reserved.
+Copyright (c) 2009-2011 Alexander Kerner. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -34,10 +34,10 @@ import net.sf.kerner.utils.factory.Factory;
  * </p>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-11-18
+ * @version 2011-09-02
  * 
  */
-public interface IntegerRangeFactory extends Factory<IntegerRange> {
+public interface IntegerRangeFactory<T extends IntegerRange> extends Factory<T> {
 
 	/**
 	 * 
@@ -49,7 +49,7 @@ public interface IntegerRangeFactory extends Factory<IntegerRange> {
 	 *            stop position of created {@code IntegerRange}
 	 * @return newly created {@code IntegerRange}
 	 */
-	IntegerRange create(int start, int stop);
+	T create(int start, int stop);
 
 	/**
 	 * 
@@ -59,6 +59,6 @@ public interface IntegerRangeFactory extends Factory<IntegerRange> {
 	 *            template that is used to create new {@code IntegerRange}
 	 * @return newly created {@code IntegerRange}
 	 */
-	IntegerRange create(IntegerRange template);
+	T create(IntegerRange template);
 
 }

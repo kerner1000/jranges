@@ -1,5 +1,5 @@
 /**********************************************************************
-Copyright (c) 2009-2010 Alexander Kerner. All rights reserved.
+Copyright (c) 2009-2011 Alexander Kerner. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -28,7 +28,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * {@link net.sf.jranges.range.integer.IntegerRange Range} related operations.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-11-05
+ * @version 2011-09-02
  * 
  */
 public class IntegerRangeUtils {
@@ -124,8 +124,8 @@ public class IntegerRangeUtils {
 	 * 
 	 * @see IntegerRangeFactory
 	 */
-	public static IntegerRange merge(List<? extends IntegerRange> ranges,
-			IntegerRangeFactory factory) {
+	public static <T extends IntegerRange> T merge(List<? extends IntegerRange> ranges,
+			IntegerRangeFactory<T> factory) {
 		if (ranges.isEmpty())
 			return factory.create();
 		IntegerRange result = factory.create(ranges.iterator().next());
