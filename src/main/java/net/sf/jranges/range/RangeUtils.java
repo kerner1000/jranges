@@ -8,7 +8,7 @@ import net.sf.kerner.utils.math.MathUtils;
 
 public class RangeUtils {
 	
-	public interface IntegerRangeCallback {
+	public interface IntegerRangeTask {
 		void call(int i);
 	}
 	
@@ -29,7 +29,7 @@ public class RangeUtils {
 		return true;
 	}
 	
-	public static void doForAllInRange(IntegerRange range, IntegerRangeCallback task){
+	public static void doForAllInRange(IntegerRange range, IntegerRangeTask task){
 		for(int i = range.getStart(); i <= range.getStop(); i+= range.getInterval()){
 			task.call(i);
 		}
