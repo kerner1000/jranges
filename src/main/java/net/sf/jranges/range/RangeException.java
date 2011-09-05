@@ -2,7 +2,7 @@
 package net.sf.jranges.range;
 
 
-public class RangeException extends RuntimeException {
+public class RangeException extends IllegalArgumentException {
 
 	private static final long serialVersionUID = -6555274736122521475L;
 
