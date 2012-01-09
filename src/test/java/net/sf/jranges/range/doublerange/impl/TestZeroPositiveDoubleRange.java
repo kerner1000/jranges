@@ -196,6 +196,12 @@ public class TestZeroPositiveDoubleRange {
 		r = new ZeroPositiveDoubleRange(0,4.8,0.2);
 		assertTrue(r.includes(4.8));
 	}
+	
+	@Test
+	public final void testIncludes07() {
+		r = new ZeroPositiveDoubleRange(0,4.8,0.2);
+		assertTrue(r.includes(2.4));
+	}
 
 	/**
 	 * Test method for {@link net.sf.jranges.range.doublerange.impl.AbstractDoubleRange#shift(double)}.

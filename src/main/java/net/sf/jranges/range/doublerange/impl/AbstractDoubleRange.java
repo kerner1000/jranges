@@ -4,9 +4,8 @@ import net.sf.jranges.range.RangeException;
 import net.sf.jranges.range.doublerange.DoubleRange;
 import net.sf.kerner.utils.math.MathUtils;
 
-public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
-		implements DoubleRange {
-	
+public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implements DoubleRange {
+
 	public static final int ACCURACY = 6;
 
 	/**
@@ -50,12 +49,11 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 	 * @throws RangeException
 	 *             if {@code limit1 > start || limit2 < stop || start > stop}
 	 */
-	public AbstractDoubleRange(double start, double stop, double limit1,
-			double limit2) throws RangeException {
+	public AbstractDoubleRange(double start, double stop, double limit1, double limit2)
+			throws RangeException {
 		if (limit1 > start || limit2 < stop || start > stop)
-			throw new RangeException("invalid range" + " start=" + start
-					+ " stop=" + stop + " limit1=" + limit1 + " limit2="
-					+ limit2);
+			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop
+					+ " limit1=" + limit1 + " limit2=" + limit2);
 		this.interval = 1;
 		this.limit1 = limit1;
 		this.limit2 = limit2;
@@ -88,29 +86,29 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 	 *             if
 	 *             {@code limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0)}
 	 */
-	public AbstractDoubleRange(double start, double stop, double limit1,
-			double limit2, double interval) throws RangeException {
-		if (limit1 > start || limit2 < stop || start > stop
-				|| (inValid(start, stop, interval)))
-			throw new RangeException("invalid range" + " start=" + start
-					+ " stop=" + stop + " limit1=" + limit1 + " limit2="
-					+ limit2 + "interval=" + interval);
+	public AbstractDoubleRange(double start, double stop, double limit1, double limit2,
+			double interval) throws RangeException {
+		if (limit1 > start || limit2 < stop || start > stop || (inValid(start, stop, interval)))
+			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop
+					+ " limit1=" + limit1 + " limit2=" + limit2 + "interval=" + interval);
 		this.limit1 = limit1;
 		this.limit2 = limit2;
 		this.interval = interval;
 		this.stop = stop;
 		this.start = start;
 	}
-	
-	protected static boolean inValid(double start, double stop, double interval){
-//		System.out.println("diff:" + MathUtils.round(stop - start, ACCURACY));
-//		System.out.println("mod:" + MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY));
-//		System.out.println("return:" + (MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) == 0));
-		return (MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) != 0 
-				
+
+	protected static boolean inValid(double start, double stop, double interval) {
+		// System.out.println("diff:" + MathUtils.round(stop - start,
+		// ACCURACY));
+		// System.out.println("mod:" + MathUtils.round((MathUtils.round(stop -
+		// start, ACCURACY)) % interval, ACCURACY));
+		// System.out.println("return:" + (MathUtils.round((MathUtils.round(stop
+		// - start, ACCURACY)) % interval, ACCURACY) == 0));
+		return (MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) != 0
+
 		// double accuracy workaround
-				&& MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) != interval
-		);
+		&& MathUtils.round((MathUtils.round(stop - start, ACCURACY)) % interval, ACCURACY) != interval);
 	}
 
 	// Public //
@@ -148,24 +146,24 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 	public boolean includes(double position) {
 		if (interval == 1)
 			return super.includes(position);
-		if(position == getStart() || position == getStop())
+		if (position == getStart() || position == getStop())
 			return true;
-		return (MathUtils.round(position - start, ACCURACY) % interval == 0) && position <= stop;
+		return ((MathUtils.round(MathUtils.round(position - start, ACCURACY) % interval, ACCURACY) == 0) || (MathUtils
+				.round(MathUtils.round(position - start, ACCURACY) % interval, ACCURACY) == interval))
+				&& position <= stop;
 	}
 
 	// Implement //
 
 	public DoubleRange shift(double offset) throws RangeException {
-		return newInstange(getStart() + offset, getStop() + offset,
-				getLimit1(), getLimit2());
+		return newInstange(getStart() + offset, getStop() + offset, getLimit1(), getLimit2());
 	}
 
 	public DoubleRange expandRange(double offset) throws RangeException {
 		return expandRange(offset, false);
 	}
 
-	public DoubleRange expandRange(double offset, boolean stayWithinLimits)
-			throws RangeException {
+	public DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException {
 		double start = this.start;
 		double stop = this.stop;
 		if (stayWithinLimits) {
@@ -205,6 +203,6 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 	 * @return the new {@code AbstractDoubleRange} instance
 	 * @throws RangeException
 	 */
-	protected abstract AbstractDoubleRange newInstange(double start,
-			double stop, double limit1, double limit2) throws RangeException;
+	protected abstract AbstractDoubleRange newInstange(double start, double stop, double limit1,
+			double limit2) throws RangeException;
 }
