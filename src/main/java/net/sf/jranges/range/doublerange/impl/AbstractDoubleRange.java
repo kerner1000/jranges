@@ -148,6 +148,8 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange
 	public boolean includes(double position) {
 		if (interval == 1)
 			return super.includes(position);
+		if(position == getStart() || position == getStop())
+			return true;
 		return (MathUtils.round(position - start, ACCURACY) % interval == 0) && position <= stop;
 	}
 
