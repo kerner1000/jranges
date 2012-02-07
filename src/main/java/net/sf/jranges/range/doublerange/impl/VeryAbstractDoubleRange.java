@@ -45,7 +45,7 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
 
 	@Override
 	public String toString() {
-		return getStart() + "-" + getStop();
+		return getStart() + "->" + getStop();
 	}
 
 	@Override
