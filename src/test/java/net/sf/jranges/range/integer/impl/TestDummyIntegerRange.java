@@ -8,7 +8,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 
 import org.junit.After;
 import org.junit.AfterClass;

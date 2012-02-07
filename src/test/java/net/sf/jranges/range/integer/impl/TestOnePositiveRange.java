@@ -3,10 +3,12 @@
  */
 package net.sf.jranges.range.integer.impl;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integer.impl.OnePositiveIntegerRange;
 
 import org.junit.After;
 import org.junit.AfterClass;

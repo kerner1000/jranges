@@ -44,7 +44,7 @@ public abstract class VeryAbstractIntegerRange implements IntegerRange {
 
 	@Override
 	public String toString() {
-		return getStart() + "-" + getStop();
+		return getStart() + "->" + getStop();
 	}
 
 	@Override

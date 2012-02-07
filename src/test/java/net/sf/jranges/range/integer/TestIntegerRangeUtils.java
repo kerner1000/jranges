@@ -11,8 +11,6 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.sf.jranges.range.integer.IntegerRange;
-import net.sf.jranges.range.integer.IntegerRangeUtils;
 import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 import net.sf.jranges.range.integer.impl.DummyIntegerRangeFactory;
 

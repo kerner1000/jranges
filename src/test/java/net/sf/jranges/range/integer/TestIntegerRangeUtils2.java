@@ -7,8 +7,6 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
-import net.sf.jranges.range.integer.IntegerRange;
-import net.sf.jranges.range.integer.IntegerRangeUtils;
 import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 
 import org.junit.After;
