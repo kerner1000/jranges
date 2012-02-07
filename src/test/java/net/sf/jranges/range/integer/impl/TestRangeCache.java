@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import net.sf.jranges.range.integer.IntegerRange;
-import net.sf.jranges.range.integer.impl.DummyIntegerRange;
 
 import org.junit.After;
 import org.junit.AfterClass;

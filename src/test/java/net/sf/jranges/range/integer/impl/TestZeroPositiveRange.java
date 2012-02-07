@@ -3,8 +3,7 @@
  */
 package net.sf.jranges.range.integer.impl;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.fail;
 import net.sf.jranges.range.RangeException;
 
 import org.junit.After;
