@@ -40,5 +40,16 @@ public class RangeUtils {
 			task.call(i);
 		}
 	}
-
+	
+	public static int startStayWithinLimit(int value, int limit){
+		if(value < limit)
+			return limit;
+		return value;
+	}
+	
+	public static int stopStayWithinLimit(int value, int limit){
+		if(value > limit)
+			return limit;
+		return value;
+	}
 }
