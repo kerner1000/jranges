@@ -60,6 +60,16 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
 	 * @return this {@code DoubleRange's} interval
 	 */
 	double getInterval();
+	
+	/**
+	 * 
+	 * Retrieve the number of positions covered by this {@code  DoubleRange}. <br>
+	 * If {@code interval == 1}, that will be typically defined as {@code
+	 * {@link #getStop()} - {@link #getStart()} +1}.
+	 * 
+	 * @return this {@code  DoubleRange}'s length
+	 */
+	int getLength();
 
 	/**
 	 * 

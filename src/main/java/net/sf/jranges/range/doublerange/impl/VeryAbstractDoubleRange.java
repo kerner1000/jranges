@@ -100,6 +100,10 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
 		return 1;
 	}
 	
+	public int getLength() {
+		return (int) ((getStop() - getStart()) / getInterval()); 
+	}
+	
 	/**
 	 * Compares this {@code DoubleRange} to given {@code DoubleRange} by {@link #getStart()}
 	 * .
