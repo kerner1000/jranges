@@ -179,5 +179,31 @@ public class IntegerRangeUtils {
 
 		return (double) result / (double) map.size();
 	}
+	
+	public static <R extends IntegerRange> R trimmValidStart(R range, int minStart, int maxStart, IntegerRangeFactory<R> factory){
+		int start = trimToBounds(range.getStart(), minStart, maxStart);
+		return factory.create(start, range.getStop());
+	}
+	
+	public static <R extends IntegerRange> R trimmValidStop(R range, int minStop, int maxStop, IntegerRangeFactory<R> factory){
+		int stop = trimToBounds(range.getStop(), minStop, maxStop);
+		return factory.create(range.getStart(), stop);
+	}
+	
+	public static <R extends IntegerRange> R trimmValid(R range, int minStart, int maxStop, IntegerRangeFactory<? extends R> factory){
+		int start = trimToBounds(range.getStart(), minStart, maxStop);
+		int stop = trimToBounds(range.getStop(), minStart, maxStop);
+		return factory.create(start, stop);
+	}
+	
+	public static int trimToBounds(int value, int min, int max){
+		if(value < min){
+			value = min;
+		}
+		if(value > max){
+			value = max;
+		}
+		return value;
+	}
 
 }

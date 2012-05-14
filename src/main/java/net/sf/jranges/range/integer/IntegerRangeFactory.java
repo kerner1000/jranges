@@ -15,7 +15,7 @@ limitations under the License.
 
 package net.sf.jranges.range.integer;
 
-import net.sf.kerner.utils.factory.Factory;
+import net.sf.kerner.utils.Factory;
 
 
 /**

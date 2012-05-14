@@ -1,6 +1,8 @@
 package net.sf.jranges.range;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import net.sf.jranges.range.doublerange.DoubleRange;
 import net.sf.jranges.range.integer.IntegerRange;
@@ -41,12 +43,14 @@ public class RangeUtils {
 		}
 	}
 	
+	@Deprecated
 	public static int startStayWithinLimit(int value, int limit){
 		if(value < limit)
 			return limit;
 		return value;
 	}
 	
+	@Deprecated
 	public static int stopStayWithinLimit(int value, int limit){
 		if(value > limit)
 			return limit;
