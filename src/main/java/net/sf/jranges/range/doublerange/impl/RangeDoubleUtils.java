@@ -23,16 +23,14 @@ public class RangeDoubleUtils {
 	 * </pre>
 	 * 
 	 */
-	public static <R extends DoubleRange> List<R> split(DoubleRange range, int accuracy,
-			FactoryRangeDouble<R> factory) {
-		
-//		System.err.println("split range " + range);
+	public static <R extends DoubleRange> List<R> split(DoubleRange range, int accuracy, FactoryRangeDouble<R> factory) {
+
+		// System.err.println("split range " + range);
 
 		final List<R> result = new ArrayList<R>();
 
 		double last = -1;
-		for (double d = range.getStart(); d <= range.getStop(); d = increment(d,
-				range.getInterval(), accuracy)) {
+		for (double d = range.getStart(); d <= range.getStop(); d = increment(d, range.getInterval(), accuracy)) {
 			if (last == -1) {
 				// skip first
 			} else {
@@ -41,8 +39,8 @@ public class RangeDoubleUtils {
 			last = d;
 		}
 
-//		System.err.println("splitted " + result);
-		
+		// System.err.println("splitted " + result);
+
 		return result;
 
 	}

@@ -17,13 +17,13 @@ package net.sf.jranges.range.integer.impl;
 
 import net.sf.jranges.range.RangeException;
 
-
 /**
  * 
  * 
  * {@code OnePositiveRange} is an implementation for
  * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}, for which the
- * following is true:<br> {@code 1 <= start <= stop <= Integer.MAX_VALUE}
+ * following is true:<br>
+ * {@code 1 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>
  * <b>Example:</b>
@@ -43,15 +43,13 @@ public class OnePositiveIntegerRange extends AbstractIntegerRange {
 	public OnePositiveIntegerRange(int start, int stop) throws RangeException {
 		super(start, stop, 1, Integer.MAX_VALUE);
 	}
-	
+
 	public OnePositiveIntegerRange(int start, int stop, int interval) throws RangeException {
 		super(start, stop, 1, Integer.MAX_VALUE, interval);
 	}
 
 	@Override
-	protected
-	OnePositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2)
-			throws RangeException {
+	protected OnePositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
 		return new OnePositiveIntegerRange(start, stop, interval);
 	}
 

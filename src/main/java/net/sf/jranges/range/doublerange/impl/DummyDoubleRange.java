@@ -21,11 +21,12 @@ import net.sf.jranges.range.doublerange.DoubleRange;
 /**
  * 
  * Most simple implementation for
- * {@link net.sf.jranges.range.doublerange.DoubleRange DoubleRange}. Arguments and
- * operations are not checked for validity.
+ * {@link net.sf.jranges.range.doublerange.DoubleRange DoubleRange}. Arguments
+ * and operations are not checked for validity.
  * 
  * <p>
- * A {@code DummyDoubleRange} is mutable. Start and Stop may be set independently.
+ * A {@code DummyDoubleRange} is mutable. Start and Stop may be set
+ * independently.
  * </p>
  * 
  * <p>
@@ -48,18 +49,20 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 
 	/**
 	 * 
-	 * Construct a new {@code DummyDoubleRange} with start and stop values initiated with {@code 0}.
-	 *
+	 * Construct a new {@code DummyDoubleRange} with start and stop values
+	 * initiated with {@code 0}.
+	 * 
 	 */
 	public DummyDoubleRange() {
 		this.start = 0;
 		this.stop = 0;
 	}
-	
+
 	/**
 	 * 
-	 * Construct a new {@code DummyDoubleRange} with given start and stop values.
-	 *
+	 * Construct a new {@code DummyDoubleRange} with given start and stop
+	 * values.
+	 * 
 	 */
 	public DummyDoubleRange(double start, double stop) {
 		this.start = start;
@@ -83,8 +86,7 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	/**
 	 * 
 	 */
-	public DoubleRange expandRange(double offset, boolean stayWithinLimits)
-			throws RangeException {
+	public DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException {
 		double start = getStart() - offset;
 		double stop = getStop() + offset;
 		return new DummyDoubleRange(start, stop);

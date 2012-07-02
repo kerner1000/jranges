@@ -17,7 +17,6 @@ package net.sf.jranges.range.integer;
 
 import net.sf.kerner.utils.Factory;
 
-
 /**
  * 
  * A factory that creates objects of type {@link IntegerRange}.

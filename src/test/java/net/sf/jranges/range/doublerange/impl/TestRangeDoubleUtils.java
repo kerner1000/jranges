@@ -37,7 +37,7 @@ public class TestRangeDoubleUtils {
 		List<? extends DoubleRange> result = RangeDoubleUtils.split(range, 2, new FactoryRangeDoubleZeroPositive());
 		assertEquals(10, result.size());
 	}
-	
+
 	@Ignore
 	@Test
 	public final void testSplit02() {

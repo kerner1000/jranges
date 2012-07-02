@@ -22,8 +22,8 @@ import net.sf.jranges.range.RangeException;
 
 /**
  * 
- * A {@code BigRange} is a {@link net.sf.jranges.range.Range Range} based
- * on {@link java.math.BigInteger BigInteger} values.
+ * A {@code BigRange} is a {@link net.sf.jranges.range.Range Range} based on
+ * {@link java.math.BigInteger BigInteger} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-07
@@ -56,11 +56,11 @@ public interface BigRange extends Comparable<BigRange>, Range {
 	 * @return this {@code BigRange}'s length
 	 */
 	BigInteger getLength();
-	
+
 	/**
 	 * 
-	 *  Retrieve this {@code BigInteger}'s interval.
-	 *
+	 * Retrieve this {@code BigInteger}'s interval.
+	 * 
 	 * @return this {@code BigInteger}'s interval
 	 */
 	BigInteger getInterval();
@@ -115,8 +115,7 @@ public interface BigRange extends Comparable<BigRange>, Range {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	BigRange expandRange(BigInteger offset, boolean stayWithinLimits)
-			throws RangeException;
+	BigRange expandRange(BigInteger offset, boolean stayWithinLimits) throws RangeException;
 
 	/**
 	 * Check if this {@code BigRange} contains the given position.

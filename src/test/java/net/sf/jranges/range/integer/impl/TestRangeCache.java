@@ -19,13 +19,13 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- *
+ * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-18
- *
+ * 
  */
 public class TestRangeCache {
-	
+
 	RangeCache cache;
 	IntegerRange range1;
 	IntegerRange range2;
@@ -49,15 +49,16 @@ public class TestRangeCache {
 	}
 
 	/**
-	 * Test method for {@link net.sf.kerner.commons.range.impl.RangeCache#next()}.
+	 * Test method for
+	 * {@link net.sf.kerner.commons.range.impl.RangeCache#next()}.
 	 */
 	@Test
 	public final void testNext() {
 		ArrayList<IntegerRange> range = new ArrayList<IntegerRange>();
-		range1 = new DummyIntegerRange(1,10);
-			range2 = new DummyIntegerRange(11,20);
-				range3 = new DummyIntegerRange(21,30);
-					range4 = new DummyIntegerRange(31,40);
+		range1 = new DummyIntegerRange(1, 10);
+		range2 = new DummyIntegerRange(11, 20);
+		range3 = new DummyIntegerRange(21, 30);
+		range4 = new DummyIntegerRange(31, 40);
 		range.add(range1);
 		range.add(range2);
 		range.add(range3);

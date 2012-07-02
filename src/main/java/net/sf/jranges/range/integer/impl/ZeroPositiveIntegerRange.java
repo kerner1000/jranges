@@ -17,13 +17,13 @@ package net.sf.jranges.range.integer.impl;
 
 import net.sf.jranges.range.RangeException;
 
-
 /**
  * 
  * 
  * {@code ZeroPositiveRange} is an implementation for
  * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}, for which the
- * following is true:<br> {@code 0 <= start <= stop <= Integer.MAX_VALUE}
+ * following is true:<br>
+ * {@code 0 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>
  * <b>Example:</b>
@@ -43,15 +43,13 @@ public class ZeroPositiveIntegerRange extends AbstractIntegerRange {
 	public ZeroPositiveIntegerRange(int start, int stop) throws RangeException {
 		super(start, stop, 0, Integer.MAX_VALUE);
 	}
-	
+
 	public ZeroPositiveIntegerRange(int start, int stop, int interval) throws RangeException {
 		super(start, stop, 0, Integer.MAX_VALUE, interval);
 	}
 
 	@Override
-	protected
-	ZeroPositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2)
-			throws RangeException {
+	protected ZeroPositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
 		return new ZeroPositiveIntegerRange(start, stop, interval);
 	}
 }

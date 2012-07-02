@@ -28,7 +28,7 @@ import net.sf.jranges.range.RangeException;
  * <li>
  * There is no {@code DoubleRange#getLength()} method, since the number of
  * elements covered by this range is defined by the rules of IEEE arithmetic</li>
- *
+ * 
  * </ul>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
@@ -52,20 +52,20 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
 	 * @return this {@code DoubleRange's} stop point
 	 */
 	double getStop();
-	
+
 	/**
 	 * 
-	 *  Retrieve this {@code DoubleRange's} interval.
-	 *
+	 * Retrieve this {@code DoubleRange's} interval.
+	 * 
 	 * @return this {@code DoubleRange's} interval
 	 */
 	double getInterval();
-	
+
 	/**
 	 * 
 	 * Retrieve the number of positions covered by this {@code  DoubleRange}. <br>
-	 * If {@code interval == 1}, that will be typically defined as {@code
-	 * {@link #getStop()} - {@link #getStart()} +1}.
+	 * If {@code interval == 1}, that will be typically defined as {@code {
+	 * @link #getStop()} - {@link #getStart()} +1}.
 	 * 
 	 * @return this {@code  DoubleRange}'s length
 	 */
@@ -121,8 +121,7 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	DoubleRange expandRange(double offset, boolean stayWithinLimits)
-			throws RangeException;
+	DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException;
 
 	/**
 	 * Check if this {@code DoubleRange} contains the given position.

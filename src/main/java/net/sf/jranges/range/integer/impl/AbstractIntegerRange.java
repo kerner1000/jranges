@@ -38,8 +38,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * @version 2010-12-08
  * 
  */
-public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements
-		IntegerRange {
+public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements IntegerRange {
 
 	/**
 	 * This {@code AbstractIntegerRange}'s lower limit, which is the smallest
@@ -82,12 +81,10 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
 	 * @throws RangeException
 	 *             if {@code limit1 > start || limit2 < stop || start > stop}
 	 */
-	public AbstractIntegerRange(int start, int stop, int limit1, int limit2)
-			throws RangeException {
+	public AbstractIntegerRange(int start, int stop, int limit1, int limit2) throws RangeException {
 		if (limit1 > start || limit2 < stop || start > stop)
-			throw new RangeException("invalid range" + " start=" + start
-					+ " stop=" + stop + " limit1=" + limit1 + " limit2="
-					+ limit2);
+			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
+					+ " limit2=" + limit2);
 		this.interval = 1;
 		this.limit1 = limit1;
 		this.limit2 = limit2;
@@ -120,13 +117,10 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
 	 *             if
 	 *             {@code limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0)}
 	 */
-	public AbstractIntegerRange(int start, int stop, int limit1, int limit2,
-			int interval) throws RangeException {
-		if (limit1 > start || limit2 < stop || start > stop
-				|| (((stop - start) % interval) != 0))
-			throw new RangeException("invalid range" + " start=" + start
-					+ " stop=" + stop + " limit1=" + limit1 + " limit2="
-					+ limit2 + "interval="+interval);
+	public AbstractIntegerRange(int start, int stop, int limit1, int limit2, int interval) throws RangeException {
+		if (limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0))
+			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
+					+ " limit2=" + limit2 + "interval=" + interval);
 		this.limit1 = limit1;
 		this.limit2 = limit2;
 		this.interval = interval;
@@ -164,28 +158,27 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
 	public int getInterval() {
 		return interval;
 	}
-	
+
 	@Override
 	public boolean includes(int position) {
 		if (interval == 1)
 			return super.includes(position);
 		return ((position - start) % interval == 0) && position <= stop;
 	}
-	
+
 	@Override
 	public int getLength() {
-		if(interval == 1)
+		if (interval == 1)
 			return super.getLength();
-		
-		return ((getStop() - getStart()) / getInterval()) + 1; 
+
+		return ((getStop() - getStart()) / getInterval()) + 1;
 	}
-	
+
 	// Implement //
 
 	public IntegerRange shift(int offset) throws RangeException {
-		return newInstange(ArithmeticSavety.addInt(getStart(), offset),
-				ArithmeticSavety.addInt(getStop(), offset), getLimit1(),
-				getLimit2());
+		return newInstange(ArithmeticSavety.addInt(getStart(), offset), ArithmeticSavety.addInt(getStop(), offset),
+				getLimit1(), getLimit2());
 
 	}
 
@@ -193,19 +186,18 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
 		return expandRange(offset, false);
 	}
 
-	public IntegerRange expandRange(int offset, boolean stayWithinLimits)
-			throws RangeException {
+	public IntegerRange expandRange(int offset, boolean stayWithinLimits) throws RangeException {
 		int start = this.start;
 		int stop = this.stop;
 		if (stayWithinLimits) {
-			try{
-			start = ArithmeticSavety.addInt(getStart(), -offset);
-			}catch(ArithmeticException e){
+			try {
+				start = ArithmeticSavety.addInt(getStart(), -offset);
+			} catch (ArithmeticException e) {
 				//
 			}
-			try{
-			stop = ArithmeticSavety.addInt(getStop(), offset);
-			}catch(ArithmeticException e){
+			try {
+				stop = ArithmeticSavety.addInt(getStop(), offset);
+			} catch (ArithmeticException e) {
 				//
 			}
 			if (start < limit1) {
@@ -241,6 +233,6 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
 	 * @return the new {@code AbstractIntegerRange} instance
 	 * @throws RangeException
 	 */
-	protected abstract AbstractIntegerRange newInstange(int start, int stop, int limit1,
-			int limit2) throws RangeException;
+	protected abstract AbstractIntegerRange newInstange(int start, int stop, int limit1, int limit2)
+			throws RangeException;
 }

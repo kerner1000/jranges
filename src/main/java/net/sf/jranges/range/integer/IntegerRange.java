@@ -18,11 +18,9 @@ package net.sf.jranges.range.integer;
 import net.sf.jranges.range.Range;
 import net.sf.jranges.range.RangeException;
 
-
 /**
  * 
- * An {@code IntegerRange} is a {@link Range}
- * based on {@code int} values.
+ * An {@code IntegerRange} is a {@link Range} based on {@code int} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-12-06
@@ -49,17 +47,17 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
 	/**
 	 * 
 	 * Retrieve the number of positions covered by this {@code IntegerRange}. <br>
-	 * If {@code interval == 1}, that will be typically defined as {@code
-	 * {@link #getStop()} - {@link #getStart()} +1}.
+	 * If {@code interval == 1}, that will be typically defined as {@code {
+	 * @link #getStop()} - {@link #getStart()} +1}.
 	 * 
 	 * @return this {@code IntegerRange}'s length
 	 */
 	int getLength();
-	
+
 	/**
 	 * 
-	 *  Retrieve this {@code IntegerRange}'s interval.
-	 *
+	 * Retrieve this {@code IntegerRange}'s interval.
+	 * 
 	 * @return this {@code IntegerRange}'s interval
 	 */
 	int getInterval();
@@ -86,7 +84,7 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
 	/**
 	 * 
 	 * 
-	 *The same as {@code IntegerRange#expandRange(int, false)}
+	 * The same as {@code IntegerRange#expandRange(int, false)}
 	 * 
 	 * @param offset
 	 *            offset by which is expanded
@@ -114,8 +112,7 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	IntegerRange expandRange(int offset, boolean stayWithinLimits)
-			throws RangeException;
+	IntegerRange expandRange(int offset, boolean stayWithinLimits) throws RangeException;
 
 	/**
 	 * Check if this {@code IntegerRange} contains the given position.

@@ -41,7 +41,8 @@ import net.sf.jranges.range.longrange.LongRange;
  * <li>
  * {@code start <= position <= stop}</li>
  * <li>
- * {@code (start + (n * interval) == position) && (stop + (n * interval) == position)}</li>
+ * {@code (start + (n * interval) == position) && (stop + (n * interval) == position)}
+ * </li>
  * </ol>
  * are also considered to be a member of this {@code Range}.
  * </p>

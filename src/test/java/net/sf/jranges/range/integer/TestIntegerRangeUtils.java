@@ -30,8 +30,9 @@ import org.junit.Test;
 public class TestIntegerRangeUtils {
 
 	private List<IntegerRange> ranges;
-//	private List<IntegerRange> ranges2;
-//	private List<IntegerRange> ranges3;
+
+	// private List<IntegerRange> ranges2;
+	// private List<IntegerRange> ranges3;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -45,9 +46,9 @@ public class TestIntegerRangeUtils {
 	public void setUp() throws Exception {
 		ranges = new ArrayList<IntegerRange>();
 
-//		ranges2 = new ArrayList<IntegerRange>();
-//
-//		ranges3 = new ArrayList<IntegerRange>();
+		// ranges2 = new ArrayList<IntegerRange>();
+		//
+		// ranges3 = new ArrayList<IntegerRange>();
 	}
 
 	@After
@@ -135,12 +136,7 @@ public class TestIntegerRangeUtils {
 		ranges.add(new DummyIntegerRange(3, 4));
 		ranges.add(new DummyIntegerRange(5, 6));
 		ranges.add(new DummyIntegerRange(7, 8));
-		assertEquals(new DummyIntegerRange(1, 8),
-				IntegerRangeUtils.merge(ranges, new DummyIntegerRangeFactory()));
+		assertEquals(new DummyIntegerRange(1, 8), IntegerRangeUtils.merge(ranges, new DummyIntegerRangeFactory()));
 	}
-
-	
-
-	
 
 }

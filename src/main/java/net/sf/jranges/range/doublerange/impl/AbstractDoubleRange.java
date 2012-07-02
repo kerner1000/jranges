@@ -49,11 +49,10 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implem
 	 * @throws RangeException
 	 *             if {@code limit1 > start || limit2 < stop || start > stop}
 	 */
-	public AbstractDoubleRange(double start, double stop, double limit1, double limit2)
-			throws RangeException {
+	public AbstractDoubleRange(double start, double stop, double limit1, double limit2) throws RangeException {
 		if (limit1 > start || limit2 < stop || start > stop)
-			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop
-					+ " limit1=" + limit1 + " limit2=" + limit2);
+			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
+					+ " limit2=" + limit2);
 		this.interval = 1;
 		this.limit1 = limit1;
 		this.limit2 = limit2;
@@ -86,11 +85,11 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implem
 	 *             if
 	 *             {@code limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0)}
 	 */
-	public AbstractDoubleRange(double start, double stop, double limit1, double limit2,
-			double interval) throws RangeException {
+	public AbstractDoubleRange(double start, double stop, double limit1, double limit2, double interval)
+			throws RangeException {
 		if (limit1 > start || limit2 < stop || start > stop || (inValid(start, stop, interval)))
-			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop
-					+ " limit1=" + limit1 + " limit2=" + limit2 + "interval=" + interval);
+			throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
+					+ " limit2=" + limit2 + "interval=" + interval);
 		this.limit1 = limit1;
 		this.limit2 = limit2;
 		this.interval = interval;
@@ -203,6 +202,6 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implem
 	 * @return the new {@code AbstractDoubleRange} instance
 	 * @throws RangeException
 	 */
-	protected abstract AbstractDoubleRange newInstange(double start, double stop, double limit1,
-			double limit2) throws RangeException;
+	protected abstract AbstractDoubleRange newInstange(double start, double stop, double limit1, double limit2)
+			throws RangeException;
 }

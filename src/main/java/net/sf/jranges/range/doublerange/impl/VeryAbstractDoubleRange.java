@@ -22,20 +22,20 @@ import net.sf.jranges.range.integer.IntegerRange;
  * 
  * Most abstract prototype implementation for {@link IntegerRange}.
  * 
- *
+ * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2011-02-23
- *
+ * 
  */
 public abstract class VeryAbstractDoubleRange implements DoubleRange {
 
 	private volatile int hashCode;
-	
+
 	/**
 	 * start position.
 	 */
 	protected double start;
-	
+
 	/**
 	 * stop position.s
 	 */
@@ -60,7 +60,7 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
 		}
 		return (int) result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -76,41 +76,40 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
 			return false;
 		return true;
 	}
-	
+
 	// Implement //
-	
+
 	/**
 	 * 
 	 */
 	public double getStart() {
 		return start;
 	}
-	
+
 	/**
 	 * 
 	 */
 	public double getStop() {
 		return stop;
 	}
-	
+
 	/**
 	 * 
 	 */
 	public double getInterval() {
 		return 1;
 	}
-	
+
 	public int getLength() {
-		return (int) ((getStop() - getStart()) / getInterval()); 
+		return (int) ((getStop() - getStart()) / getInterval());
 	}
-	
+
 	/**
-	 * Compares this {@code DoubleRange} to given {@code DoubleRange} by {@link #getStart()}
-	 * .
+	 * Compares this {@code DoubleRange} to given {@code DoubleRange} by
+	 * {@link #getStart()} .
 	 */
 	public int compareTo(DoubleRange o) {
-		return Double.valueOf(getStart()).compareTo(
-				Double.valueOf(o.getStart()));
+		return Double.valueOf(getStart()).compareTo(Double.valueOf(o.getStart()));
 	}
 
 	/**

@@ -7,33 +7,33 @@ import java.util.List;
 
 import net.sf.jranges.range.integer.IntegerRange;
 
-class RangeCache implements Iterable<Collection<? extends IntegerRange>>,Iterator<Collection<? extends IntegerRange>>{
-	
+class RangeCache implements Iterable<Collection<? extends IntegerRange>>, Iterator<Collection<? extends IntegerRange>> {
+
 	final static int DEFAULT_ELEMENTS = 10000;
-	
+
 	final int elements;
-	
+
 	private final List<? extends IntegerRange> ranges;
-	
+
 	private volatile Collection<? extends IntegerRange> cache;
-	
+
 	private volatile int index = 0;
-	
-	RangeCache(final Collection<? extends IntegerRange> ranges, int elements){
+
+	RangeCache(final Collection<? extends IntegerRange> ranges, int elements) {
 		this.elements = elements;
 		this.ranges = new ArrayList<IntegerRange>(ranges);
 		fill();
 	}
-	
-	RangeCache(final Collection<? extends IntegerRange> ranges){
+
+	RangeCache(final Collection<? extends IntegerRange> ranges) {
 		this.elements = DEFAULT_ELEMENTS;
 		this.ranges = new ArrayList<IntegerRange>(ranges);
 		fill();
 	}
-	
-	private void fill(){
+
+	private void fill() {
 		int end = index + elements;
-		if(end > ranges.size()-1)
+		if (end > ranges.size() - 1)
 			end = ranges.size();
 		cache = new ArrayList<IntegerRange>(ranges.subList(index, end));
 		index += elements;
@@ -43,7 +43,7 @@ class RangeCache implements Iterable<Collection<? extends IntegerRange>>,Iterato
 	 * 
 	 */
 	public boolean hasNext() {
-//		System.err.println(index);
+		// System.err.println(index);
 		return (index <= ranges.size());
 	}
 

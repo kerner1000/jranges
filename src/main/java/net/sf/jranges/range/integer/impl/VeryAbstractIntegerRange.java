@@ -21,20 +21,20 @@ import net.sf.jranges.range.integer.IntegerRange;
  * 
  * Most abstract prototype implementation for {@link IntegerRange}.
  * 
- *
+ * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-12-08
- *
+ * 
  */
 public abstract class VeryAbstractIntegerRange implements IntegerRange {
 
 	private volatile int hashCode;
-	
+
 	/**
 	 * start position.
 	 */
 	protected int start;
-	
+
 	/**
 	 * stop position.s
 	 */
@@ -60,7 +60,7 @@ public abstract class VeryAbstractIntegerRange implements IntegerRange {
 		}
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -78,38 +78,37 @@ public abstract class VeryAbstractIntegerRange implements IntegerRange {
 			return false;
 		return true;
 	}
-	
+
 	// Implement //
-	
+
 	public int getStart() {
 		return start;
 	}
-	
+
 	public int getStop() {
 		return stop;
 	}
-	
+
 	/**
 	 * 
 	 */
 	public int getLength() {
 		return getStop() - getStart() + 1;
 	}
-	
+
 	/**
 	 * 
 	 */
 	public int getInterval() {
 		return 1;
 	}
-	
+
 	/**
-	 * Compares this {@code IntegerRange} to given {@code IntegerRange} by {@link #getStart()}
-	 * .
+	 * Compares this {@code IntegerRange} to given {@code IntegerRange} by
+	 * {@link #getStart()} .
 	 */
 	public int compareTo(IntegerRange o) {
-		return Integer.valueOf(getStart()).compareTo(
-				Integer.valueOf(o.getStart()));
+		return Integer.valueOf(getStart()).compareTo(Integer.valueOf(o.getStart()));
 	}
 
 	/**

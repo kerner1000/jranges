@@ -18,11 +18,10 @@ package net.sf.jranges.range.longrange;
 import net.sf.jranges.range.Range;
 import net.sf.jranges.range.RangeException;
 
-
 /**
  * 
- * A {@code LongRange} is a {@link net.sf.jranges.range.Range Range}
- * based on {@code long} values.
+ * A {@code LongRange} is a {@link net.sf.jranges.range.Range Range} based on
+ * {@code long} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-07
@@ -55,11 +54,11 @@ public interface LongRange extends Comparable<LongRange>, Range {
 	 * @return this {@code LongRange}'s length
 	 */
 	long getLength();
-	
+
 	/**
 	 * 
-	 *  Retrieve this {@code LongRange}'s interval.
-	 *
+	 * Retrieve this {@code LongRange}'s interval.
+	 * 
 	 * @return this {@code LongRange}'s interval
 	 */
 	long getInterval();
@@ -114,8 +113,7 @@ public interface LongRange extends Comparable<LongRange>, Range {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	LongRange expandRange(long offset, boolean stayWithinLimits)
-			throws RangeException;
+	LongRange expandRange(long offset, boolean stayWithinLimits) throws RangeException;
 
 	/**
 	 * Check if this {@code LongRange} contains the given position.
