@@ -7,7 +7,7 @@
 	</parent>
 	<groupId>net.sf.jranges</groupId>
 	<artifactId>jranges</artifactId>
-	<version>0.4.3</version>
+	<version>0.4.4-SNAPSHOT</version>
 	<name>JRanges</name>
 	<description>A Range is a collection of sequential positions and an interval. It is defined by the first position, inclusively, the last position, inclusively and an interval. Start and stop positions must both be a multiple of interval.</description>
 	<properties>
@@ -35,7 +35,7 @@
 		</url>
 		<connection>scm:git:git://jranges.git.sourceforge.net/gitroot/jranges/jranges</connection>
 		<developerConnection>scm:git:ssh://akerner@jranges.git.sourceforge.net/gitroot/jranges/jranges</developerConnection>
-	  <tag>jranges-0.4.3</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<distributionManagement>
 		<site>
