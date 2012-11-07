@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -35,9 +36,14 @@
 		</url>
 		<connection>scm:git:git://jranges.git.sourceforge.net/gitroot/jranges/jranges</connection>
 		<developerConnection>scm:git:ssh://akerner@jranges.git.sourceforge.net/gitroot/jranges/jranges</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 	<distributionManagement>
+		<repository>
+			<id>sourceforge-jranges</id>
+			<url>
+sftp://frs.sourceforge.net:/home/frs/project/j/jr/jranges/releases</url>
+		</repository>
 		<site>
 			<id>sourceforge-jranges</id>
 			<url>sftp://frs.sourceforge.net:/home/groups/j/jr/jranges/htdocs</url>
