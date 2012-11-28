@@ -99,8 +99,7 @@ sftp://frs.sourceforge.net:/home/frs/project/j/jr/jranges/releases</url>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.3.2</version>
-			</plugin>
+				</plugin>
 		</plugins>
 	</build>
 	<dependencies>
