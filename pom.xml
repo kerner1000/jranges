@@ -107,12 +107,12 @@ sftp://frs.sourceforge.net:/home/frs/project/j/jr/jranges/releases</url>
 		<dependency>
 			<groupId>net.sf.kerner-utils</groupId>
 			<artifactId>kerner-utils</artifactId>
-			<version>0.14.0</version>
+			<version>0.16.0</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
+			<version>4.11</version>
 		</dependency>
 	</dependencies>
 </project>
