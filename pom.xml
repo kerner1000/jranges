@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -17,7 +18,7 @@
 		<developer>
 			<id>kerner</id>
 			<name>Alexander Kerner</name>
-			<email>alex.kerner.24@googlemail.com</email>
+			<email>alexanderkerner24@googlemail.com</email>
 			<roles>
 				<role>Project Manager</role>
 				<role>Architect</role>
@@ -31,10 +32,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<url>git://jranges.git.sourceforge.net/gitroot/jranges/jranges 
-		</url>
-		<connection>scm:git:git://jranges.git.sourceforge.net/gitroot/jranges/jranges</connection>
-		<developerConnection>scm:git:ssh://akerner@jranges.git.sourceforge.net/gitroot/jranges/jranges</developerConnection>
+		<url>git://git.code.sf.net/p/jranges/code</url>
+		<connection>scm:git://git://git.code.sf.net/p/jranges/code</connection>
+		<developerConnection>scm:git:ssh://akerner@git://git.code.sf.net/p/jranges/code</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<distributionManagement>
@@ -99,14 +99,14 @@ sftp://frs.sourceforge.net:/home/frs/project/j/jr/jranges/releases</url>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				</plugin>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
 			<groupId>net.sf.kerner-utils</groupId>
 			<artifactId>kerner-utils</artifactId>
-			<version>0.16.0</version>
+			<version>0.16.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
