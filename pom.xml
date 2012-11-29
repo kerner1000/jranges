@@ -37,11 +37,6 @@
 		<tag>HEAD</tag>
 	</scm>
 	<distributionManagement>
-		<repository>
-			<id>sourceforge-jranges</id>
-			<url>
-sftp://frs.sourceforge.net:/home/frs/project/j/jr/jranges/releases</url>
-		</repository>
 		<site>
 			<id>sourceforge-jranges</id>
 			<url>sftp://frs.sourceforge.net:/home/groups/j/jr/jranges/htdocs</url>
