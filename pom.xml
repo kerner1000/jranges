@@ -33,7 +33,7 @@
 	</licenses>
 	<scm>
 		<url>git://git.code.sf.net/p/jranges/code</url>
-		<connection>scm:git://git://git.code.sf.net/p/jranges/code</connection>
+		<connection>scm:git://git.code.sf.net/p/jranges/code</connection>
 		<developerConnection>scm:git:ssh://akerner@git://git.code.sf.net/p/jranges/code</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
