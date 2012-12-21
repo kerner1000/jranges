@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: jranges
+Bundle-SymbolicName: net.sf.jranges
+Bundle-Version: 0.4.9.SNAPSHOT
+Export-Package: net.sf.jranges.range,
+ net.sf.jranges.range.doublerange,
+ net.sf.jranges.range.doublerange.impl,
+ net.sf.jranges.range.integer,
+ net.sf.jranges.range.integer.impl,
+ net.sf.jranges.range.longrange,
+ net.sf.jranges.range.longrange.impl
