@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -8,7 +7,7 @@
 	</parent>
 	<groupId>net.sf.jranges</groupId>
 	<artifactId>jranges</artifactId>
-	<version>0.4.9-SNAPSHOT</version>
+	<version>0.4.9</version>
 	<name>JRanges</name>
 	<description>A Range is a collection of sequential positions and an interval. It is defined by the first position, inclusively, the last position, inclusively and an interval. Start and stop positions must both be a multiple of interval.</description>
 	<properties>
