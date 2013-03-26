@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JRanges
 Bundle-SymbolicName: net.sf.jranges
-Bundle-Version: 0.4.9
-Export-Package: net.sf.jranges.range;version="0.4.9",
- net.sf.jranges.range.doublerange;version="0.4.9",
- net.sf.jranges.range.doublerange.impl;version="0.4.9",
- net.sf.jranges.range.integer;version="0.4.9",
- net.sf.jranges.range.integer.impl;version="0.4.9",
- net.sf.jranges.range.longrange;version="0.4.9",
- net.sf.jranges.range.longrange.impl;version="0.4.9"
+Bundle-Version: 0.4.10
+Export-Package: net.sf.jranges.range;version="0.4.10",
+ net.sf.jranges.range.doublerange;version="0.4.10",
+ net.sf.jranges.range.doublerange.impl;version="0.4.10",
+ net.sf.jranges.range.integer;version="0.4.10",
+ net.sf.jranges.range.integer.impl;version="0.4.10",
+ net.sf.jranges.range.longrange;version="0.4.10",
+ net.sf.jranges.range.longrange.impl;version="0.4.10"
 Import-Package: net.sf.kerner.utils,
  net.sf.kerner.utils.async,
  net.sf.kerner.utils.concurrent,
