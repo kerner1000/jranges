@@ -15,6 +15,9 @@ limitations under the License.
 
 package net.sf.jranges.range.integer.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import net.sf.jranges.range.integer.IntegerRange;
 
 /**
@@ -28,96 +31,101 @@ import net.sf.jranges.range.integer.IntegerRange;
  */
 public abstract class VeryAbstractIntegerRange implements IntegerRange {
 
-	private volatile int hashCode;
+    private volatile int hashCode;
 
-	/**
-	 * start position.
-	 */
-	protected int start;
+    /**
+     * start position.
+     */
+    protected int start;
 
-	/**
-	 * stop position.s
-	 */
-	protected int stop;
+    /**
+     * stop position.s
+     */
+    protected int stop;
 
-	// Override //
+    public List<Integer> asList() {
+        // TODO init size
+        final List<Integer> result = new ArrayList<Integer>();
+        for (int i = getStart(); i <= getStop(); i++) {
+            result.add(i);
+        }
+        return result;
+    }
 
-	@Override
-	public String toString() {
-		return getStart() + "->" + getStop();
-	}
+    /**
+     * Compares this {@code IntegerRange} to given {@code IntegerRange} by
+     * {@link #getStart()} .
+     */
+    public int compareTo(final IntegerRange o) {
+        return Integer.valueOf(getStart()).compareTo(Integer.valueOf(o.getStart()));
+    }
 
-	@Override
-	public int hashCode() {
-		int result = hashCode;
-		if (result == 0) {
-			final int prime = 31;
-			result = 1;
-			result = prime * result + getStart();
-			result = prime * result + getStop();
-			result = prime * result + getInterval();
-			hashCode = result;
-		}
-		return result;
-	}
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (!(obj instanceof IntegerRange))
+            return false;
+        final IntegerRange other = (IntegerRange) obj;
+        if (getStart() != other.getStart())
+            return false;
+        if (getStop() != other.getStop())
+            return false;
+        if (getInterval() != other.getInterval())
+            return false;
+        return true;
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (!(obj instanceof IntegerRange))
-			return false;
-		IntegerRange other = (IntegerRange) obj;
-		if (getStart() != other.getStart())
-			return false;
-		if (getStop() != other.getStop())
-			return false;
-		if (getInterval() != other.getInterval())
-			return false;
-		return true;
-	}
-
-	// Implement //
-
-	public int getStart() {
-		return start;
-	}
-
-	public int getStop() {
-		return stop;
-	}
-
-	/**
+    /**
 	 * 
 	 */
-	public int getLength() {
-		return getStop() - getStart() + 1;
-	}
+    public int getInterval() {
+        return 1;
+    }
 
-	/**
+    /**
 	 * 
 	 */
-	public int getInterval() {
-		return 1;
-	}
+    public int getLength() {
+        return getStop() - getStart() + 1;
+    }
 
-	/**
-	 * Compares this {@code IntegerRange} to given {@code IntegerRange} by
-	 * {@link #getStart()} .
-	 */
-	public int compareTo(IntegerRange o) {
-		return Integer.valueOf(getStart()).compareTo(Integer.valueOf(o.getStart()));
-	}
+    public int getStart() {
+        return start;
+    }
 
-	/**
+    public int getStop() {
+        return stop;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = hashCode;
+        if (result == 0) {
+            final int prime = 31;
+            result = 1;
+            result = prime * result + getStart();
+            result = prime * result + getStop();
+            result = prime * result + getInterval();
+            hashCode = result;
+        }
+        return result;
+    }
+
+    /**
 	 * 
 	 */
-	public boolean includes(int position) {
-		if (getStart() <= position && getStop() >= position)
-			return true;
-		return false;
-	}
+    public boolean includes(final int position) {
+        if (getStart() <= position && getStop() >= position)
+            return true;
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return getStart() + "->" + getStop();
+    }
 
 }

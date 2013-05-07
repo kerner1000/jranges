@@ -15,6 +15,8 @@ limitations under the License.
 
 package net.sf.jranges.range.integer;
 
+import java.util.List;
+
 import net.sf.jranges.range.Range;
 import net.sf.jranges.range.RangeException;
 
@@ -28,100 +30,103 @@ import net.sf.jranges.range.RangeException;
  */
 public interface IntegerRange extends Range, Comparable<IntegerRange> {
 
-	/**
-	 * 
-	 * Retrieve this {@code IntegerRange}'s start point.
-	 * 
-	 * @return this {@code IntegerRange}'s start point
-	 */
-	int getStart();
+    List<Integer> asList();
 
-	/**
-	 * 
-	 * Retrieve this {@code IntegerRange}'s stop point.
-	 * 
-	 * @return this {@code IntegerRange}'s stop point
-	 */
-	int getStop();
+    /**
+     * 
+     * 
+     * The same as {@code IntegerRange#expandRange(int, false)}
+     * 
+     * @param offset
+     *            offset by which is expanded
+     * @return the new, expanded {@code IntegerRange}
+     * @throws RangeException
+     *             if this operation resulted in an invalid range
+     */
+    IntegerRange expandRange(int offset) throws RangeException;
 
-	/**
-	 * 
-	 * Retrieve the number of positions covered by this {@code IntegerRange}. <br>
-	 * If {@code interval == 1}, that will be typically defined as {@code {
-	 * @link #getStop()} - {@link #getStart()} +1}.
-	 * 
-	 * @return this {@code IntegerRange}'s length
-	 */
-	int getLength();
+    /**
+     * 
+     * Expand this {@code IntegerRange}.
+     * <p>
+     * IntegerRange expansion is defined as the increment of this
+     * {@code IntegerRange}'s length by {@code offset * 2}. <br>
+     * If {@code offset} is negative, it will result in an decrement of this
+     * {@code IntegerRange}'s length.
+     * </p>
+     * 
+     * @param offset
+     *            offset by which is expanded
+     * @param stayWithinLimits
+     *            if true, this operation will not result in a RangeException
+     * @return the new, expanded {@code IntegerRange}
+     * @throws RangeException
+     *             if this operation resulted in an invalid range
+     */
+    IntegerRange expandRange(int offset, boolean stayWithinLimits) throws RangeException;
 
-	/**
-	 * 
-	 * Retrieve this {@code IntegerRange}'s interval.
-	 * 
-	 * @return this {@code IntegerRange}'s interval
-	 */
-	int getInterval();
+    /**
+     * 
+     * Retrieve this {@code IntegerRange}'s interval.
+     * 
+     * @return this {@code IntegerRange}'s interval
+     */
+    int getInterval();
 
-	/**
-	 * 
-	 * 
-	 * Shift this {@code IntegerRange}.
-	 * <p>
-	 * A shift is defined as the increment of both start and stop by given
-	 * offset. <br>
-	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code IntegerRange}'s start and stop.
-	 * </p>
-	 * 
-	 * @param offset
-	 *            offset by which is shifted
-	 * @return the new, shifted {@code IntegerRange}
-	 * @throws RangeException
-	 *             if this operation resulted in an invalid range
-	 */
-	IntegerRange shift(int offset) throws RangeException;
+    /**
+     * 
+     * Retrieve the number of positions covered by this {@code IntegerRange}. <br>
+     * If {@code interval == 1}, that will be typically defined as {@code
+     * 
+     * @link #getStop()} - {@link #getStart()} +1}.
+     * 
+     * @return this {@code IntegerRange}'s length
+     */
+    int getLength();
 
-	/**
-	 * 
-	 * 
-	 * The same as {@code IntegerRange#expandRange(int, false)}
-	 * 
-	 * @param offset
-	 *            offset by which is expanded
-	 * @return the new, expanded {@code IntegerRange}
-	 * @throws RangeException
-	 *             if this operation resulted in an invalid range
-	 */
-	IntegerRange expandRange(int offset) throws RangeException;
+    /**
+     * 
+     * Retrieve this {@code IntegerRange}'s start point.
+     * 
+     * @return this {@code IntegerRange}'s start point
+     */
+    int getStart();
 
-	/**
-	 * 
-	 * Expand this {@code IntegerRange}.
-	 * <p>
-	 * IntegerRange expansion is defined as the increment of this
-	 * {@code IntegerRange}'s length by {@code offset * 2}. <br>
-	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code IntegerRange}'s length.
-	 * </p>
-	 * 
-	 * @param offset
-	 *            offset by which is expanded
-	 * @param stayWithinLimits
-	 *            if true, this operation will not result in a RangeException
-	 * @return the new, expanded {@code IntegerRange}
-	 * @throws RangeException
-	 *             if this operation resulted in an invalid range
-	 */
-	IntegerRange expandRange(int offset, boolean stayWithinLimits) throws RangeException;
+    /**
+     * 
+     * Retrieve this {@code IntegerRange}'s stop point.
+     * 
+     * @return this {@code IntegerRange}'s stop point
+     */
+    int getStop();
 
-	/**
-	 * Check if this {@code IntegerRange} contains the given position.
-	 * 
-	 * @param position
-	 *            position that is checked
-	 * @return true, if given position is covered by this {@code IntegerRange};
-	 *         false otherwise
-	 */
-	boolean includes(int position);
+    /**
+     * Check if this {@code IntegerRange} contains the given position.
+     * 
+     * @param position
+     *            position that is checked
+     * @return true, if given position is covered by this {@code IntegerRange};
+     *         false otherwise
+     */
+    boolean includes(int position);
+
+    /**
+     * 
+     * 
+     * Shift this {@code IntegerRange}.
+     * <p>
+     * A shift is defined as the increment of both start and stop by given
+     * offset. <br>
+     * If {@code offset} is negative, it will result in an decrement of this
+     * {@code IntegerRange}'s start and stop.
+     * </p>
+     * 
+     * @param offset
+     *            offset by which is shifted
+     * @return the new, shifted {@code IntegerRange}
+     * @throws RangeException
+     *             if this operation resulted in an invalid range
+     */
+    IntegerRange shift(int offset) throws RangeException;
 
 }
