@@ -1,4 +1,0 @@
-RangeUtils: doForAll() should use a Visitor.
-
-delegate equals() to hashCode().
-
