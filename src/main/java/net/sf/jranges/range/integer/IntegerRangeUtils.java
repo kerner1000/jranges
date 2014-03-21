@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.sf.kerner.utils.impl.util.Util;
+import net.sf.kerner.utils.Util;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**

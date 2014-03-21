@@ -1,5 +1,5 @@
 /**********************************************************************
-Copyright (c) 2011 Alexander Kerner. All rights reserved.
+Copyright (c) 2011-2014 Alexander Kerner. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -31,106 +31,134 @@ import net.sf.jranges.range.RangeException;
  * 
  * </ul>
  * 
- * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2011-04-12
+ * <p>
+ * <b>Example:</b><br>
+ * 
+ * </p>
+ * <p>
+ * 
+ * <pre>
+ * TODO example
+ * </pre>
+ * 
+ * </p>
+ * <p>
+ * <b>Threading:</b><br>
+ * 
+ * </p>
+ * <p>
+ * 
+ * <pre>
+ * Not thread save.
+ * </pre>
+ * 
+ * </p>
+ * <p>
+ * last reviewed: 2014-02-11
+ * </p>
+ * 
+ * @author <a href="mailto:alexanderkerner24@gmail.com">Alexander Kerner</a>
  * 
  */
+
 public interface DoubleRange extends Range, Comparable<DoubleRange> {
 
-	/**
-	 * 
-	 * Retrieve this {@code DoubleRange's} start point.
-	 * 
-	 * @return this {@code DoubleRange's} start point
-	 */
-	double getStart();
+    /**
+     * 
+     * 
+     * The same as {@code DoubleRange#expandRange(int, false)}
+     * 
+     * @param offset
+     *            offset by which is expanded
+     * @return the new, expanded {@code DoubleRange}
+     * @throws RangeException
+     *             if this operation resulted in an invalid range
+     */
+    DoubleRange expandRange(double offset) throws RangeException;
 
-	/**
-	 * 
-	 * Retrieve this {@code DoubleRange's} stop point.
-	 * 
-	 * @return this {@code DoubleRange's} stop point
-	 */
-	double getStop();
+    /**
+     * 
+     * Expand this {@code DoubleRange}.
+     * <p>
+     * DoubleRange expansion is defined as the increment of this
+     * {@code DoubleRange's} length by {@code offset * 2}. <br>
+     * If {@code offset} is negative, it will result in an decrement of this
+     * {@code DoubleRange's} length.
+     * </p>
+     * 
+     * @param offset
+     *            offset by which is expanded
+     * @param stayWithinLimits
+     *            if true, this operation will not result in a RangeException
+     * @return the new, expanded {@code DoubleRange}
+     * @throws RangeException
+     *             if this operation resulted in an invalid range
+     */
+    DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException;
 
-	/**
-	 * 
-	 * Retrieve this {@code DoubleRange's} interval.
-	 * 
-	 * @return this {@code DoubleRange's} interval
-	 */
-	double getInterval();
+    /**
+     * 
+     * Retrieve this {@code DoubleRange's} interval.
+     * 
+     * @return this {@code DoubleRange's} interval
+     */
+    double getInterval();
 
-	/**
-	 * 
-	 * Retrieve the number of positions covered by this {@code  DoubleRange}. <br>
-	 * If {@code interval == 1}, that will be typically defined as {@code {
-	 * @link #getStop()} - {@link #getStart()} +1}.
-	 * 
-	 * @return this {@code  DoubleRange}'s length
-	 */
-	int getLength();
+    /**
+     * 
+     * Retrieve the number of positions covered by this {@code  DoubleRange}. <br>
+     * If {@code interval == 1}, that will be typically defined as
+     * {@link #getStop()} - {@link #getStart()} +1.
+     * 
+     * @return this {@code  DoubleRange}'s length
+     */
+    int getLength();
 
-	/**
-	 * 
-	 * 
-	 * Shift this {@code DoubleRange}.
-	 * <p>
-	 * A shift is defined as the increment of both start and stop by given
-	 * offset. <br>
-	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code DoubleRange's} start and stop.
-	 * </p>
-	 * 
-	 * @param offset
-	 *            offset by which is shifted
-	 * @return the new, shifted {@code DoubleRange}
-	 * @throws RangeException
-	 *             if this operation resulted in an invalid range
-	 */
-	DoubleRange shift(double offset) throws RangeException;
+    /**
+     * 
+     * Retrieve this {@code DoubleRange's} start point.
+     * 
+     * @return this {@code DoubleRange's} start point
+     */
+    double getStart();
 
-	/**
-	 * 
-	 * 
-	 * The same as {@code DoubleRange#expandRange(int, false)}
-	 * 
-	 * @param offset
-	 *            offset by which is expanded
-	 * @return the new, expanded {@code DoubleRange}
-	 * @throws RangeException
-	 *             if this operation resulted in an invalid range
-	 */
-	DoubleRange expandRange(double offset) throws RangeException;
+    /**
+     * 
+     * Retrieve this {@code DoubleRange's} stop point.
+     * 
+     * @return this {@code DoubleRange's} stop point
+     */
+    double getStop();
 
-	/**
-	 * 
-	 * Expand this {@code DoubleRange}.
-	 * <p>
-	 * DoubleRange expansion is defined as the increment of this
-	 * {@code DoubleRange's} length by {@code offset * 2}. <br>
-	 * If {@code offset} is negative, it will result in an decrement of this
-	 * {@code DoubleRange's} length.
-	 * </p>
-	 * 
-	 * @param offset
-	 *            offset by which is expanded
-	 * @param stayWithinLimits
-	 *            if true, this operation will not result in a RangeException
-	 * @return the new, expanded {@code DoubleRange}
-	 * @throws RangeException
-	 *             if this operation resulted in an invalid range
-	 */
-	DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException;
+    /**
+     * Check if this {@code DoubleRange} contains the given position.
+     * 
+     * @param position
+     *            position that is checked
+     * @return true, if given position is covered by this {@code DoubleRange};
+     *         false otherwise
+     */
+    boolean includes(double position);
 
-	/**
-	 * Check if this {@code DoubleRange} contains the given position.
-	 * 
-	 * @param position
-	 *            position that is checked
-	 * @return true, if given position is covered by this {@code DoubleRange};
-	 *         false otherwise
-	 */
-	boolean includes(double position);
+    boolean sharesPositionsWith(DoubleRange anotherRange);
+
+    /**
+     * 
+     * 
+     * Shift this {@code DoubleRange}.
+     * <p>
+     * A shift is defined as the increment of both start and stop by given
+     * offset. <br>
+     * If {@code offset} is negative, it will result in an decrement of this
+     * {@code DoubleRange's} start and stop.
+     * </p>
+     * 
+     * @param offset
+     *            offset by which is shifted
+     * @return the new, shifted {@code DoubleRange}
+     * @throws RangeException
+     *             if this operation resulted in an invalid range
+     */
+    DoubleRange shift(double offset) throws RangeException;
 
 }
