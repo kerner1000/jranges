@@ -1,3 +1,18 @@
+/*******************************************************************************
+ * Copyright (c) 2010-2014 Alexander Kerner. All rights reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
 /**
  * 
  *
@@ -30,8 +45,9 @@ import org.junit.Test;
 public class TestIntegerRangeUtils {
 
 	private List<IntegerRange> ranges;
-//	private List<IntegerRange> ranges2;
-//	private List<IntegerRange> ranges3;
+
+	// private List<IntegerRange> ranges2;
+	// private List<IntegerRange> ranges3;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -45,9 +61,9 @@ public class TestIntegerRangeUtils {
 	public void setUp() throws Exception {
 		ranges = new ArrayList<IntegerRange>();
 
-//		ranges2 = new ArrayList<IntegerRange>();
-//
-//		ranges3 = new ArrayList<IntegerRange>();
+		// ranges2 = new ArrayList<IntegerRange>();
+		//
+		// ranges3 = new ArrayList<IntegerRange>();
 	}
 
 	@After
@@ -135,12 +151,7 @@ public class TestIntegerRangeUtils {
 		ranges.add(new DummyIntegerRange(3, 4));
 		ranges.add(new DummyIntegerRange(5, 6));
 		ranges.add(new DummyIntegerRange(7, 8));
-		assertEquals(new DummyIntegerRange(1, 8),
-				IntegerRangeUtils.merge(ranges, new DummyIntegerRangeFactory()));
+		assertEquals(new DummyIntegerRange(1, 8), IntegerRangeUtils.merge(ranges, new DummyIntegerRangeFactory()));
 	}
-
-	
-
-	
 
 }

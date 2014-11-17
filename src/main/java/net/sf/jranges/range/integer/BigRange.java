@@ -1,18 +1,18 @@
-/**********************************************************************
-Copyright (c) 2009-2010 Alexander Kerner. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
- ***********************************************************************/
-
+/*******************************************************************************
+ * Copyright (c) 2010-2014 Alexander Kerner. All rights reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
 package net.sf.jranges.range.integer;
 
 import java.math.BigInteger;
@@ -22,8 +22,8 @@ import net.sf.jranges.range.RangeException;
 
 /**
  * 
- * A {@code BigRange} is a {@link net.sf.jranges.range.Range Range} based
- * on {@link java.math.BigInteger BigInteger} values.
+ * A {@code BigRange} is a {@link net.sf.jranges.range.Range Range} based on
+ * {@link java.math.BigInteger BigInteger} values.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-07
@@ -56,11 +56,11 @@ public interface BigRange extends Comparable<BigRange>, Range {
 	 * @return this {@code BigRange}'s length
 	 */
 	BigInteger getLength();
-	
+
 	/**
 	 * 
-	 *  Retrieve this {@code BigInteger}'s interval.
-	 *
+	 * Retrieve this {@code BigInteger}'s interval.
+	 * 
 	 * @return this {@code BigInteger}'s interval
 	 */
 	BigInteger getInterval();
@@ -115,8 +115,7 @@ public interface BigRange extends Comparable<BigRange>, Range {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	BigRange expandRange(BigInteger offset, boolean stayWithinLimits)
-			throws RangeException;
+	BigRange expandRange(BigInteger offset, boolean stayWithinLimits) throws RangeException;
 
 	/**
 	 * Check if this {@code BigRange} contains the given position.

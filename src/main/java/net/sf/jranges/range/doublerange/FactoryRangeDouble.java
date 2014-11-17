@@ -13,29 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range;
+package net.sf.jranges.range.doublerange;
 
-public class RangeException extends IllegalArgumentException {
+public interface FactoryRangeDouble<R extends DoubleRange> {
 
-	private static final long serialVersionUID = -6555274736122521475L;
-
-	public RangeException() {
-
-	}
-
-	public RangeException(String message) {
-		super(message);
-
-	}
-
-	public RangeException(Throwable cause) {
-		super(cause);
-
-	}
-
-	public RangeException(String message, Throwable cause) {
-		super(message, cause);
-
-	}
+	R create(double start, double stop);
 
 }

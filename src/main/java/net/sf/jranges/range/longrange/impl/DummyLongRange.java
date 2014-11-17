@@ -1,16 +1,32 @@
+/*******************************************************************************
+ * Copyright (c) 2010-2014 Alexander Kerner. All rights reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
 package net.sf.jranges.range.longrange.impl;
 
 import net.sf.jranges.range.RangeException;
 import net.sf.jranges.range.longrange.LongRange;
 
 public class DummyLongRange extends VeryAbstractLongRange implements LongRange {
-	
+
 	// Constructor //
 
 	/**
 	 * 
-	 * Construct a new {@code DummyLongRange} with start and stop values initiated with {@code 0}.
-	 *
+	 * Construct a new {@code DummyLongRange} with start and stop values
+	 * initiated with {@code 0}.
+	 * 
 	 */
 	public DummyLongRange() {
 		this.start = 0;
@@ -20,20 +36,21 @@ public class DummyLongRange extends VeryAbstractLongRange implements LongRange {
 	/**
 	 * 
 	 * Construct a new {@code DummyLongRange} with given start and stop values.
-	 *
+	 * 
 	 */
 	public DummyLongRange(long start, long stop) {
 		this.start = start;
 		this.stop = stop;
 	}
-	
+
 	// Public //
 
 	/**
 	 * 
 	 * Set start position for this {@code DummyLongRange}.
-	 *
-	 * @param start new start position
+	 * 
+	 * @param start
+	 *            new start position
 	 */
 	public void setStart(long start) {
 		this.start = start;
@@ -42,8 +59,9 @@ public class DummyLongRange extends VeryAbstractLongRange implements LongRange {
 	/**
 	 * 
 	 * Set stop position for this {@code DummyLongRange}.
-	 *
-	 * @param stop new stop position
+	 * 
+	 * @param stop
+	 *            new stop position
 	 */
 	public void setStop(long stop) {
 		this.stop = stop;
@@ -68,8 +86,7 @@ public class DummyLongRange extends VeryAbstractLongRange implements LongRange {
 	/**
 	 * 
 	 */
-	public LongRange expandRange(long offset, boolean stayWithinLimits)
-			throws RangeException {
+	public LongRange expandRange(long offset, boolean stayWithinLimits) throws RangeException {
 		long start = getStart() - offset;
 		long stop = getStop() + offset;
 		return new DummyLongRange(start, stop);
