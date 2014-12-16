@@ -38,7 +38,7 @@ import net.sf.jranges.range.RangeException;
  * @version 2010-10-19
  * 
  */
-public class OnePositiveIntegerRange extends AbstractIntegerRange {
+public class OnePositiveIntegerRange extends RangeIntegerAbstract {
 
 	public OnePositiveIntegerRange(int start, int stop) throws RangeException {
 		super(start, stop, 1, Integer.MAX_VALUE);

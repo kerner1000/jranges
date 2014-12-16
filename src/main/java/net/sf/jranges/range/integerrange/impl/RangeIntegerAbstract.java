@@ -41,7 +41,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * @version 2010-12-08
  * 
  */
-public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements RangeInteger {
+public abstract class RangeIntegerAbstract extends VeryAbstractIntegerRange implements RangeInteger {
 
     /**
      * This {@code AbstractIntegerRange}'s lower limit, which is the smallest
@@ -82,7 +82,7 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
      * @throws RangeException
      *             if {@code limit1 > start || limit2 < stop || start > stop}
      */
-    public AbstractIntegerRange(final int start, final int stop, final int limit1, final int limit2)
+    public RangeIntegerAbstract(final int start, final int stop, final int limit1, final int limit2)
             throws RangeException {
         if (limit1 > start || limit2 < stop || start > stop)
             throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
@@ -119,7 +119,7 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
      *             if
      *             {@code limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0)}
      */
-    public AbstractIntegerRange(final int start, final int stop, final int limit1, final int limit2, final int interval)
+    public RangeIntegerAbstract(final int start, final int stop, final int limit1, final int limit2, final int interval)
             throws RangeException {
         if (limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0))
             throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
@@ -232,7 +232,7 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
      * @return the new {@code AbstractIntegerRange} instance
      * @throws RangeException
      */
-    protected abstract AbstractIntegerRange newInstange(int start, int stop, int limit1, int limit2)
+    protected abstract RangeIntegerAbstract newInstange(int start, int stop, int limit1, int limit2)
             throws RangeException;
 
     public RangeInteger shift(final int offset) throws RangeException {
