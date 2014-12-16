@@ -18,7 +18,7 @@ package net.sf.jranges.range.longrange.impl;
 import net.sf.jranges.range.RangeException;
 import net.sf.jranges.range.longrange.RangeLong;
 
-public class DummyLongRange extends VeryAbstractLongRange implements RangeLong {
+public class RangeLongDummy extends VeryAbstractLongRange implements RangeLong {
 
 	// Constructor //
 
@@ -28,7 +28,7 @@ public class DummyLongRange extends VeryAbstractLongRange implements RangeLong {
 	 * initiated with {@code 0}.
 	 * 
 	 */
-	public DummyLongRange() {
+	public RangeLongDummy() {
 		this.start = 0;
 		this.stop = 0;
 	}
@@ -38,7 +38,7 @@ public class DummyLongRange extends VeryAbstractLongRange implements RangeLong {
 	 * Construct a new {@code DummyLongRange} with given start and stop values.
 	 * 
 	 */
-	public DummyLongRange(long start, long stop) {
+	public RangeLongDummy(long start, long stop) {
 		this.start = start;
 		this.stop = stop;
 	}
@@ -73,7 +73,7 @@ public class DummyLongRange extends VeryAbstractLongRange implements RangeLong {
 	 * 
 	 */
 	public RangeLong shift(long offset) {
-		return new DummyLongRange(getStart() + offset, getStop() + offset);
+		return new RangeLongDummy(getStart() + offset, getStop() + offset);
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class DummyLongRange extends VeryAbstractLongRange implements RangeLong {
 	public RangeLong expandRange(long offset, boolean stayWithinLimits) throws RangeException {
 		long start = getStart() - offset;
 		long stop = getStop() + offset;
-		return new DummyLongRange(start, stop);
+		return new RangeLongDummy(start, stop);
 	}
 
 }
