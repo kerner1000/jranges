@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integerrange.IntegerRange;
 
 /**
  * 

@@ -16,7 +16,7 @@
 /**
  * 
  */
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -24,6 +24,7 @@ import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import net.sf.jranges.range.RangeException;
+import net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -61,7 +62,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
 	 * .
 	 */
 	@Test
@@ -71,7 +72,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -81,7 +82,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -91,7 +92,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
@@ -101,7 +102,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
@@ -111,7 +112,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -121,7 +122,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -131,7 +132,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
@@ -141,7 +142,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -151,7 +152,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#equals(java.lang.Object)}
 	 * .
 	 */
 	@Test
@@ -163,7 +164,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#equals(java.lang.Object)}
 	 * .
 	 */
 	@Test
@@ -175,7 +176,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#equals(java.lang.Object)}
 	 * .
 	 */
 	@Test
@@ -187,7 +188,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#equals(java.lang.Object)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#equals(java.lang.Object)}
 	 * .
 	 */
 	@Test
@@ -199,7 +200,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getInterval()}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#getInterval()}
 	 * .
 	 */
 	@Test
@@ -210,7 +211,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getInterval()}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#getInterval()}
 	 * .
 	 */
 	@Test
@@ -221,7 +222,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#shift(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#shift(int)}
 	 * .
 	 */
 	@Test
@@ -232,7 +233,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#shift(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#shift(int)}
 	 * .
 	 */
 	@Test
@@ -243,7 +244,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#shift(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#shift(int)}
 	 * .
 	 */
 	@Test
@@ -254,7 +255,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#expandRange(int)}
 	 * .
 	 */
 	@Test
@@ -265,7 +266,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#expandRange(int)}
 	 * .
 	 */
 	@Test
@@ -276,7 +277,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#expandRange(int)}
 	 * .
 	 */
 	@Test
@@ -287,7 +288,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int, boolean)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#expandRange(int, boolean)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -298,7 +299,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int, boolean)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#expandRange(int, boolean)}
 	 * .
 	 */
 	@Test
@@ -309,7 +310,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#expandRange(int, boolean)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#expandRange(int, boolean)}
 	 * .
 	 */
 	@Test
@@ -320,7 +321,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#includes(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#includes(int)}
 	 * .
 	 */
 	@Test
@@ -334,7 +335,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#includes(int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#includes(int)}
 	 * .
 	 */
 	@Test
@@ -348,7 +349,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getLimit1()}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#getLimit1()}
 	 * .
 	 */
 	@Test
@@ -359,7 +360,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getLimit1()}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#getLimit1()}
 	 * .
 	 */
 	@Test
@@ -370,7 +371,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.AbstractIntegerRange#getLimit2()}
+	 * {@link net.sf.jranges.range.integerrange.impl.AbstractIntegerRange#getLimit2()}
 	 * .
 	 */
 	@Test
@@ -381,7 +382,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode() {
@@ -392,7 +393,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode01() {
@@ -403,7 +404,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode02() {
@@ -414,7 +415,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#hashCode()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#hashCode()}.
 	 */
 	@Test
 	public final void testHashCode03() {
@@ -425,7 +426,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#toString()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#toString()}.
 	 */
 	@Test
 	@Ignore
@@ -435,7 +436,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getStart()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#getStart()}.
 	 */
 	@Test
 	public final void testGetStart() {
@@ -445,7 +446,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getStop()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#getStop()}.
 	 */
 	@Test
 	public final void testGetStop() {
@@ -455,7 +456,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getLength()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#getLength()}.
 	 */
 	@Test
 	public final void testGetLength() {
@@ -465,7 +466,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getLength()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#getLength()}.
 	 */
 	@Test
 	public final void testGetLength01() {
@@ -475,7 +476,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#getLength()}.
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#getLength()}.
 	 */
 	@Test
 	public final void testGetLength02() {
@@ -485,7 +486,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
 	 * .
 	 */
 	@Test
@@ -497,7 +498,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
 	 * .
 	 */
 	@Test
@@ -512,7 +513,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
 	 * .
 	 */
 	@Test
@@ -527,7 +528,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
 	 * .
 	 */
 	@Test
@@ -539,7 +540,7 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
+	 * {@link net.sf.jranges.range.integerrange.impl.DummyIntegerRange#compareTo(net.sf.jranges.range.IntegerRange)}
 	 * .
 	 */
 	@Test

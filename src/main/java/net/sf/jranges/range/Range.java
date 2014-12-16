@@ -15,8 +15,8 @@
  ******************************************************************************/
 package net.sf.jranges.range;
 
-import net.sf.jranges.range.integer.BigRange;
-import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integerrange.BigRange;
+import net.sf.jranges.range.integerrange.IntegerRange;
 import net.sf.jranges.range.longrange.LongRange;
 
 /**

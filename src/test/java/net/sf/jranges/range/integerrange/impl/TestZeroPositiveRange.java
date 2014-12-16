@@ -16,10 +16,11 @@
 /**
  * 
  */
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
 import static org.junit.Assert.fail;
 import net.sf.jranges.range.RangeException;
+import net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -54,7 +55,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
 	 * .
 	 */
 	@Test
@@ -64,7 +65,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
 	 * .
 	 */
 	@Test
@@ -74,7 +75,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
 	 * .
 	 */
 	@Test
@@ -84,7 +85,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -94,7 +95,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -104,7 +105,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int)}
 	 * .
 	 */
 	@Test
@@ -114,7 +115,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
@@ -124,7 +125,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
@@ -134,7 +135,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -144,7 +145,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#ZeroPositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
@@ -154,7 +155,7 @@ public class TestZeroPositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integer.impl.ZeroPositiveIntegerRange#newInstange(int, int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.ZeroPositiveIntegerRange#newInstange(int, int, int, int)}
 	 * .
 	 */
 	@Test

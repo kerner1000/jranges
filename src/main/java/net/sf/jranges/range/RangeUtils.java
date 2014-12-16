@@ -18,7 +18,7 @@ package net.sf.jranges.range;
 import java.util.Collection;
 
 import net.sf.jranges.range.doublerange.DoubleRange;
-import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integerrange.IntegerRange;
 import net.sf.kerner.utils.math.UtilMath;
 
 public class RangeUtils {

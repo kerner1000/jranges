@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integerrange.IntegerRange;
 
 /**
  * 
  * Most simple implementation for
- * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}. Arguments and
+ * {@link net.sf.jranges.range.integerrange.IntegerRange IntegerRange}. Arguments and
  * operations are not checked for validity.
  * 
  * <p>
