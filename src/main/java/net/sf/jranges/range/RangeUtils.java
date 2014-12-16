@@ -18,7 +18,7 @@ package net.sf.jranges.range;
 import java.util.Collection;
 
 import net.sf.jranges.range.doublerange.RangeDouble;
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.kerner.utils.math.UtilMath;
 
 public class RangeUtils {
@@ -38,7 +38,7 @@ public class RangeUtils {
         }
     }
 
-    public static void doForAllInRange(final IntegerRange range, final IntegerRangeTask task) {
+    public static void doForAllInRange(final RangeInteger range, final IntegerRangeTask task) {
         if (range == null || task == null) {
             throw new NullPointerException();
         }
@@ -47,7 +47,7 @@ public class RangeUtils {
         }
     }
 
-    public static boolean includesAll(final IntegerRange range,
+    public static boolean includesAll(final RangeInteger range,
             final Collection<? extends Integer> positions) {
         for (final int i : positions) {
             if (range.includes(i)) {

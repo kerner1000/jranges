@@ -25,7 +25,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -50,12 +50,12 @@ public class TestRangeCache {
     }
 
     RangeCache cache;
-    IntegerRange range1;
-    IntegerRange range2;
+    RangeInteger range1;
+    RangeInteger range2;
 
-    IntegerRange range3;
+    RangeInteger range3;
 
-    IntegerRange range4;
+    RangeInteger range4;
 
     @Before
     public void setUp() throws Exception {
@@ -71,7 +71,7 @@ public class TestRangeCache {
      */
     @Test
     public final void testNext() {
-        final ArrayList<IntegerRange> range = new ArrayList<IntegerRange>();
+        final ArrayList<RangeInteger> range = new ArrayList<RangeInteger>();
         range1 = new DummyIntegerRange(1, 10);
         range2 = new DummyIntegerRange(11, 20);
         range3 = new DummyIntegerRange(21, 30);

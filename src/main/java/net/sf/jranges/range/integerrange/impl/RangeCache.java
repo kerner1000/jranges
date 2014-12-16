@@ -20,29 +20,29 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 
-class RangeCache implements Iterable<Collection<? extends IntegerRange>>, Iterator<Collection<? extends IntegerRange>> {
+class RangeCache implements Iterable<Collection<? extends RangeInteger>>, Iterator<Collection<? extends RangeInteger>> {
 
 	final static int DEFAULT_ELEMENTS = 10000;
 
 	final int elements;
 
-	private final List<? extends IntegerRange> ranges;
+	private final List<? extends RangeInteger> ranges;
 
-	private volatile Collection<? extends IntegerRange> cache;
+	private volatile Collection<? extends RangeInteger> cache;
 
 	private volatile int index = 0;
 
-	RangeCache(final Collection<? extends IntegerRange> ranges, int elements) {
+	RangeCache(final Collection<? extends RangeInteger> ranges, int elements) {
 		this.elements = elements;
-		this.ranges = new ArrayList<IntegerRange>(ranges);
+		this.ranges = new ArrayList<RangeInteger>(ranges);
 		fill();
 	}
 
-	RangeCache(final Collection<? extends IntegerRange> ranges) {
+	RangeCache(final Collection<? extends RangeInteger> ranges) {
 		this.elements = DEFAULT_ELEMENTS;
-		this.ranges = new ArrayList<IntegerRange>(ranges);
+		this.ranges = new ArrayList<RangeInteger>(ranges);
 		fill();
 	}
 
@@ -50,7 +50,7 @@ class RangeCache implements Iterable<Collection<? extends IntegerRange>>, Iterat
 		int end = index + elements;
 		if (end > ranges.size() - 1)
 			end = ranges.size();
-		cache = new ArrayList<IntegerRange>(ranges.subList(index, end));
+		cache = new ArrayList<RangeInteger>(ranges.subList(index, end));
 		index += elements;
 	}
 
@@ -65,8 +65,8 @@ class RangeCache implements Iterable<Collection<? extends IntegerRange>>, Iterat
 	/** 
 	 * 
 	 */
-	public synchronized Collection<? extends IntegerRange> next() {
-		final Collection<? extends IntegerRange> result = new ArrayList<IntegerRange>(cache);
+	public synchronized Collection<? extends RangeInteger> next() {
+		final Collection<? extends RangeInteger> result = new ArrayList<RangeInteger>(cache);
 		fill();
 		return result;
 	}
@@ -81,7 +81,7 @@ class RangeCache implements Iterable<Collection<? extends IntegerRange>>, Iterat
 	/** 
 	 * 
 	 */
-	public Iterator<Collection<? extends IntegerRange>> iterator() {
+	public Iterator<Collection<? extends RangeInteger>> iterator() {
 		return this;
 	}
 }

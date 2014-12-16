@@ -26,7 +26,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.integerrange.IntegerRangeUtils;
 import net.sf.jranges.range.integerrange.impl.DummyIntegerRange;
 import net.sf.jranges.range.integerrange.impl.DummyIntegerRangeFactory;
@@ -46,7 +46,7 @@ import org.junit.Test;
  */
 public class TestIntegerRangeUtils {
 
-	private List<IntegerRange> ranges;
+	private List<RangeInteger> ranges;
 
 	// private List<IntegerRange> ranges2;
 	// private List<IntegerRange> ranges3;
@@ -61,7 +61,7 @@ public class TestIntegerRangeUtils {
 
 	@Before
 	public void setUp() throws Exception {
-		ranges = new ArrayList<IntegerRange>();
+		ranges = new ArrayList<RangeInteger>();
 
 		// ranges2 = new ArrayList<IntegerRange>();
 		//

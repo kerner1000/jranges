@@ -21,7 +21,7 @@ import net.sf.jranges.range.RangeException;
 /**
  * 
  * A {@code DoubleRange} is a {@link Range} based on {@code double} values. In
- * comparison to {@link net.sf.jranges.range.IntegerRange IntegerRange}, there
+ * comparison to {@link net.sf.jranges.range.RangeInteger IntegerRange}, there
  * are some differences:
  * 
  * <ul>

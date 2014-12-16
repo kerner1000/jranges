@@ -22,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.integerrange.IntegerRangeUtils;
 import net.sf.jranges.range.integerrange.impl.DummyIntegerRange;
 
@@ -40,10 +40,10 @@ import org.junit.Test;
  */
 public class TestIntegerRangeUtils2 {
 
-	private IntegerRange range1;
-	private IntegerRange range2;
-	private IntegerRange range3;
-	private IntegerRange range4;
+	private RangeInteger range1;
+	private RangeInteger range2;
+	private RangeInteger range3;
+	private RangeInteger range4;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

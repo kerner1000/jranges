@@ -15,7 +15,7 @@
  ******************************************************************************/
 package net.sf.jranges.range.integerrange.impl;
 
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.integerrange.IntegerRangeFactory;
 
 public class ZeroPositiveIntegerRangeFactory implements IntegerRangeFactory<ZeroPositiveIntegerRange> {
@@ -28,7 +28,7 @@ public class ZeroPositiveIntegerRangeFactory implements IntegerRangeFactory<Zero
 		return new ZeroPositiveIntegerRange(start, stop);
 	}
 
-	public ZeroPositiveIntegerRange create(IntegerRange template) {
+	public ZeroPositiveIntegerRange create(RangeInteger template) {
 		return create(template.getStart(), template.getStop());
 	}
 

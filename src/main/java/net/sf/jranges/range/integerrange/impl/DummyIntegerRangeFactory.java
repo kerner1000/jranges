@@ -15,7 +15,7 @@
  ******************************************************************************/
 package net.sf.jranges.range.integerrange.impl;
 
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.integerrange.IntegerRangeFactory;
 
 /**
@@ -38,7 +38,7 @@ import net.sf.jranges.range.integerrange.IntegerRangeFactory;
  * @version 2011-09-02
  * 
  */
-public class DummyIntegerRangeFactory implements IntegerRangeFactory<IntegerRange> {
+public class DummyIntegerRangeFactory implements IntegerRangeFactory<RangeInteger> {
 
 	public DummyIntegerRange create() {
 		return new DummyIntegerRange();
@@ -48,7 +48,7 @@ public class DummyIntegerRangeFactory implements IntegerRangeFactory<IntegerRang
 		return new DummyIntegerRange(start, stop);
 	}
 
-	public DummyIntegerRange create(IntegerRange template) {
+	public DummyIntegerRange create(RangeInteger template) {
 		return new DummyIntegerRange(template.getStart(), template.getStop());
 	}
 

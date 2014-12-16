@@ -16,7 +16,7 @@
 package net.sf.jranges.range;
 
 import net.sf.jranges.range.integerrange.BigRange;
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.longrange.LongRange;
 
 /**
@@ -72,7 +72,7 @@ import net.sf.jranges.range.longrange.LongRange;
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-19
  *
- * @see IntegerRange
+ * @see RangeInteger
  * @see LongRange
  * @see BigRange
  *

@@ -19,13 +19,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integerrange.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
  * 
  * 
- * A prototype implementation for {@link IntegerRange}.
+ * A prototype implementation for {@link RangeInteger}.
  * 
  * <p>
  * In contrast to {@link DummyIntegerRange}, an {@code AbstractIntegerRange} is
@@ -41,7 +41,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * @version 2010-12-08
  * 
  */
-public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements IntegerRange {
+public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements RangeInteger {
 
     /**
      * This {@code AbstractIntegerRange}'s lower limit, which is the smallest
@@ -141,11 +141,11 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
         return result;
     }
 
-    public IntegerRange expandRange(final int offset) throws RangeException {
+    public RangeInteger expandRange(final int offset) throws RangeException {
         return expandRange(offset, false);
     }
 
-    public IntegerRange expandRange(final int offset, final boolean stayWithinLimits) throws RangeException {
+    public RangeInteger expandRange(final int offset, final boolean stayWithinLimits) throws RangeException {
         int start = this.start;
         int stop = this.stop;
         if (stayWithinLimits) {
@@ -235,7 +235,7 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
     protected abstract AbstractIntegerRange newInstange(int start, int stop, int limit1, int limit2)
             throws RangeException;
 
-    public IntegerRange shift(final int offset) throws RangeException {
+    public RangeInteger shift(final int offset) throws RangeException {
         return newInstange(ArithmeticSavety.addInt(getStart(), offset), ArithmeticSavety.addInt(getStop(), offset),
                 getLimit1(), getLimit2());
 

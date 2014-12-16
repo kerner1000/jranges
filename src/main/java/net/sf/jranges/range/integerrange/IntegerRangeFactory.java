@@ -19,7 +19,7 @@ import net.sf.kerner.utils.Factory;
 
 /**
  * 
- * A factory that creates objects of type {@link IntegerRange}.
+ * A factory that creates objects of type {@link RangeInteger}.
  * 
  * <p>
  * <b>Example:</b><br>
@@ -37,11 +37,11 @@ import net.sf.kerner.utils.Factory;
  * @version 2011-09-02
  * 
  */
-public interface IntegerRangeFactory<T extends IntegerRange> extends Factory<T> {
+public interface IntegerRangeFactory<T extends RangeInteger> extends Factory<T> {
 
 	/**
 	 * 
-	 * Create a {@link IntegerRange} with given start and stop positions.
+	 * Create a {@link RangeInteger} with given start and stop positions.
 	 * 
 	 * @param start
 	 *            start position of created {@code IntegerRange}
@@ -53,12 +53,12 @@ public interface IntegerRangeFactory<T extends IntegerRange> extends Factory<T> 
 
 	/**
 	 * 
-	 * Create a {@link IntegerRange} with from given template.
+	 * Create a {@link RangeInteger} with from given template.
 	 * 
 	 * @param template
 	 *            template that is used to create new {@code IntegerRange}
 	 * @return newly created {@code IntegerRange}
 	 */
-	T create(IntegerRange template);
+	T create(RangeInteger template);
 
 }

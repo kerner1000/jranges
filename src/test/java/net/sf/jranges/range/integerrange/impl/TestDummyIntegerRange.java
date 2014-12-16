@@ -61,7 +61,7 @@ public class TestDummyIntegerRange {
 
     /**
      * Test method for
-     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}
+     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.RangeInteger.range.IntegerRange)}
      * .
      */
     @Test
@@ -73,7 +73,7 @@ public class TestDummyIntegerRange {
 
     /**
      * Test method for
-     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}
+     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.RangeInteger.range.IntegerRange)}
      * .
      */
     @Test
@@ -85,7 +85,7 @@ public class TestDummyIntegerRange {
 
     /**
      * Test method for
-     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}
+     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.RangeInteger.range.IntegerRange)}
      * .
      */
     @Test
@@ -97,7 +97,7 @@ public class TestDummyIntegerRange {
 
     /**
      * Test method for
-     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}
+     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.RangeInteger.range.IntegerRange)}
      * .
      */
     @Test
@@ -109,7 +109,7 @@ public class TestDummyIntegerRange {
 
     /**
      * Test method for
-     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.commons.range.IntegerRange)}
+     * {@link net.sf.kerner.DummyIntegerRange.range.impl.DummyRange#compareTo(net.sf.kerner.RangeInteger.range.IntegerRange)}
      * .
      */
     @Test
