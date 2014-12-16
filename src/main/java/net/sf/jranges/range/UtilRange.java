@@ -21,7 +21,7 @@ import net.sf.jranges.range.doublerange.RangeDouble;
 import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.kerner.utils.math.UtilMath;
 
-public class RangeUtils {
+public class UtilRange {
 
     public interface DoubleRangeTask {
         void call(double d);
@@ -59,6 +59,6 @@ public class RangeUtils {
         return true;
     }
 
-    private RangeUtils() {
+    private UtilRange() {
     }
 }

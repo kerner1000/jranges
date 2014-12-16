@@ -63,7 +63,7 @@ public class TestIntegerRangeUtils2 {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#positionFrequencies(java.util.Collection, java.util.Collection)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#positionFrequencies(java.util.Collection, java.util.Collection)}
 	 * .
 	 */
 	@Test
@@ -73,7 +73,7 @@ public class TestIntegerRangeUtils2 {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
 	 * .
 	 */
 	@Test
@@ -85,7 +85,7 @@ public class TestIntegerRangeUtils2 {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
 	 * .
 	 */
 	@Test
@@ -97,7 +97,7 @@ public class TestIntegerRangeUtils2 {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
 	 * .
 	 */
 	@Test
@@ -111,7 +111,7 @@ public class TestIntegerRangeUtils2 {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#medianPositionFrequencies(java.util.Collection, java.util.Collection)}
 	 * .
 	 */
 	@Test

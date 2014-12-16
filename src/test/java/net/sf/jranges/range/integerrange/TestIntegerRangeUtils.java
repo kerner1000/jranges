@@ -74,7 +74,7 @@ public class TestIntegerRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -88,7 +88,7 @@ public class TestIntegerRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -102,7 +102,7 @@ public class TestIntegerRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -116,7 +116,7 @@ public class TestIntegerRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -130,7 +130,7 @@ public class TestIntegerRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#includedByOne(java.util.List, int)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#includedByOne(java.util.List, int)}
 	 * .
 	 */
 	@Test
@@ -144,7 +144,7 @@ public class TestIntegerRangeUtils {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.RangeUtils#merge(java.util.List, net.sf.kerner.commons.range.RangeFactory)}
+	 * {@link net.sf.jranges.range.integerrange.UtilsRangeInteger.range.impl.UtilRange#merge(java.util.List, net.sf.kerner.commons.range.RangeFactory)}
 	 * .
 	 */
 	@Test
