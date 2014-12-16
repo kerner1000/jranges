@@ -15,9 +15,9 @@
  ******************************************************************************/
 package net.sf.jranges.range.longrange.impl;
 
-import net.sf.jranges.range.longrange.LongRange;
+import net.sf.jranges.range.longrange.RangeLong;
 
-public abstract class VeryAbstractLongRange implements LongRange {
+public abstract class VeryAbstractLongRange implements RangeLong {
 
 	private volatile int hashCode;
 
@@ -73,7 +73,7 @@ public abstract class VeryAbstractLongRange implements LongRange {
 	 * Compares this {@code LongRange} to given {@code LongRange} by
 	 * {@link #getStart()} .
 	 */
-	public int compareTo(LongRange o) {
+	public int compareTo(RangeLong o) {
 		return Long.valueOf(getStart()).compareTo(Long.valueOf(o.getStart()));
 	}
 

@@ -27,7 +27,7 @@ import net.sf.jranges.range.RangeException;
  * @version 2010-11-07
  * 
  */
-public interface LongRange extends Comparable<LongRange>, Range {
+public interface RangeLong extends Comparable<RangeLong>, Range {
 
 	/**
 	 * 
@@ -80,7 +80,7 @@ public interface LongRange extends Comparable<LongRange>, Range {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	LongRange shift(long offset) throws RangeException;
+	RangeLong shift(long offset) throws RangeException;
 
 	/**
 	 * 
@@ -93,7 +93,7 @@ public interface LongRange extends Comparable<LongRange>, Range {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	LongRange expandRange(long offset) throws RangeException;
+	RangeLong expandRange(long offset) throws RangeException;
 
 	/**
 	 * 
@@ -113,7 +113,7 @@ public interface LongRange extends Comparable<LongRange>, Range {
 	 * @throws RangeException
 	 *             if this operation resulted in an invalid range
 	 */
-	LongRange expandRange(long offset, boolean stayWithinLimits) throws RangeException;
+	RangeLong expandRange(long offset, boolean stayWithinLimits) throws RangeException;
 
 	/**
 	 * Check if this {@code LongRange} contains the given position.

@@ -16,9 +16,9 @@
 package net.sf.jranges.range.longrange.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.longrange.LongRange;
+import net.sf.jranges.range.longrange.RangeLong;
 
-public class DummyLongRange extends VeryAbstractLongRange implements LongRange {
+public class DummyLongRange extends VeryAbstractLongRange implements RangeLong {
 
 	// Constructor //
 
@@ -72,21 +72,21 @@ public class DummyLongRange extends VeryAbstractLongRange implements LongRange {
 	/**
 	 * 
 	 */
-	public LongRange shift(long offset) {
+	public RangeLong shift(long offset) {
 		return new DummyLongRange(getStart() + offset, getStop() + offset);
 	}
 
 	/**
 	 * 
 	 */
-	public LongRange expandRange(long offset) throws RangeException {
+	public RangeLong expandRange(long offset) throws RangeException {
 		return expandRange(offset, false);
 	}
 
 	/**
 	 * 
 	 */
-	public LongRange expandRange(long offset, boolean stayWithinLimits) throws RangeException {
+	public RangeLong expandRange(long offset, boolean stayWithinLimits) throws RangeException {
 		long start = getStart() - offset;
 		long stop = getStop() + offset;
 		return new DummyLongRange(start, stop);
