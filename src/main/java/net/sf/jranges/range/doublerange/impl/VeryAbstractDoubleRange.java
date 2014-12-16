@@ -15,11 +15,11 @@
  ******************************************************************************/
 package net.sf.jranges.range.doublerange.impl;
 
-import net.sf.jranges.range.doublerange.DoubleRange;
+import net.sf.jranges.range.doublerange.RangeDouble;
 
 /**
  * 
- * Most abstract prototype implementation for {@link DoubleRange}.
+ * Most abstract prototype implementation for {@link RangeDouble}.
  * 
  * <p>
  * <b>Example:</b><br>
@@ -50,7 +50,7 @@ import net.sf.jranges.range.doublerange.DoubleRange;
  * @author <a href="mailto:alexanderkerner24@gmail.com">Alexander Kerner</a>
  * 
  */
-public abstract class VeryAbstractDoubleRange implements DoubleRange {
+public abstract class VeryAbstractDoubleRange implements RangeDouble {
 
     private volatile int hashCode;
 
@@ -68,7 +68,7 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
      * Compares this {@code DoubleRange} to given {@code DoubleRange} by
      * {@link #getStart()} .
      */
-    public int compareTo(final DoubleRange o) {
+    public int compareTo(final RangeDouble o) {
         return Double.valueOf(getStart()).compareTo(Double.valueOf(o.getStart()));
     }
 
@@ -78,9 +78,9 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
             return true;
         if (obj == null)
             return false;
-        if (!(obj instanceof DoubleRange))
+        if (!(obj instanceof RangeDouble))
             return false;
-        final DoubleRange other = (DoubleRange) obj;
+        final RangeDouble other = (RangeDouble) obj;
         if (getStart() != other.getStart())
             return false;
         if (getStop() != other.getStop())
@@ -135,7 +135,7 @@ public abstract class VeryAbstractDoubleRange implements DoubleRange {
         return false;
     }
 
-    public boolean sharesPositionsWith(final DoubleRange anotherRange) {
+    public boolean sharesPositionsWith(final RangeDouble anotherRange) {
         return (includes(anotherRange.getStart()) || includes(anotherRange.getStop()));
     }
 

@@ -17,7 +17,7 @@ package net.sf.jranges.range;
 
 import java.util.Collection;
 
-import net.sf.jranges.range.doublerange.DoubleRange;
+import net.sf.jranges.range.doublerange.RangeDouble;
 import net.sf.jranges.range.integerrange.IntegerRange;
 import net.sf.kerner.utils.math.UtilMath;
 
@@ -31,7 +31,7 @@ public class RangeUtils {
         void call(int i);
     }
 
-    public static void doForAllInRange(final DoubleRange range, final DoubleRangeTask task) {
+    public static void doForAllInRange(final RangeDouble range, final DoubleRangeTask task) {
         for (double i = range.getStart(); UtilMath.round(i, 6) <= range.getStop(); i += range
                 .getInterval()) {
             task.call(i);

@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
-import net.sf.jranges.range.doublerange.DoubleRange;
+import net.sf.jranges.range.doublerange.RangeDouble;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -48,16 +48,16 @@ public class TestRangeDoubleUtils {
 
 	@Test
 	public final void testSplit01() {
-		DoubleRange range = new DummyDoubleRange(0, 10);
-		List<? extends DoubleRange> result = RangeDoubleUtils.split(range, 2, new FactoryRangeDoubleZeroPositive());
+		RangeDouble range = new DummyDoubleRange(0, 10);
+		List<? extends RangeDouble> result = RangeDoubleUtils.split(range, 2, new FactoryRangeDoubleZeroPositive());
 		assertEquals(10, result.size());
 	}
 
 	@Ignore
 	@Test
 	public final void testSplit02() {
-		DoubleRange range = new ZeroPositiveDoubleRange(0, 10, 0.2);
-		List<? extends DoubleRange> result = RangeDoubleUtils.split(range, 2, new FactoryRangeDoubleZeroPositive());
+		RangeDouble range = new ZeroPositiveDoubleRange(0, 10, 0.2);
+		List<? extends RangeDouble> result = RangeDoubleUtils.split(range, 2, new FactoryRangeDoubleZeroPositive());
 		System.out.println(result);
 	}
 

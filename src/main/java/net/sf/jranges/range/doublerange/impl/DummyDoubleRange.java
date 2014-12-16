@@ -16,12 +16,12 @@
 package net.sf.jranges.range.doublerange.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.doublerange.DoubleRange;
+import net.sf.jranges.range.doublerange.RangeDouble;
 
 /**
  * 
  * Most simple implementation for
- * {@link net.sf.jranges.range.doublerange.DoubleRange DoubleRange}. Arguments
+ * {@link net.sf.jranges.range.doublerange.RangeDouble DoubleRange}. Arguments
  * and operations are not checked for validity.
  * 
  * <p>
@@ -72,21 +72,21 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	/**
 	 * 
 	 */
-	public DoubleRange shift(double offset) throws RangeException {
+	public RangeDouble shift(double offset) throws RangeException {
 		return new DummyDoubleRange(getStart() + offset, getStop() + offset);
 	}
 
 	/**
 	 * 
 	 */
-	public DoubleRange expandRange(double offset) throws RangeException {
+	public RangeDouble expandRange(double offset) throws RangeException {
 		return expandRange(offset, false);
 	}
 
 	/**
 	 * 
 	 */
-	public DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException {
+	public RangeDouble expandRange(double offset, boolean stayWithinLimits) throws RangeException {
 		double start = getStart() - offset;
 		double stop = getStop() + offset;
 		return new DummyDoubleRange(start, stop);
