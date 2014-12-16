@@ -45,7 +45,7 @@ import net.sf.jranges.range.doublerange.RangeDouble;
  * @version 2011-02-23
  * 
  */
-public class DummyDoubleRange extends VeryAbstractDoubleRange {
+public class RangeDoubleDummy extends VeryAbstractDoubleRange {
 
 	/**
 	 * 
@@ -53,7 +53,7 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	 * initiated with {@code 0}.
 	 * 
 	 */
-	public DummyDoubleRange() {
+	public RangeDoubleDummy() {
 		this.start = 0;
 		this.stop = 0;
 	}
@@ -64,7 +64,7 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	 * values.
 	 * 
 	 */
-	public DummyDoubleRange(double start, double stop) {
+	public RangeDoubleDummy(double start, double stop) {
 		this.start = start;
 		this.stop = stop;
 	}
@@ -73,7 +73,7 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	 * 
 	 */
 	public RangeDouble shift(double offset) throws RangeException {
-		return new DummyDoubleRange(getStart() + offset, getStop() + offset);
+		return new RangeDoubleDummy(getStart() + offset, getStop() + offset);
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	public RangeDouble expandRange(double offset, boolean stayWithinLimits) throws RangeException {
 		double start = getStart() - offset;
 		double stop = getStop() + offset;
-		return new DummyDoubleRange(start, stop);
+		return new RangeDoubleDummy(start, stop);
 	}
 
 }

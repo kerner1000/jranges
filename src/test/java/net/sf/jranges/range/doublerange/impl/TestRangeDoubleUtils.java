@@ -48,7 +48,7 @@ public class TestRangeDoubleUtils {
 
 	@Test
 	public final void testSplit01() {
-		RangeDouble range = new DummyDoubleRange(0, 10);
+		RangeDouble range = new RangeDoubleDummy(0, 10);
 		List<? extends RangeDouble> result = RangeDoubleUtils.split(range, 2, new FactoryRangeDoubleZeroPositive());
 		assertEquals(10, result.size());
 	}
