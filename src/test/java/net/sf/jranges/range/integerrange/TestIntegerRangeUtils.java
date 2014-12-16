@@ -29,7 +29,7 @@ import java.util.List;
 import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.integerrange.UtilsRangeInteger;
 import net.sf.jranges.range.integerrange.impl.RangeIntegerDummy;
-import net.sf.jranges.range.integerrange.impl.DummyIntegerRangeFactory;
+import net.sf.jranges.range.integerrange.impl.FactoryRangeIntegerDummy;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -153,7 +153,7 @@ public class TestIntegerRangeUtils {
 		ranges.add(new RangeIntegerDummy(3, 4));
 		ranges.add(new RangeIntegerDummy(5, 6));
 		ranges.add(new RangeIntegerDummy(7, 8));
-		assertEquals(new RangeIntegerDummy(1, 8), UtilsRangeInteger.merge(ranges, new DummyIntegerRangeFactory()));
+		assertEquals(new RangeIntegerDummy(1, 8), UtilsRangeInteger.merge(ranges, new FactoryRangeIntegerDummy()));
 	}
 
 }

@@ -38,7 +38,7 @@ import net.sf.jranges.range.integerrange.IntegerRangeFactory;
  * @version 2011-09-02
  * 
  */
-public class DummyIntegerRangeFactory implements IntegerRangeFactory<RangeInteger> {
+public class FactoryRangeIntegerDummy implements IntegerRangeFactory<RangeInteger> {
 
 	public RangeIntegerDummy create() {
 		return new RangeIntegerDummy();
