@@ -59,20 +59,6 @@ public class RangeUtils {
         return true;
     }
 
-    @Deprecated
-    public static int startStayWithinLimit(final int value, final int limit) {
-        if (value < limit)
-            return limit;
-        return value;
-    }
-
-    @Deprecated
-    public static int stopStayWithinLimit(final int value, final int limit) {
-        if (value > limit)
-            return limit;
-        return value;
-    }
-
     private RangeUtils() {
     }
 }
