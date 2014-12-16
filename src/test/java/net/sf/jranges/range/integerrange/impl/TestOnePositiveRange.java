@@ -24,7 +24,7 @@ import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange;
+import net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,8 +41,8 @@ import org.junit.Test;
  */
 public class TestOnePositiveRange {
 
-	private OnePositiveIntegerRange r1;
-	private OnePositiveIntegerRange r2;
+	private RangeIntegerOnePositive r1;
+	private RangeIntegerOnePositive r2;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -62,92 +62,92 @@ public class TestOnePositiveRange {
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int)}
 	 * .
 	 */
 	@Test
 	public final void testOnePositiveRangeIntInt() {
-		r1 = new OnePositiveIntegerRange(1, 2);
+		r1 = new RangeIntegerOnePositive(1, 2);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
 	public final void testOnePositiveRangeIntInt01() {
-		r1 = new OnePositiveIntegerRange(0, 2);
+		r1 = new RangeIntegerOnePositive(0, 2);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
 	public final void testOnePositiveRangeIntInt03() {
-		r1 = new OnePositiveIntegerRange(-1, 2);
+		r1 = new RangeIntegerOnePositive(-1, 2);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
 	public final void testOnePositiveRangeIntIntInt() {
-		r1 = new OnePositiveIntegerRange(1, 2, 1);
+		r1 = new RangeIntegerOnePositive(1, 2, 1);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
 	public final void testOnePositiveRangeIntIntInt01() {
-		r1 = new OnePositiveIntegerRange(1, 7, 3);
+		r1 = new RangeIntegerOnePositive(1, 7, 3);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
 	public final void testOnePositiveRangeIntIntInt02() {
-		r1 = new OnePositiveIntegerRange(1, 6, 3);
+		r1 = new RangeIntegerOnePositive(1, 6, 3);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
 	public final void testOnePositiveRangeIntIntInt03() {
-		r1 = new OnePositiveIntegerRange(1, 8, 3);
+		r1 = new RangeIntegerOnePositive(1, 8, 3);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test
 	public final void testOnePositiveRangeIntIntInt04() {
-		r1 = new OnePositiveIntegerRange(1, 9, 2);
+		r1 = new RangeIntegerOnePositive(1, 9, 2);
 	}
 
 	/**
 	 * Test method for
-	 * {@link net.sf.jranges.range.integerrange.impl.OnePositiveIntegerRange#OnePositiveRange(int, int, int)}
+	 * {@link net.sf.jranges.range.integerrange.impl.RangeIntegerOnePositive#OnePositiveRange(int, int, int)}
 	 * .
 	 */
 	@Test(expected = RangeException.class)
 	public final void testOnePositiveRangeIntIntInt05() {
-		r1 = new OnePositiveIntegerRange(2, 9, 2);
+		r1 = new RangeIntegerOnePositive(2, 9, 2);
 	}
 
 	/**
@@ -157,8 +157,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testEqualsObject() {
-		r1 = new OnePositiveIntegerRange(1, 2);
-		r2 = new OnePositiveIntegerRange(1, 2);
+		r1 = new RangeIntegerOnePositive(1, 2);
+		r2 = new RangeIntegerOnePositive(1, 2);
 		assertEquals(r1, r2);
 	}
 
@@ -169,8 +169,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testEqualsObject01() {
-		r1 = new OnePositiveIntegerRange(1, 2);
-		r2 = new OnePositiveIntegerRange(1, 3);
+		r1 = new RangeIntegerOnePositive(1, 2);
+		r2 = new RangeIntegerOnePositive(1, 3);
 		assertNotSame(r1, r2);
 	}
 
@@ -181,8 +181,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testEqualsObject02() {
-		r1 = new OnePositiveIntegerRange(1, 2);
-		r2 = new OnePositiveIntegerRange(1, 5, 2);
+		r1 = new RangeIntegerOnePositive(1, 2);
+		r2 = new RangeIntegerOnePositive(1, 5, 2);
 		assertNotSame(r1, r2);
 	}
 
@@ -193,8 +193,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testEqualsObject03() {
-		r1 = new OnePositiveIntegerRange(1, 5, 2);
-		r2 = new OnePositiveIntegerRange(1, 5, 2);
+		r1 = new RangeIntegerOnePositive(1, 5, 2);
+		r2 = new RangeIntegerOnePositive(1, 5, 2);
 		assertEquals(r1, r2);
 	}
 
@@ -205,7 +205,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetInterval() {
-		r1 = new OnePositiveIntegerRange(1, 5, 2);
+		r1 = new RangeIntegerOnePositive(1, 5, 2);
 		assertEquals(2, r1.getInterval());
 	}
 
@@ -216,7 +216,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetInterval01() {
-		r1 = new OnePositiveIntegerRange(1, 4);
+		r1 = new RangeIntegerOnePositive(1, 4);
 		assertEquals(1, r1.getInterval());
 	}
 
@@ -227,8 +227,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testShift() {
-		r1 = new OnePositiveIntegerRange(4, 8);
-		assertEquals(new OnePositiveIntegerRange(3, 7), r1.shift(-1));
+		r1 = new RangeIntegerOnePositive(4, 8);
+		assertEquals(new RangeIntegerOnePositive(3, 7), r1.shift(-1));
 	}
 
 	/**
@@ -238,8 +238,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testShift01() {
-		r1 = new OnePositiveIntegerRange(4, 8);
-		assertEquals(new OnePositiveIntegerRange(5, 9), r1.shift(1));
+		r1 = new RangeIntegerOnePositive(4, 8);
+		assertEquals(new RangeIntegerOnePositive(5, 9), r1.shift(1));
 	}
 
 	/**
@@ -249,8 +249,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testShift02() {
-		r1 = new OnePositiveIntegerRange(4, 8);
-		assertEquals(new OnePositiveIntegerRange(4, 8), r1.shift(0));
+		r1 = new RangeIntegerOnePositive(4, 8);
+		assertEquals(new RangeIntegerOnePositive(4, 8), r1.shift(0));
 	}
 
 	/**
@@ -260,8 +260,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testExpandRangeInt() {
-		r1 = new OnePositiveIntegerRange(4, 8);
-		assertEquals(new OnePositiveIntegerRange(3, 9), r1.expandRange(1));
+		r1 = new RangeIntegerOnePositive(4, 8);
+		assertEquals(new RangeIntegerOnePositive(3, 9), r1.expandRange(1));
 	}
 
 	/**
@@ -271,8 +271,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testExpandRangeInt01() {
-		r1 = new OnePositiveIntegerRange(4, 8);
-		assertEquals(new OnePositiveIntegerRange(5, 7), r1.expandRange(-1));
+		r1 = new RangeIntegerOnePositive(4, 8);
+		assertEquals(new RangeIntegerOnePositive(5, 7), r1.expandRange(-1));
 	}
 
 	/**
@@ -282,8 +282,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testExpandRangeInt02() {
-		r1 = new OnePositiveIntegerRange(4, 8);
-		assertEquals(new OnePositiveIntegerRange(4, 8), r1.expandRange(0));
+		r1 = new RangeIntegerOnePositive(4, 8);
+		assertEquals(new RangeIntegerOnePositive(4, 8), r1.expandRange(0));
 	}
 
 	/**
@@ -293,7 +293,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test(expected = RangeException.class)
 	public final void testExpandRangeIntBoolean() {
-		r1 = new OnePositiveIntegerRange(1, 8);
+		r1 = new RangeIntegerOnePositive(1, 8);
 		r1.expandRange(2, false);
 	}
 
@@ -304,8 +304,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testExpandRangeIntBoolean01() {
-		r1 = new OnePositiveIntegerRange(1, 8);
-		assertEquals(new OnePositiveIntegerRange(1, 10), r1.expandRange(2, true));
+		r1 = new RangeIntegerOnePositive(1, 8);
+		assertEquals(new RangeIntegerOnePositive(1, 10), r1.expandRange(2, true));
 	}
 
 	/**
@@ -315,8 +315,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testExpandRangeIntBoolean02() {
-		r1 = new OnePositiveIntegerRange(4, Integer.MAX_VALUE);
-		assertEquals(new OnePositiveIntegerRange(2, Integer.MAX_VALUE), r1.expandRange(2, true));
+		r1 = new RangeIntegerOnePositive(4, Integer.MAX_VALUE);
+		assertEquals(new RangeIntegerOnePositive(2, Integer.MAX_VALUE), r1.expandRange(2, true));
 	}
 
 	/**
@@ -326,7 +326,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testIncludes() {
-		r1 = new OnePositiveIntegerRange(1, 8);
+		r1 = new RangeIntegerOnePositive(1, 8);
 		assertTrue(r1.includes(1));
 		assertTrue(r1.includes(2));
 		assertTrue(r1.includes(7));
@@ -340,7 +340,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testIncludes01() {
-		r1 = new OnePositiveIntegerRange(1, 8);
+		r1 = new RangeIntegerOnePositive(1, 8);
 		assertFalse(r1.includes(0));
 		assertFalse(r1.includes(9));
 		assertFalse(r1.includes(-1));
@@ -354,7 +354,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetLimit1() {
-		r1 = new OnePositiveIntegerRange(1, 8);
+		r1 = new RangeIntegerOnePositive(1, 8);
 		assertEquals(1, r1.getLimit1());
 	}
 
@@ -365,7 +365,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetLimit101() {
-		r1 = new OnePositiveIntegerRange(2, 8);
+		r1 = new RangeIntegerOnePositive(2, 8);
 		assertEquals(1, r1.getLimit1());
 	}
 
@@ -376,7 +376,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetLimit2() {
-		r1 = new OnePositiveIntegerRange(2, 8);
+		r1 = new RangeIntegerOnePositive(2, 8);
 		assertEquals(Integer.MAX_VALUE, r1.getLimit2());
 	}
 
@@ -386,8 +386,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testHashCode() {
-		r1 = new OnePositiveIntegerRange(2, 8);
-		r2 = new OnePositiveIntegerRange(2, 8);
+		r1 = new RangeIntegerOnePositive(2, 8);
+		r2 = new RangeIntegerOnePositive(2, 8);
 		assertEquals(r1.hashCode(), r2.hashCode());
 	}
 
@@ -397,8 +397,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testHashCode01() {
-		r1 = new OnePositiveIntegerRange(2, 8);
-		r2 = new OnePositiveIntegerRange(2, 9);
+		r1 = new RangeIntegerOnePositive(2, 8);
+		r2 = new RangeIntegerOnePositive(2, 9);
 		assertNotSame(r1.hashCode(), r2.hashCode());
 	}
 
@@ -408,8 +408,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testHashCode02() {
-		r1 = new OnePositiveIntegerRange(2, 8, 2);
-		r2 = new OnePositiveIntegerRange(2, 8, 2);
+		r1 = new RangeIntegerOnePositive(2, 8, 2);
+		r2 = new RangeIntegerOnePositive(2, 8, 2);
 		assertEquals(r1.hashCode(), r2.hashCode());
 	}
 
@@ -419,8 +419,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testHashCode03() {
-		r1 = new OnePositiveIntegerRange(2, 8, 3);
-		r2 = new OnePositiveIntegerRange(2, 8, 1);
+		r1 = new RangeIntegerOnePositive(2, 8, 3);
+		r2 = new RangeIntegerOnePositive(2, 8, 1);
 		assertNotSame(r1.hashCode(), r2.hashCode());
 	}
 
@@ -440,7 +440,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetStart() {
-		r1 = new OnePositiveIntegerRange(2, 8, 3);
+		r1 = new RangeIntegerOnePositive(2, 8, 3);
 		assertEquals(2, r1.getStart());
 	}
 
@@ -450,7 +450,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetStop() {
-		r1 = new OnePositiveIntegerRange(2, 8, 3);
+		r1 = new RangeIntegerOnePositive(2, 8, 3);
 		assertEquals(8, r1.getStop());
 	}
 
@@ -460,7 +460,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetLength() {
-		r1 = new OnePositiveIntegerRange(2, 8, 3);
+		r1 = new RangeIntegerOnePositive(2, 8, 3);
 		assertEquals(3, r1.getLength());
 	}
 
@@ -470,7 +470,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetLength01() {
-		r1 = new OnePositiveIntegerRange(2, 8, 1);
+		r1 = new RangeIntegerOnePositive(2, 8, 1);
 		assertEquals(7, r1.getLength());
 	}
 
@@ -480,7 +480,7 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testGetLength02() {
-		r1 = new OnePositiveIntegerRange(1, 9, 2);
+		r1 = new RangeIntegerOnePositive(1, 9, 2);
 		assertEquals(5, r1.getLength());
 	}
 
@@ -491,8 +491,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testCompareTo() {
-		r1 = new OnePositiveIntegerRange(2, 8, 3);
-		r2 = new OnePositiveIntegerRange(2, 8);
+		r1 = new RangeIntegerOnePositive(2, 8, 3);
+		r2 = new RangeIntegerOnePositive(2, 8);
 		assertEquals(0, r1.compareTo(r2));
 	}
 
@@ -503,8 +503,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testCompareTo01() {
-		r1 = new OnePositiveIntegerRange(2, 8);
-		r2 = new OnePositiveIntegerRange(2, 9);
+		r1 = new RangeIntegerOnePositive(2, 8);
+		r2 = new RangeIntegerOnePositive(2, 9);
 
 		// compareTo compares start positions (not length)!!
 
@@ -518,8 +518,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testCompareTo02() {
-		r1 = new OnePositiveIntegerRange(2, 8, 3);
-		r2 = new OnePositiveIntegerRange(2, 9);
+		r1 = new RangeIntegerOnePositive(2, 8, 3);
+		r2 = new RangeIntegerOnePositive(2, 9);
 
 		// compareTo compares start positions (not length)!!
 
@@ -533,8 +533,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testCompareTo03() {
-		r1 = new OnePositiveIntegerRange(2, 8, 3);
-		r2 = new OnePositiveIntegerRange(1, 9);
+		r1 = new RangeIntegerOnePositive(2, 8, 3);
+		r2 = new RangeIntegerOnePositive(1, 9);
 		assertEquals(1, r1.compareTo(r2));
 	}
 
@@ -545,8 +545,8 @@ public class TestOnePositiveRange {
 	 */
 	@Test
 	public final void testCompareTo04() {
-		r1 = new OnePositiveIntegerRange(1, 8);
-		r2 = new OnePositiveIntegerRange(2, 9);
+		r1 = new RangeIntegerOnePositive(1, 8);
+		r2 = new RangeIntegerOnePositive(2, 9);
 		assertEquals(-1, r1.compareTo(r2));
 	}
 

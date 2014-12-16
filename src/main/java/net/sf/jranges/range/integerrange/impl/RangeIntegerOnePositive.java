@@ -38,19 +38,19 @@ import net.sf.jranges.range.RangeException;
  * @version 2010-10-19
  * 
  */
-public class OnePositiveIntegerRange extends RangeIntegerAbstract {
+public class RangeIntegerOnePositive extends RangeIntegerAbstract {
 
-	public OnePositiveIntegerRange(int start, int stop) throws RangeException {
+	public RangeIntegerOnePositive(int start, int stop) throws RangeException {
 		super(start, stop, 1, Integer.MAX_VALUE);
 	}
 
-	public OnePositiveIntegerRange(int start, int stop, int interval) throws RangeException {
+	public RangeIntegerOnePositive(int start, int stop, int interval) throws RangeException {
 		super(start, stop, 1, Integer.MAX_VALUE, interval);
 	}
 
 	@Override
-	protected OnePositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
-		return new OnePositiveIntegerRange(start, stop, interval);
+	protected RangeIntegerOnePositive newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
+		return new RangeIntegerOnePositive(start, stop, interval);
 	}
 
 }
