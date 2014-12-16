@@ -28,9 +28,9 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2011-09-02
  */
-public class IntegerRangeUtils {
+public class UtilsRangeInteger {
 
-    private IntegerRangeUtils() {
+    private UtilsRangeInteger() {
         // singleton
     }
 
