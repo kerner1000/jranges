@@ -28,7 +28,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * A prototype implementation for {@link RangeInteger}.
  * 
  * <p>
- * In contrast to {@link DummyIntegerRange}, an {@code AbstractIntegerRange} is
+ * In contrast to {@link RangeIntegerDummy}, an {@code AbstractIntegerRange} is
  * immutable and also provides basic value checking e.g. {@code start <= stop}.
  * </p>
  * An {@code AbstractIntegerRange} also has limits, that means start cannot be

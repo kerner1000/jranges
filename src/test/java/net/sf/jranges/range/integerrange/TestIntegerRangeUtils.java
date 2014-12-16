@@ -28,7 +28,7 @@ import java.util.List;
 
 import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.integerrange.UtilsRangeInteger;
-import net.sf.jranges.range.integerrange.impl.DummyIntegerRange;
+import net.sf.jranges.range.integerrange.impl.RangeIntegerDummy;
 import net.sf.jranges.range.integerrange.impl.DummyIntegerRangeFactory;
 
 import org.junit.After;
@@ -79,10 +79,10 @@ public class TestIntegerRangeUtils {
 	 */
 	@Test
 	public final void testIncludedByOne() {
-		ranges.add(new DummyIntegerRange(1, 2));
-		ranges.add(new DummyIntegerRange(3, 4));
-		ranges.add(new DummyIntegerRange(5, 6));
-		ranges.add(new DummyIntegerRange(7, 8));
+		ranges.add(new RangeIntegerDummy(1, 2));
+		ranges.add(new RangeIntegerDummy(3, 4));
+		ranges.add(new RangeIntegerDummy(5, 6));
+		ranges.add(new RangeIntegerDummy(7, 8));
 		assertTrue(UtilsRangeInteger.includedByOne(ranges, 1));
 	}
 
@@ -93,10 +93,10 @@ public class TestIntegerRangeUtils {
 	 */
 	@Test
 	public final void testIncludedByOne01() {
-		ranges.add(new DummyIntegerRange(1, 2));
-		ranges.add(new DummyIntegerRange(3, 4));
-		ranges.add(new DummyIntegerRange(5, 6));
-		ranges.add(new DummyIntegerRange(7, 8));
+		ranges.add(new RangeIntegerDummy(1, 2));
+		ranges.add(new RangeIntegerDummy(3, 4));
+		ranges.add(new RangeIntegerDummy(5, 6));
+		ranges.add(new RangeIntegerDummy(7, 8));
 		assertTrue(UtilsRangeInteger.includedByOne(ranges, 8));
 	}
 
@@ -107,10 +107,10 @@ public class TestIntegerRangeUtils {
 	 */
 	@Test
 	public final void testIncludedByOne02() {
-		ranges.add(new DummyIntegerRange(1, 2));
-		ranges.add(new DummyIntegerRange(3, 4));
-		ranges.add(new DummyIntegerRange(5, 6));
-		ranges.add(new DummyIntegerRange(7, 8));
+		ranges.add(new RangeIntegerDummy(1, 2));
+		ranges.add(new RangeIntegerDummy(3, 4));
+		ranges.add(new RangeIntegerDummy(5, 6));
+		ranges.add(new RangeIntegerDummy(7, 8));
 		assertFalse(UtilsRangeInteger.includedByOne(ranges, 0));
 	}
 
@@ -121,10 +121,10 @@ public class TestIntegerRangeUtils {
 	 */
 	@Test
 	public final void testIncludedByOne03() {
-		ranges.add(new DummyIntegerRange(1, 2));
-		ranges.add(new DummyIntegerRange(3, 4));
-		ranges.add(new DummyIntegerRange(5, 6));
-		ranges.add(new DummyIntegerRange(7, 8));
+		ranges.add(new RangeIntegerDummy(1, 2));
+		ranges.add(new RangeIntegerDummy(3, 4));
+		ranges.add(new RangeIntegerDummy(5, 6));
+		ranges.add(new RangeIntegerDummy(7, 8));
 		assertFalse(UtilsRangeInteger.includedByOne(ranges, -1));
 	}
 
@@ -135,10 +135,10 @@ public class TestIntegerRangeUtils {
 	 */
 	@Test
 	public final void testIncludedByOne04() {
-		ranges.add(new DummyIntegerRange(1, 2));
-		ranges.add(new DummyIntegerRange(3, 4));
-		ranges.add(new DummyIntegerRange(5, 6));
-		ranges.add(new DummyIntegerRange(7, 8));
+		ranges.add(new RangeIntegerDummy(1, 2));
+		ranges.add(new RangeIntegerDummy(3, 4));
+		ranges.add(new RangeIntegerDummy(5, 6));
+		ranges.add(new RangeIntegerDummy(7, 8));
 		assertFalse(UtilsRangeInteger.includedByOne(ranges, 9));
 	}
 
@@ -149,11 +149,11 @@ public class TestIntegerRangeUtils {
 	 */
 	@Test
 	public final void testMerge() {
-		ranges.add(new DummyIntegerRange(1, 2));
-		ranges.add(new DummyIntegerRange(3, 4));
-		ranges.add(new DummyIntegerRange(5, 6));
-		ranges.add(new DummyIntegerRange(7, 8));
-		assertEquals(new DummyIntegerRange(1, 8), UtilsRangeInteger.merge(ranges, new DummyIntegerRangeFactory()));
+		ranges.add(new RangeIntegerDummy(1, 2));
+		ranges.add(new RangeIntegerDummy(3, 4));
+		ranges.add(new RangeIntegerDummy(5, 6));
+		ranges.add(new RangeIntegerDummy(7, 8));
+		assertEquals(new RangeIntegerDummy(1, 8), UtilsRangeInteger.merge(ranges, new DummyIntegerRangeFactory()));
 	}
 
 }

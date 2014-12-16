@@ -72,10 +72,10 @@ public class TestRangeCache {
     @Test
     public final void testNext() {
         final ArrayList<RangeInteger> range = new ArrayList<RangeInteger>();
-        range1 = new DummyIntegerRange(1, 10);
-        range2 = new DummyIntegerRange(11, 20);
-        range3 = new DummyIntegerRange(21, 30);
-        range4 = new DummyIntegerRange(31, 40);
+        range1 = new RangeIntegerDummy(1, 10);
+        range2 = new RangeIntegerDummy(11, 20);
+        range3 = new RangeIntegerDummy(21, 30);
+        range4 = new RangeIntegerDummy(31, 40);
         range.add(range1);
         range.add(range2);
         range.add(range3);

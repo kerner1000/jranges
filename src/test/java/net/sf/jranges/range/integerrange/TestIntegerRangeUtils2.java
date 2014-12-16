@@ -24,7 +24,7 @@ import java.util.Arrays;
 
 import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.jranges.range.integerrange.UtilsRangeInteger;
-import net.sf.jranges.range.integerrange.impl.DummyIntegerRange;
+import net.sf.jranges.range.integerrange.impl.RangeIntegerDummy;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -78,7 +78,7 @@ public class TestIntegerRangeUtils2 {
 	 */
 	@Test
 	public final void testMedianPositionFrequencies() {
-		range1 = new DummyIntegerRange(1, 10000);
+		range1 = new RangeIntegerDummy(1, 10000);
 		range2 = range1;
 		assertEquals(1, UtilsRangeInteger.medianPositionFrequencies(Arrays.asList(range1), Arrays.asList(range2)), 0);
 	}
@@ -90,8 +90,8 @@ public class TestIntegerRangeUtils2 {
 	 */
 	@Test
 	public final void testMedianPositionFrequencies01() {
-		range1 = new DummyIntegerRange(10001, 20000);
-		range2 = new DummyIntegerRange(1, 100000);
+		range1 = new RangeIntegerDummy(10001, 20000);
+		range2 = new RangeIntegerDummy(1, 100000);
 		assertEquals(0.1, UtilsRangeInteger.medianPositionFrequencies(Arrays.asList(range1), Arrays.asList(range2)), 0);
 	}
 
@@ -102,9 +102,9 @@ public class TestIntegerRangeUtils2 {
 	 */
 	@Test
 	public final void testMedianPositionFrequencies02() {
-		range1 = new DummyIntegerRange(10001, 20000);
-		range2 = new DummyIntegerRange(20001, 30000);
-		range3 = new DummyIntegerRange(1, 100000);
+		range1 = new RangeIntegerDummy(10001, 20000);
+		range2 = new RangeIntegerDummy(20001, 30000);
+		range3 = new RangeIntegerDummy(1, 100000);
 		assertEquals(0.2,
 				UtilsRangeInteger.medianPositionFrequencies(Arrays.asList(range1, range2), Arrays.asList(range3)), 0);
 	}
@@ -116,10 +116,10 @@ public class TestIntegerRangeUtils2 {
 	 */
 	@Test
 	public final void testMedianPositionFrequencies03() {
-		range1 = new DummyIntegerRange(10001, 20000);
-		range2 = new DummyIntegerRange(20001, 30000);
-		range3 = new DummyIntegerRange(1, 50000);
-		range4 = new DummyIntegerRange(50001, 100000);
+		range1 = new RangeIntegerDummy(10001, 20000);
+		range2 = new RangeIntegerDummy(20001, 30000);
+		range3 = new RangeIntegerDummy(1, 50000);
+		range4 = new RangeIntegerDummy(50001, 100000);
 		assertEquals(
 				0.2,
 				UtilsRangeInteger.medianPositionFrequencies(Arrays.asList(range1, range2),

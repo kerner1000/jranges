@@ -44,7 +44,7 @@ import net.sf.jranges.range.integerrange.RangeInteger;
  * @version 2010-11-18
  * 
  */
-public class DummyIntegerRange extends VeryAbstractIntegerRange implements RangeInteger {
+public class RangeIntegerDummy extends VeryAbstractIntegerRange implements RangeInteger {
 
 	// Constructor //
 
@@ -54,7 +54,7 @@ public class DummyIntegerRange extends VeryAbstractIntegerRange implements Range
 	 * with {@code 0}.
 	 * 
 	 */
-	public DummyIntegerRange() {
+	public RangeIntegerDummy() {
 		this.start = 0;
 		this.stop = 0;
 	}
@@ -64,7 +64,7 @@ public class DummyIntegerRange extends VeryAbstractIntegerRange implements Range
 	 * Construct a new {@code DummyRange} with given start and stop values.
 	 * 
 	 */
-	public DummyIntegerRange(int start, int stop) {
+	public RangeIntegerDummy(int start, int stop) {
 		this.start = start;
 		this.stop = stop;
 	}
@@ -99,7 +99,7 @@ public class DummyIntegerRange extends VeryAbstractIntegerRange implements Range
 	 * 
 	 */
 	public RangeInteger shift(int offset) {
-		return new DummyIntegerRange(getStart() + offset, getStop() + offset);
+		return new RangeIntegerDummy(getStart() + offset, getStop() + offset);
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class DummyIntegerRange extends VeryAbstractIntegerRange implements Range
 	public RangeInteger expandRange(int offset, boolean stayWithinLimits) throws RangeException {
 		int start = getStart() - offset;
 		int stop = getStop() + offset;
-		return new DummyIntegerRange(start, stop);
+		return new RangeIntegerDummy(start, stop);
 	}
 
 }
