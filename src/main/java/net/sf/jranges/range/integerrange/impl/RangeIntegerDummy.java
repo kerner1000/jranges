@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 
 /**
  * 
  * Most simple implementation for
- * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}. Arguments and
+ * {@link net.sf.jranges.range.integerrange.RangeInteger IntegerRange}. Arguments and
  * operations are not checked for validity.
  * 
  * <p>
@@ -44,7 +44,7 @@ import net.sf.jranges.range.integer.IntegerRange;
  * @version 2010-11-18
  * 
  */
-public class DummyIntegerRange extends VeryAbstractIntegerRange implements IntegerRange {
+public class RangeIntegerDummy extends VeryAbstractIntegerRange implements RangeInteger {
 
 	// Constructor //
 
@@ -54,7 +54,7 @@ public class DummyIntegerRange extends VeryAbstractIntegerRange implements Integ
 	 * with {@code 0}.
 	 * 
 	 */
-	public DummyIntegerRange() {
+	public RangeIntegerDummy() {
 		this.start = 0;
 		this.stop = 0;
 	}
@@ -64,7 +64,7 @@ public class DummyIntegerRange extends VeryAbstractIntegerRange implements Integ
 	 * Construct a new {@code DummyRange} with given start and stop values.
 	 * 
 	 */
-	public DummyIntegerRange(int start, int stop) {
+	public RangeIntegerDummy(int start, int stop) {
 		this.start = start;
 		this.stop = stop;
 	}
@@ -98,24 +98,24 @@ public class DummyIntegerRange extends VeryAbstractIntegerRange implements Integ
 	/**
 	 * 
 	 */
-	public IntegerRange shift(int offset) {
-		return new DummyIntegerRange(getStart() + offset, getStop() + offset);
+	public RangeInteger shift(int offset) {
+		return new RangeIntegerDummy(getStart() + offset, getStop() + offset);
 	}
 
 	/**
 	 * 
 	 */
-	public IntegerRange expandRange(int offset) throws RangeException {
+	public RangeInteger expandRange(int offset) throws RangeException {
 		return expandRange(offset, false);
 	}
 
 	/**
 	 * 
 	 */
-	public IntegerRange expandRange(int offset, boolean stayWithinLimits) throws RangeException {
+	public RangeInteger expandRange(int offset, boolean stayWithinLimits) throws RangeException {
 		int start = getStart() - offset;
 		int stop = getStop() + offset;
-		return new DummyIntegerRange(start, stop);
+		return new RangeIntegerDummy(start, stop);
 	}
 
 }

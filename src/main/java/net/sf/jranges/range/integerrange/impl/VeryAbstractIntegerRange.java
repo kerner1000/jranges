@@ -13,23 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 
 /**
  * 
- * Most abstract prototype implementation for {@link IntegerRange}.
+ * Most abstract prototype implementation for {@link RangeInteger}.
  * 
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-12-08
  * 
  */
-public abstract class VeryAbstractIntegerRange implements IntegerRange {
+public abstract class VeryAbstractIntegerRange implements RangeInteger {
 
     private volatile int hashCode;
 
@@ -56,7 +56,7 @@ public abstract class VeryAbstractIntegerRange implements IntegerRange {
      * Compares this {@code IntegerRange} to given {@code IntegerRange} by
      * {@link #getStart()} .
      */
-    public int compareTo(final IntegerRange o) {
+    public int compareTo(final RangeInteger o) {
         return Integer.valueOf(getStart()).compareTo(Integer.valueOf(o.getStart()));
     }
 
@@ -66,9 +66,9 @@ public abstract class VeryAbstractIntegerRange implements IntegerRange {
             return true;
         if (obj == null)
             return false;
-        if (!(obj instanceof IntegerRange))
+        if (!(obj instanceof RangeInteger))
             return false;
-        final IntegerRange other = (IntegerRange) obj;
+        final RangeInteger other = (RangeInteger) obj;
         if (getStart() != other.getStart())
             return false;
         if (getStop() != other.getStop())

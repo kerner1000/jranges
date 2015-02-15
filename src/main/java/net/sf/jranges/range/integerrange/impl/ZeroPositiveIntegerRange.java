@@ -13,19 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer;
+package net.sf.jranges.range.integerrange.impl;
 
-import net.sf.kerner.utils.Factory;
+import net.sf.jranges.range.RangeException;
 
 /**
  * 
- * A factory that creates objects of type {@link IntegerRange}.
+ * 
+ * {@code ZeroPositiveRange} is an implementation for
+ * {@link net.sf.jranges.range.integerrange.RangeInteger IntegerRange}, for which the
+ * following is true:<br>
+ * {@code 0 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>
- * <b>Example:</b><br>
- * 
- * </p>
- * <p>
+ * <b>Example:</b>
  * 
  * <pre>
  * TODO example
@@ -34,31 +35,21 @@ import net.sf.kerner.utils.Factory;
  * </p>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2011-09-02
+ * @version 2010-10-19
  * 
  */
-public interface IntegerRangeFactory<T extends IntegerRange> extends Factory<T> {
+public class ZeroPositiveIntegerRange extends RangeIntegerAbstract {
 
-	/**
-	 * 
-	 * Create a {@link IntegerRange} with given start and stop positions.
-	 * 
-	 * @param start
-	 *            start position of created {@code IntegerRange}
-	 * @param stop
-	 *            stop position of created {@code IntegerRange}
-	 * @return newly created {@code IntegerRange}
-	 */
-	T create(int start, int stop);
+	public ZeroPositiveIntegerRange(int start, int stop) throws RangeException {
+		super(start, stop, 0, Integer.MAX_VALUE);
+	}
 
-	/**
-	 * 
-	 * Create a {@link IntegerRange} with from given template.
-	 * 
-	 * @param template
-	 *            template that is used to create new {@code IntegerRange}
-	 * @return newly created {@code IntegerRange}
-	 */
-	T create(IntegerRange template);
+	public ZeroPositiveIntegerRange(int start, int stop, int interval) throws RangeException {
+		super(start, stop, 0, Integer.MAX_VALUE, interval);
+	}
 
+	@Override
+	protected ZeroPositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
+		return new ZeroPositiveIntegerRange(start, stop, interval);
+	}
 }

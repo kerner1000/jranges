@@ -13,20 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange;
 
-import net.sf.jranges.range.RangeException;
+import net.sf.kerner.utils.Factory;
 
 /**
  * 
- * 
- * {@code ZeroPositiveRange} is an implementation for
- * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}, for which the
- * following is true:<br>
- * {@code 0 <= start <= stop <= Integer.MAX_VALUE}
+ * A factory that creates objects of type {@link RangeInteger}.
  * 
  * <p>
- * <b>Example:</b>
+ * <b>Example:</b><br>
+ * 
+ * </p>
+ * <p>
  * 
  * <pre>
  * TODO example
@@ -35,21 +34,31 @@ import net.sf.jranges.range.RangeException;
  * </p>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-10-19
+ * @version 2011-09-02
  * 
  */
-public class ZeroPositiveIntegerRange extends AbstractIntegerRange {
+public interface IntegerRangeFactory<T extends RangeInteger> extends Factory<T> {
 
-	public ZeroPositiveIntegerRange(int start, int stop) throws RangeException {
-		super(start, stop, 0, Integer.MAX_VALUE);
-	}
+	/**
+	 * 
+	 * Create a {@link RangeInteger} with given start and stop positions.
+	 * 
+	 * @param start
+	 *            start position of created {@code IntegerRange}
+	 * @param stop
+	 *            stop position of created {@code IntegerRange}
+	 * @return newly created {@code IntegerRange}
+	 */
+	T create(int start, int stop);
 
-	public ZeroPositiveIntegerRange(int start, int stop, int interval) throws RangeException {
-		super(start, stop, 0, Integer.MAX_VALUE, interval);
-	}
+	/**
+	 * 
+	 * Create a {@link RangeInteger} with from given template.
+	 * 
+	 * @param template
+	 *            template that is used to create new {@code IntegerRange}
+	 * @return newly created {@code IntegerRange}
+	 */
+	T create(RangeInteger template);
 
-	@Override
-	protected ZeroPositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
-		return new ZeroPositiveIntegerRange(start, stop, interval);
-	}
 }

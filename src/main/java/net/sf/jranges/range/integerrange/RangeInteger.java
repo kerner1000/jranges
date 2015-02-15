@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer;
+package net.sf.jranges.range.integerrange;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ import net.sf.jranges.range.RangeException;
  * @version 2010-12-06
  * 
  */
-public interface IntegerRange extends Range, Comparable<IntegerRange> {
+public interface RangeInteger extends Range, Comparable<RangeInteger> {
 
     List<Integer> asList();
 
@@ -43,7 +43,7 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
      * @throws RangeException
      *             if this operation resulted in an invalid range
      */
-    IntegerRange expandRange(int offset) throws RangeException;
+    RangeInteger expandRange(int offset) throws RangeException;
 
     /**
      * 
@@ -63,7 +63,7 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
      * @throws RangeException
      *             if this operation resulted in an invalid range
      */
-    IntegerRange expandRange(int offset, boolean stayWithinLimits) throws RangeException;
+    RangeInteger expandRange(int offset, boolean stayWithinLimits) throws RangeException;
 
     /**
      * 
@@ -127,6 +127,6 @@ public interface IntegerRange extends Range, Comparable<IntegerRange> {
      * @throws RangeException
      *             if this operation resulted in an invalid range
      */
-    IntegerRange shift(int offset) throws RangeException;
+    RangeInteger shift(int offset) throws RangeException;
 
 }

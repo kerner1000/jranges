@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
-import net.sf.jranges.range.RangeException;
+import net.sf.jranges.range.integerrange.RangeInteger;
+import net.sf.jranges.range.integerrange.IntegerRangeFactory;
 
 /**
  * 
- * 
- * {@code OnePositiveRange} is an implementation for
- * {@link net.sf.jranges.range.integer.IntegerRange IntegerRange}, for which the
- * following is true:<br>
- * {@code 1 <= start <= stop <= Integer.MAX_VALUE}
+ * A factory that creates objects of type {@link RangeIntegerDummy}.
  * 
  * <p>
- * <b>Example:</b>
+ * <b>Example:</b><br>
+ * 
+ * </p>
+ * <p>
  * 
  * <pre>
  * TODO example
@@ -35,22 +35,21 @@ import net.sf.jranges.range.RangeException;
  * </p>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2010-10-19
+ * @version 2011-09-02
  * 
  */
-public class OnePositiveIntegerRange extends AbstractIntegerRange {
+public class FactoryRangeIntegerDummy implements IntegerRangeFactory<RangeInteger> {
 
-	public OnePositiveIntegerRange(int start, int stop) throws RangeException {
-		super(start, stop, 1, Integer.MAX_VALUE);
+	public RangeIntegerDummy create() {
+		return new RangeIntegerDummy();
 	}
 
-	public OnePositiveIntegerRange(int start, int stop, int interval) throws RangeException {
-		super(start, stop, 1, Integer.MAX_VALUE, interval);
+	public RangeIntegerDummy create(int start, int stop) {
+		return new RangeIntegerDummy(start, stop);
 	}
 
-	@Override
-	protected OnePositiveIntegerRange newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
-		return new OnePositiveIntegerRange(start, stop, interval);
+	public RangeIntegerDummy create(RangeInteger template) {
+		return new RangeIntegerDummy(template.getStart(), template.getStop());
 	}
 
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer;
+package net.sf.jranges.range.integerrange;
 
 import java.util.HashMap;
 import java.util.List;
@@ -23,14 +23,14 @@ import net.sf.kerner.utils.Util;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
- * Utility class for all kind of {@link net.sf.jranges.range.integer.IntegerRange Range} related operations.
+ * Utility class for all kind of {@link net.sf.jranges.range.integerrange.RangeInteger Range} related operations.
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2011-09-02
  */
-public class IntegerRangeUtils {
+public class UtilsRangeInteger {
 
-    private IntegerRangeUtils() {
+    private UtilsRangeInteger() {
         // singleton
     }
 
@@ -58,8 +58,8 @@ public class IntegerRangeUtils {
      *            position that is checked
      * @return true, if given position is contained by at least one of the given ranges; false otherwise
      */
-    public static boolean includedByOne(final List<? extends IntegerRange> ranges, final int position) {
-        for (final IntegerRange r : ranges) {
+    public static boolean includedByOne(final List<? extends RangeInteger> ranges, final int position) {
+        for (final RangeInteger r : ranges) {
             if (r.includes(position)) {
                 return true;
             }
@@ -67,9 +67,9 @@ public class IntegerRangeUtils {
         return false;
     }
 
-    public static int numberOfAppearances(final List<? extends IntegerRange> ranges, final int position) {
+    public static int numberOfAppearances(final List<? extends RangeInteger> ranges, final int position) {
         int result = 0;
-        for (final IntegerRange r : ranges) {
+        for (final RangeInteger r : ranges) {
             if (r.includes(position)) {
                 result++;
             }
@@ -77,9 +77,9 @@ public class IntegerRangeUtils {
         return result;
     }
 
-    public static long numberOfPositions(final List<? extends IntegerRange> ranges) {
+    public static long numberOfPositions(final List<? extends RangeInteger> ranges) {
         long result = 0;
-        for (final IntegerRange r : ranges) {
+        for (final RangeInteger r : ranges) {
             result += r.getLength();
         }
         return result;
@@ -105,19 +105,19 @@ public class IntegerRangeUtils {
      * @param ranges
      *            {@code Range}s that are to be merged
      * @param factory
-     *            {@link net.sf.jranges.range.integer.IntegerRangeFactory RangeFactory} that is used for retrieving a
+     *            {@link net.sf.jranges.range.integerrange.IntegerRangeFactory RangeFactory} that is used for retrieving a
      *            new {@code Range} -instance
      * @return a new {@code Range}, that represents the merge of the given {@code Range}s
      * @see IntegerRangeFactory
      */
-    public static <T extends IntegerRange> T merge(final List<? extends IntegerRange> ranges,
+    public static <T extends RangeInteger> T merge(final List<? extends RangeInteger> ranges,
             final IntegerRangeFactory<T> factory) {
         if (ranges.isEmpty())
             return factory.create();
-        final IntegerRange result = factory.create(ranges.iterator().next());
+        final RangeInteger result = factory.create(ranges.iterator().next());
         int start = result.getStart();
         int stop = result.getStop();
-        for (final IntegerRange r : ranges) {
+        for (final RangeInteger r : ranges) {
             if (r.getStart() < start)
                 start = r.getStart();
             if (r.getStop() > stop)
@@ -126,13 +126,13 @@ public class IntegerRangeUtils {
         return factory.create(start, stop);
     }
 
-    public static Map<Integer, Integer> positionFrequencies(final List<? extends IntegerRange> ranges,
-            final List<? extends IntegerRange> ranges2) {
+    public static Map<Integer, Integer> positionFrequencies(final List<? extends RangeInteger> ranges,
+            final List<? extends RangeInteger> ranges2) {
         Util.checkForNull(ranges, ranges2);
 
         final Map<Integer, Integer> result = new HashMap<Integer, Integer>();
 
-        for (final IntegerRange range : ranges2) {
+        for (final RangeInteger range : ranges2) {
             for (int i = range.getStart(); i <= range.getStop(); i++) {
                 final int n = numberOfAppearances(ranges, i);
                 final Integer key = Integer.valueOf(i);
@@ -147,8 +147,8 @@ public class IntegerRangeUtils {
         return result;
     }
 
-    public static double medianPositionFrequencies(final List<? extends IntegerRange> ranges,
-            final List<? extends IntegerRange> ranges2) {
+    public static double medianPositionFrequencies(final List<? extends RangeInteger> ranges,
+            final List<? extends RangeInteger> ranges2) {
 
         final Map<Integer, Integer> map = positionFrequencies(ranges, ranges2);
 
@@ -164,19 +164,19 @@ public class IntegerRangeUtils {
         return (double) result / (double) map.size();
     }
 
-    public static <R extends IntegerRange> R trimmValidStart(final R range, final int minStart, final int maxStart,
+    public static <R extends RangeInteger> R trimmValidStart(final R range, final int minStart, final int maxStart,
             final IntegerRangeFactory<R> factory) {
         final int start = trimToBounds(range.getStart(), minStart, maxStart);
         return factory.create(start, range.getStop());
     }
 
-    public static <R extends IntegerRange> R trimmValidStop(final R range, final int minStop, final int maxStop,
+    public static <R extends RangeInteger> R trimmValidStop(final R range, final int minStop, final int maxStop,
             final IntegerRangeFactory<R> factory) {
         final int stop = trimToBounds(range.getStop(), minStop, maxStop);
         return factory.create(range.getStart(), stop);
     }
 
-    public static <R extends IntegerRange> R trimmValid(final R range, final int minStart, final int maxStop,
+    public static <R extends RangeInteger> R trimmValid(final R range, final int minStart, final int maxStop,
             final IntegerRangeFactory<? extends R> factory) {
         final int start = trimToBounds(range.getStart(), minStart, maxStop);
         final int stop = trimToBounds(range.getStop(), minStart, maxStop);

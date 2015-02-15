@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.integer.IntegerRange;
+import net.sf.jranges.range.integerrange.RangeInteger;
 import net.sf.kerner.utils.math.ArithmeticSavety;
 
 /**
  * 
  * 
- * A prototype implementation for {@link IntegerRange}.
+ * A prototype implementation for {@link RangeInteger}.
  * 
  * <p>
- * In contrast to {@link DummyIntegerRange}, an {@code AbstractIntegerRange} is
+ * In contrast to {@link RangeIntegerDummy}, an {@code AbstractIntegerRange} is
  * immutable and also provides basic value checking e.g. {@code start <= stop}.
  * </p>
  * An {@code AbstractIntegerRange} also has limits, that means start cannot be
@@ -41,7 +41,7 @@ import net.sf.kerner.utils.math.ArithmeticSavety;
  * @version 2010-12-08
  * 
  */
-public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange implements IntegerRange {
+public abstract class RangeIntegerAbstract extends VeryAbstractIntegerRange implements RangeInteger {
 
     /**
      * This {@code AbstractIntegerRange}'s lower limit, which is the smallest
@@ -82,7 +82,7 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
      * @throws RangeException
      *             if {@code limit1 > start || limit2 < stop || start > stop}
      */
-    public AbstractIntegerRange(final int start, final int stop, final int limit1, final int limit2)
+    public RangeIntegerAbstract(final int start, final int stop, final int limit1, final int limit2)
             throws RangeException {
         if (limit1 > start || limit2 < stop || start > stop)
             throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
@@ -119,7 +119,7 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
      *             if
      *             {@code limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0)}
      */
-    public AbstractIntegerRange(final int start, final int stop, final int limit1, final int limit2, final int interval)
+    public RangeIntegerAbstract(final int start, final int stop, final int limit1, final int limit2, final int interval)
             throws RangeException {
         if (limit1 > start || limit2 < stop || start > stop || (((stop - start) % interval) != 0))
             throw new RangeException("invalid range" + " start=" + start + " stop=" + stop + " limit1=" + limit1
@@ -141,11 +141,11 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
         return result;
     }
 
-    public IntegerRange expandRange(final int offset) throws RangeException {
+    public RangeInteger expandRange(final int offset) throws RangeException {
         return expandRange(offset, false);
     }
 
-    public IntegerRange expandRange(final int offset, final boolean stayWithinLimits) throws RangeException {
+    public RangeInteger expandRange(final int offset, final boolean stayWithinLimits) throws RangeException {
         int start = this.start;
         int stop = this.stop;
         if (stayWithinLimits) {
@@ -232,10 +232,10 @@ public abstract class AbstractIntegerRange extends VeryAbstractIntegerRange impl
      * @return the new {@code AbstractIntegerRange} instance
      * @throws RangeException
      */
-    protected abstract AbstractIntegerRange newInstange(int start, int stop, int limit1, int limit2)
+    protected abstract RangeIntegerAbstract newInstange(int start, int stop, int limit1, int limit2)
             throws RangeException;
 
-    public IntegerRange shift(final int offset) throws RangeException {
+    public RangeInteger shift(final int offset) throws RangeException {
         return newInstange(ArithmeticSavety.addInt(getStart(), offset), ArithmeticSavety.addInt(getStop(), offset),
                 getLimit1(), getLimit2());
 

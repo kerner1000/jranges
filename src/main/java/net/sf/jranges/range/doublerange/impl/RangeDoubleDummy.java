@@ -16,12 +16,12 @@
 package net.sf.jranges.range.doublerange.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.doublerange.DoubleRange;
+import net.sf.jranges.range.doublerange.RangeDouble;
 
 /**
  * 
  * Most simple implementation for
- * {@link net.sf.jranges.range.doublerange.DoubleRange DoubleRange}. Arguments
+ * {@link net.sf.jranges.range.doublerange.RangeDouble DoubleRange}. Arguments
  * and operations are not checked for validity.
  * 
  * <p>
@@ -45,7 +45,7 @@ import net.sf.jranges.range.doublerange.DoubleRange;
  * @version 2011-02-23
  * 
  */
-public class DummyDoubleRange extends VeryAbstractDoubleRange {
+public class RangeDoubleDummy extends VeryAbstractDoubleRange {
 
 	/**
 	 * 
@@ -53,7 +53,7 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	 * initiated with {@code 0}.
 	 * 
 	 */
-	public DummyDoubleRange() {
+	public RangeDoubleDummy() {
 		this.start = 0;
 		this.stop = 0;
 	}
@@ -64,7 +64,7 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	 * values.
 	 * 
 	 */
-	public DummyDoubleRange(double start, double stop) {
+	public RangeDoubleDummy(double start, double stop) {
 		this.start = start;
 		this.stop = stop;
 	}
@@ -72,24 +72,24 @@ public class DummyDoubleRange extends VeryAbstractDoubleRange {
 	/**
 	 * 
 	 */
-	public DoubleRange shift(double offset) throws RangeException {
-		return new DummyDoubleRange(getStart() + offset, getStop() + offset);
+	public RangeDouble shift(double offset) throws RangeException {
+		return new RangeDoubleDummy(getStart() + offset, getStop() + offset);
 	}
 
 	/**
 	 * 
 	 */
-	public DoubleRange expandRange(double offset) throws RangeException {
+	public RangeDouble expandRange(double offset) throws RangeException {
 		return expandRange(offset, false);
 	}
 
 	/**
 	 * 
 	 */
-	public DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException {
+	public RangeDouble expandRange(double offset, boolean stayWithinLimits) throws RangeException {
 		double start = getStart() - offset;
 		double stop = getStop() + offset;
-		return new DummyDoubleRange(start, stop);
+		return new RangeDoubleDummy(start, stop);
 	}
 
 }

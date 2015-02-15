@@ -16,10 +16,10 @@
 package net.sf.jranges.range.doublerange.impl;
 
 import net.sf.jranges.range.RangeException;
-import net.sf.jranges.range.doublerange.DoubleRange;
+import net.sf.jranges.range.doublerange.RangeDouble;
 import net.sf.kerner.utils.math.UtilMath;
 
-public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implements DoubleRange {
+public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implements RangeDouble {
 
     public static final int ACCURACY = 6;
 
@@ -119,11 +119,11 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implem
 
     // Public //
 
-    public DoubleRange expandRange(final double offset) throws RangeException {
+    public RangeDouble expandRange(final double offset) throws RangeException {
         return expandRange(offset, false);
     }
 
-    public DoubleRange expandRange(final double offset, final boolean stayWithinLimits) throws RangeException {
+    public RangeDouble expandRange(final double offset, final boolean stayWithinLimits) throws RangeException {
         double start = this.start;
         double stop = this.stop;
         if (stayWithinLimits) {
@@ -201,7 +201,7 @@ public abstract class AbstractDoubleRange extends VeryAbstractDoubleRange implem
 
     // Abstract //
 
-    public DoubleRange shift(final double offset) throws RangeException {
+    public RangeDouble shift(final double offset) throws RangeException {
         return newInstange(getStart() + offset, getStop() + offset, getLimit1(), getLimit2());
     }
 }

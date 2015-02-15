@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package net.sf.jranges.range.integer.impl;
+package net.sf.jranges.range.integerrange.impl;
 
-import net.sf.jranges.range.integer.IntegerRange;
-import net.sf.jranges.range.integer.IntegerRangeFactory;
+import net.sf.jranges.range.RangeException;
 
 /**
  * 
- * A factory that creates objects of type {@link DummyIntegerRange}.
+ * 
+ * {@code OnePositiveRange} is an implementation for
+ * {@link net.sf.jranges.range.integerrange.RangeInteger IntegerRange}, for which the
+ * following is true:<br>
+ * {@code 1 <= start <= stop <= Integer.MAX_VALUE}
  * 
  * <p>
- * <b>Example:</b><br>
- * 
- * </p>
- * <p>
+ * <b>Example:</b>
  * 
  * <pre>
  * TODO example
@@ -35,21 +35,22 @@ import net.sf.jranges.range.integer.IntegerRangeFactory;
  * </p>
  * 
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
- * @version 2011-09-02
+ * @version 2010-10-19
  * 
  */
-public class DummyIntegerRangeFactory implements IntegerRangeFactory<IntegerRange> {
+public class RangeIntegerOnePositive extends RangeIntegerAbstract {
 
-	public DummyIntegerRange create() {
-		return new DummyIntegerRange();
+	public RangeIntegerOnePositive(int start, int stop) throws RangeException {
+		super(start, stop, 1, Integer.MAX_VALUE);
 	}
 
-	public DummyIntegerRange create(int start, int stop) {
-		return new DummyIntegerRange(start, stop);
+	public RangeIntegerOnePositive(int start, int stop, int interval) throws RangeException {
+		super(start, stop, 1, Integer.MAX_VALUE, interval);
 	}
 
-	public DummyIntegerRange create(IntegerRange template) {
-		return new DummyIntegerRange(template.getStart(), template.getStop());
+	@Override
+	protected RangeIntegerOnePositive newInstange(int start, int stop, int limit1, int limit2) throws RangeException {
+		return new RangeIntegerOnePositive(start, stop, interval);
 	}
 
 }

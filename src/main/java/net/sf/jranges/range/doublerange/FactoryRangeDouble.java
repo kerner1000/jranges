@@ -15,7 +15,7 @@
  ******************************************************************************/
 package net.sf.jranges.range.doublerange;
 
-public interface FactoryRangeDouble<R extends DoubleRange> {
+public interface FactoryRangeDouble<R extends RangeDouble> {
 
 	R create(double start, double stop);
 

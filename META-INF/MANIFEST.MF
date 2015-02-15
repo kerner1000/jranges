@@ -6,8 +6,8 @@ Bundle-Version: 0.5.0
 Export-Package: net.sf.jranges.range;version="0.5.0",
  net.sf.jranges.range.doublerange;version="0.5.0",
  net.sf.jranges.range.doublerange.impl;version="0.5.0",
- net.sf.jranges.range.integer;version="0.5.0",
- net.sf.jranges.range.integer.impl;version="0.5.0",
+ net.sf.jranges.range.integerrange;version="0.5.0",
+ net.sf.jranges.range.integerrange.impl;version="0.5.0",
  net.sf.jranges.range.longrange;version="0.5.0",
  net.sf.jranges.range.longrange.impl;version="0.5.0"
 Import-Package: net.sf.kerner.utils,

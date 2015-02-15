@@ -21,7 +21,7 @@ import net.sf.jranges.range.RangeException;
 /**
  * 
  * A {@code DoubleRange} is a {@link Range} based on {@code double} values. In
- * comparison to {@link net.sf.jranges.range.IntegerRange IntegerRange}, there
+ * comparison to {@link net.sf.jranges.range.RangeInteger IntegerRange}, there
  * are some differences:
  * 
  * <ul>
@@ -61,7 +61,7 @@ import net.sf.jranges.range.RangeException;
  * 
  */
 
-public interface DoubleRange extends Range, Comparable<DoubleRange> {
+public interface RangeDouble extends Range, Comparable<RangeDouble> {
 
     /**
      * 
@@ -74,7 +74,7 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
      * @throws RangeException
      *             if this operation resulted in an invalid range
      */
-    DoubleRange expandRange(double offset) throws RangeException;
+    RangeDouble expandRange(double offset) throws RangeException;
 
     /**
      * 
@@ -94,7 +94,7 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
      * @throws RangeException
      *             if this operation resulted in an invalid range
      */
-    DoubleRange expandRange(double offset, boolean stayWithinLimits) throws RangeException;
+    RangeDouble expandRange(double offset, boolean stayWithinLimits) throws RangeException;
 
     /**
      * 
@@ -140,7 +140,7 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
      */
     boolean includes(double position);
 
-    boolean sharesPositionsWith(DoubleRange anotherRange);
+    boolean sharesPositionsWith(RangeDouble anotherRange);
 
     /**
      * 
@@ -159,6 +159,6 @@ public interface DoubleRange extends Range, Comparable<DoubleRange> {
      * @throws RangeException
      *             if this operation resulted in an invalid range
      */
-    DoubleRange shift(double offset) throws RangeException;
+    RangeDouble shift(double offset) throws RangeException;
 
 }
