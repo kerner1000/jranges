@@ -67,8 +67,6 @@ import net.sf.jranges.range.longrange.RangeLong;
  * {@code (a,a+i,...,s-i,s)}
  *
  *
- * <p>
- *
  * @author <a href="mailto:alex.kerner.24@googlemail.com">Alexander Kerner</a>
  * @version 2010-11-19
  *
