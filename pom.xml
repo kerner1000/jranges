@@ -9,7 +9,7 @@
 		<relativePath>../eclipse.rcp/build/com.silicosciences.parent/</relativePath>
 	</parent>
 	
-	<groupId>net.sf.kerner</groupId>
+	<groupId>net.sf.jranges</groupId>
 	<artifactId>net.sf.jranges</artifactId>
 	<version>0.7.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
