@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JRanges
 Bundle-SymbolicName: net.sf.jranges
-Bundle-Version: 0.7.2.qualifier
+Bundle-Version: 0.8.1.qualifier
 Export-Package: net.sf.jranges.range,
  net.sf.jranges.range.doublerange,
  net.sf.jranges.range.doublerange.impl,
