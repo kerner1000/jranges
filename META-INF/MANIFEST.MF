@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JRanges
+Bundle-SymbolicName: net.sf.jranges
+Bundle-Version: 0.7.1.qualifier
+Export-Package: net.sf.jranges.range;version="0.6.2.qualifier",
+ net.sf.jranges.range.doublerange;version="0.6.2.qualifier",
+ net.sf.jranges.range.doublerange.impl;version="0.6.2.qualifier",
+ net.sf.jranges.range.integerrange;version="0.6.2.qualifier",
+ net.sf.jranges.range.integerrange.impl;version="0.6.2.qualifier",
+ net.sf.jranges.range.longrange;version="0.6.2.qualifier",
+ net.sf.jranges.range.longrange.impl;version="0.6.2.qualifier"
+Import-Package: org.junit;resolution:=optional
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: net.sf.kerner.utils;bundle-version="1.2.4"
